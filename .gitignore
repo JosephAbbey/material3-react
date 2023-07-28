@@ -43,3 +43,6 @@ jspm_packages/
 
 # Output of 'npm build'
 lib/
+
+# Output of 'npm build:storybook'
+storybook-static/
