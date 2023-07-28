@@ -49,3 +49,10 @@
   background-color: var(--button-disabled-container-color);
   color: var(--button-disabled-icon-color);
 }
+
+.Button:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}

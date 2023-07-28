@@ -95,3 +95,10 @@
   box-shadow: 0 0 var(--button-disabled-elevation)
     var(--md-comp-filled-button-container-shadow-color);
 }
+
+.Button:focus {
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}
