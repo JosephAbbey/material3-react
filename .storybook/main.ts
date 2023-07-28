@@ -11,6 +11,12 @@ const config: StorybookConfig = {
     '@storybook/addon-storysource',
     '@storybook/addon-styling',
   ],
+  core: {
+    builder: {
+      name: '@storybook/builder-vite',
+      options: { viteConfigPath: './vite.storybook.config.js' },
+    },
+  },
   framework: {
     name: '@storybook/react-vite',
     options: {},
