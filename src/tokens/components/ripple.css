@@ -1,0 +1,12 @@
+@import url(../baseline/baseline.css);
+
+:root {
+  --md-comp-ripple-hovered-color: var(--md-sys-color-on-surface);
+  --md-comp-ripple-hovered-opacity: var(
+    --md-sys-state-hover-state-layer-opacity
+  );
+  --md-comp-ripple-pressed-color: var(--md-sys-color-on-surface);
+  --md-comp-ripple-pressed-opacity: var(
+    --md-sys-state-pressed-state-layer-opacity
+  );
+}

@@ -1,0 +1,64 @@
+@import url(../tokens/components/ripple.css);
+
+.Ripple {
+  --ripple-hovered-color: var(--md-comp-ripple-hovered-color);
+  --ripple-hovered-opacity: var(--md-comp-ripple-hovered-opacity);
+  --ripple-pressed-color: var(--md-comp-ripple-pressed-color);
+  --ripple-pressed-opacity: var(--md-comp-ripple-pressed-opacity);
+
+  --ripple-diameter: ;
+  --ripple-offset-left: ;
+  --ripple-offset-top: ;
+  --ripple-content: ;
+}
+
+:has(> .Ripple) {
+  position: relative;
+}
+
+.Ripple {
+  position: absolute;
+  overflow: hidden;
+  border-radius: inherit;
+  inset: 0;
+}
+
+.Ripple:not(.disabled):hover {
+  background-color: color-mix(
+    in srgb,
+    var(--ripple-hovered-color) calc(var(--ripple-hovered-opacity) * 100%),
+    transparent
+  );
+}
+
+.Ripple:not(.disabled)::after {
+  content: var(--ripple-content);
+
+  position: absolute; /* The absolute position we mentioned earlier */
+  border-radius: 50%;
+  transform: scale(0);
+  animation: ripple var(--md-sys-motion-duration-900)
+    cubic-bezier(
+      var(--md-sys-motion-easing-standard-x0),
+      var(--md-sys-motion-easing-standard-y0),
+      var(--md-sys-motion-easing-standard-x1),
+      var(--md-sys-motion-easing-standard-y1)
+    );
+  background-color: color-mix(
+    in srgb,
+    var(--ripple-pressed-color) calc(var(--ripple-pressed-opacity) * 400%),
+    transparent
+  );
+
+  width: var(--ripple-diameter);
+  height: var(--ripple-diameter);
+  left: var(--ripple-offset-left);
+  top: var(--ripple-offset-top);
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}

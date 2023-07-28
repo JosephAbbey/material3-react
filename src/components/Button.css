@@ -1,0 +1,97 @@
+@import url(../font.css);
+@import url(../tokens/components/filled-button.css);
+
+.Button {
+  transition: box-shadow linear 100ms;
+}
+
+/* ButtonDefaults */
+.Button {
+  --button-container-color: var(--md-comp-filled-button-container-color);
+  --button-content-color: var(--md-comp-filled-button-label-text-color);
+  --button-disabled-container-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-button-disabled-container-color)
+      var(--md-comp-filled-button-disabled-container-opacity),
+    transparent
+  );
+  --button-disabled-content-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-button-disabled-label-text-color)
+      var(--md-comp-filled-button-disabled-label-text-opacity),
+    transparent
+  );
+
+  --button-default-elevation: var(--md-comp-filled-button-container-elevation);
+  --button-pressed-elevation: var(
+    --md-comp-filled-button-pressed-container-elevation
+  );
+  --button-focused-elevation: var(
+    --md-comp-filled-button-focused-container-elevation
+  );
+  --button-hovered-elevation: var(
+    --md-comp-filled-button-hovered-container-elevation
+  );
+  --button-disabled-elevation: var(
+    --md-comp-filled-button-disabled-container-elevation
+  );
+}
+
+/* https://m3.material.io/components/buttons/specs#85e63496-f905-4978-ae35-69ab83b70536 */
+.Button {
+  height: 40px;
+  border-radius: 20px;
+  padding-inline: 24px;
+  display: flex;
+  gap: 8px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+}
+.Button:not(:disabled) {
+  cursor: pointer;
+}
+.Button .icon:first-child {
+  --icon-size: 18px;
+}
+.Button:has(.icon:first-child) {
+  padding-left: 16px;
+  padding-right: 24px;
+}
+
+.Button {
+  color: var(--button-content-color);
+  font-family: var(--md-comp-filled-button-label-text-font);
+  line-height: var(--md-comp-filled-button-label-text-line-height);
+  font-size: var(--md-comp-filled-button-label-text-size);
+  letter-spacing: var(--md-comp-filled-button-label-text-tracking);
+  font-weight: var(--md-comp-filled-button-label-text-weight);
+
+  background-color: var(--button-container-color);
+  box-shadow: 0 0 var(--button-default-elevation)
+    var(--md-comp-filled-button-container-shadow-color);
+}
+
+.Button:hover {
+  box-shadow: 0 0 var(--button-hovered-elevation)
+    var(--md-comp-filled-button-container-shadow-color);
+}
+
+.Button:focus {
+  box-shadow: 0 0 var(--button-focused-elevation)
+    var(--md-comp-filled-button-container-shadow-color);
+}
+
+.Button:active {
+  box-shadow: 0 0 var(--button-pressed-elevation)
+    var(--md-comp-filled-button-container-shadow-color);
+}
+
+.Button:disabled {
+  background-color: var(--button-disabled-container-color);
+  color: var(--button-disabled-content-color);
+  box-shadow: 0 0 var(--button-disabled-elevation)
+    var(--md-comp-filled-button-container-shadow-color);
+}

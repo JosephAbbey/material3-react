@@ -1,0 +1,51 @@
+@import url(../tokens/components/filled-icon-button.css);
+
+/* IconButtonDefaults */
+.IconButton {
+  --button-container-color: var(
+    --md-comp-filled-icon-button-default-container-color
+  );
+  --button-icon-color: var(--md-comp-filled-icon-button-default-icon-color);
+  --button-disabled-container-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-icon-button-disabled-container-color)
+      var(--md-comp-filled-icon-button-disabled-container-opacity),
+    transparent
+  );
+  --button-disabled-icon-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-icon-button-disabled-icon-color)
+      var(--md-comp-filled-icon-button-disabled-icon-opacity),
+    transparent
+  );
+}
+
+/* https://m3.material.io/components/icon-buttons/specs#545cdffc-4b0f-4f4e-ae55-98031586b209 */
+.IconButton {
+  margin: 8px;
+  width: var(--md-comp-filled-icon-button-container-size);
+  height: var(--md-comp-filled-icon-button-container-size);
+  border-radius: var(--md-comp-filled-icon-button-container-shape);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+}
+.IconButton > .Icon {
+  --icon-size: var(--md-comp-filled-icon-button-icon-size);
+}
+.IconButton:not(:disabled) {
+  cursor: pointer;
+}
+
+.IconButton {
+  color: var(--button-icon-color);
+  background-color: var(--button-container-color);
+}
+
+.IconButton:disabled {
+  background-color: var(--button-disabled-container-color);
+  color: var(--button-disabled-icon-color);
+}

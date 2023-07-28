@@ -1,0 +1,18 @@
+@import url(../baseline/baseline.css);
+
+:root {
+  --md-comp-filled-icon-button-icon-size: 24px;
+  --md-comp-filled-icon-button-default-icon-color: var(--md-sys-color-on-primary);
+  --md-comp-filled-icon-button-unselected-icon-color: var(--md-sys-color-primary);
+  --md-comp-filled-icon-button-selected-icon-color: var(--md-sys-color-on-primary);
+  --md-comp-filled-icon-button-container-size: 40px;
+  --md-comp-filled-icon-button-container-shape: /* var(--md-sys-shape-corner-full) */ 50%;
+  --md-comp-filled-icon-button-default-container-color: var(--md-sys-color-primary);
+  --md-comp-filled-icon-button-unselected-container-color: var(--md-sys-color-surface-container-highest);
+  --md-comp-filled-icon-button-selected-container-color: var(--md-sys-color-primary);
+
+  --md-comp-filled-icon-button-disabled-icon-color: var(--md-sys-color-primary);
+  --md-comp-filled-icon-button-disabled-icon-opacity: 38%;
+  --md-comp-filled-icon-button-disabled-container-color: var(--md-sys-color-primary);
+  --md-comp-filled-icon-button-disabled-container-opacity: 12%;
+}
