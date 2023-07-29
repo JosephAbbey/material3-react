@@ -24,7 +24,7 @@
   --md-comp-text-button-focused-icon-color: var(--md-sys-color-primary);
 
   --md-comp-text-button-pressed-container-state-layer-color: var(--md-sys-color-primary);
-  --md-comp-text-button-pressed-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --md-comp-text-button-pressed-container-state-layer-opacity: var(--md-sys-state-pressed-state-layer-opacity);
   --md-comp-text-button-pressed-label-text-color: var(--md-sys-color-primary);
   --md-comp-text-button-pressed-icon-color: var(--md-sys-color-primary);
 }

@@ -2,10 +2,18 @@ import React, { PropsWithChildren } from 'react';
 import './IconButton.css';
 import { Ripple } from './Ripple';
 
+export const IconButtonType = {
+  Filled: 'Filled',
+  Tonal: 'Tonal',
+  Outlined: 'Outlined',
+  Standard: 'Standard',
+} as const;
+export type IconButtonType = valueof<typeof IconButtonType>;
+
 export type IconButtonProps = PropsWithChildren<{
   onClick: () => void;
   disabled?: boolean;
-  filled?: boolean;
+  type?: IconButtonType;
   style?: React.CSSProperties;
 }>;
 
@@ -15,13 +23,13 @@ export type IconButtonProps = PropsWithChildren<{
 export const IconButton = ({
   onClick,
   disabled = false,
-  filled = false,
+  type = IconButtonType.Standard,
   style,
   children,
 }: IconButtonProps) => {
   return (
     <button
-      className={`IconButton ${filled ? 'filled' : ''}`}
+      className={`IconButton ${type}`}
       type='button'
       onClick={onClick}
       disabled={disabled}

@@ -375,15 +375,18 @@
   --icon-color: var(--button-disabled-content-color);
 }
 
-.Button:focus {
-  -webkit-tap-highlight-color: transparent;
-  -ms-touch-action: manipulation;
-  touch-action: manipulation;
-}
-
 .Button > .Ripple {
   --ripple-hovered-color: var(--button-hovered-container-state-layer-color);
   --ripple-hovered-opacity: var(--button-hovered-container-state-layer-opacity);
   --ripple-pressed-color: var(--button-pressed-container-state-layer-color);
   --ripple-pressed-opacity: var(--button-pressed-container-state-layer-opacity);
+}
+
+.Button {
+  user-select: none;
+}
+.Button:focus {
+  -webkit-tap-highlight-color: transparent;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }

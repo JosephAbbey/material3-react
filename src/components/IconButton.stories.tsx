@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
-import { IconButton } from './IconButton';
+import { IconButton, IconButtonType } from './IconButton';
 import { Icon } from './Icon';
 import React from 'react';
 
@@ -10,14 +10,16 @@ const meta = {
   component: IconButton,
   parameters: {
     layout: 'centered',
-    badges: [BADGE.EXPERIMENTAL],
+    badges: [BADGE.BETA],
   },
   argTypes: {
     disabled: {
       control: 'boolean',
     },
-    filled: {
-      control: 'boolean',
+    type: {
+      control: 'select',
+      options: IconButtonType,
+      description: 'The type of button to display.',
     },
     onClick: { action: 'clicked' },
     children: {
@@ -33,7 +35,7 @@ type Story = StoryObj<typeof meta>;
 export const Standard: Story = {
   args: {
     disabled: false,
-    filled: false,
+    type: IconButtonType.Standard,
     children: (
       <>
         <Icon icon='cable' />
@@ -44,7 +46,7 @@ export const Standard: Story = {
 export const StandardDisabled: Story = {
   args: {
     disabled: true,
-    filled: false,
+    type: IconButtonType.Standard,
     children: (
       <>
         <Icon icon='cable' />
@@ -52,10 +54,11 @@ export const StandardDisabled: Story = {
     ),
   },
 };
+
 export const Filled: Story = {
   args: {
     disabled: false,
-    filled: true,
+    type: IconButtonType.Filled,
     children: (
       <>
         <Icon icon='cable' />
@@ -66,7 +69,53 @@ export const Filled: Story = {
 export const FilledDisabled: Story = {
   args: {
     disabled: true,
-    filled: true,
+    type: IconButtonType.Filled,
+    children: (
+      <>
+        <Icon icon='cable' />
+      </>
+    ),
+  },
+};
+
+export const Tonal: Story = {
+  args: {
+    disabled: false,
+    type: IconButtonType.Tonal,
+    children: (
+      <>
+        <Icon icon='cable' />
+      </>
+    ),
+  },
+};
+export const TonalDisabled: Story = {
+  args: {
+    disabled: true,
+    type: IconButtonType.Tonal,
+    children: (
+      <>
+        <Icon icon='cable' />
+      </>
+    ),
+  },
+};
+
+export const Outlined: Story = {
+  args: {
+    disabled: false,
+    type: IconButtonType.Outlined,
+    children: (
+      <>
+        <Icon icon='cable' />
+      </>
+    ),
+  },
+};
+export const OutlinedDisabled: Story = {
+  args: {
+    disabled: true,
+    type: IconButtonType.Outlined,
     children: (
       <>
         <Icon icon='cable' />

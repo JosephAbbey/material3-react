@@ -8,7 +8,7 @@ const meta = {
   component: Icon,
   parameters: {
     layout: 'centered',
-    badges: [BADGE.EXPERIMENTAL],
+    badges: [BADGE.STABLE],
   },
   argTypes: {},
 } satisfies Meta<typeof Icon>;

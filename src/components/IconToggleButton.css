@@ -79,9 +79,11 @@
   color: var(--button-disabled-icon-color);
 }
 
-.Button:focus {
+.IconToggleButton {
+  user-select: none;
+}
+.IconToggleButton:focus {
   -webkit-tap-highlight-color: transparent;
-  outline: none;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
 }
