@@ -14,7 +14,7 @@
  limitations under the License.
 */
 
-:root {
+:root, .MaterialTheme {
   /* Emphasized decelerate easing (out) */
   --md-sys-motion-easing-emphasized-decelerate-x0: 0.05000000074505806;
   --md-sys-motion-easing-emphasized-decelerate-y0: 0.699999988079071;

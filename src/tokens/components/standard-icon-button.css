@@ -1,0 +1,11 @@
+:root, .MaterialTheme {
+  --md-comp-standard-icon-button-icon-size: 24px;
+  --md-comp-standard-icon-button-default-icon-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-standard-icon-button-unselected-icon-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-standard-icon-button-selected-icon-color: var(--md-sys-color-primary);
+  --md-comp-standard-icon-button-container-size: 40px;
+  --md-comp-standard-icon-button-container-shape: /* var(--md-sys-shape-corner-full) */ 50%;
+
+  --md-comp-standard-icon-button-disabled-icon-color: var(--md-sys-color-on-surface);
+  --md-comp-standard-icon-button-disabled-icon-opacity: 38%;
+}

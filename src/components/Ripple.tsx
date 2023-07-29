@@ -4,13 +4,13 @@ import './Ripple.css';
 /* https://m3.material.io/foundations/interaction/states/applying-states#c3690714-b741-492d-97b0-5fc1960e43e6 */
 
 export type RippleProps = {
-  enabled?: boolean;
+  disabled?: boolean;
   style?: React.CSSProperties;
 };
 
-export function Ripple({ enabled = true, style }: RippleProps) {
+export function Ripple({ disabled = false, style }: RippleProps) {
   const createRipple: MouseEventHandler<HTMLDivElement> = function (e) {
-    if (!enabled) return;
+    if (disabled) return;
 
     const span = e.currentTarget;
 
@@ -35,7 +35,7 @@ export function Ripple({ enabled = true, style }: RippleProps) {
 
   return (
     <div
-      className={`Ripple ${enabled ? '' : 'disabled'}`}
+      className={`Ripple ${disabled ? 'disabled' : ''}`}
       style={style}
       onClick={createRipple}></div>
   );

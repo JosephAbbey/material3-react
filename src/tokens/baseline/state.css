@@ -14,7 +14,7 @@
  limitations under the License.
 */
 
-:root {
+:root, .MaterialTheme {
   /* Dragged state layer opacity */
   --md-sys-state-dragged-state-layer-opacity: 0.1599999964237213;
   /* Pressed state layer opacity */

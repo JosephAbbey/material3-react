@@ -2,30 +2,45 @@ import React, { PropsWithChildren } from 'react';
 import './Button.css';
 import { Ripple } from './Ripple';
 
+export const ButtonType = {
+  Elevated: 'Elevated',
+  Filled: 'Filled',
+  Tonal: 'Tonal',
+  Outlined: 'Outlined',
+  Text: 'Text',
+} as const;
+export type ButtonType = valueof<typeof ButtonType>;
+
 export type ButtonProps = PropsWithChildren<{
+  /** Called when this button is clicked. */
   onClick: () => void;
-  enabled?: boolean;
+  /** The type of button to display. */
+  type?: ButtonType;
+  /** Controls the enabled state of this button. When true, this component will not respond to user input, and it will appear visually disabled and disabled to accessibility services. */
+  disabled?: boolean;
+  /** CSS styles to be applied to the HTMLButtonElement. */
   style?: React.CSSProperties;
 }>;
 
 /**
- * Primary UI component for user interaction
+ * https://m3.material.io/components/buttons/overview
  */
 export const Button = ({
   onClick,
-  enabled = true,
+  type = ButtonType.Filled,
+  disabled = false,
   style,
   children,
 }: ButtonProps) => {
   return (
     <button
-      className='Button'
+      className={`Button ${type}`}
       type='button'
       onClick={onClick}
-      disabled={!enabled}
+      disabled={disabled}
       style={style}>
-      <Ripple enabled={enabled} />
       {children}
+      <Ripple disabled={disabled} />
     </button>
   );
 };

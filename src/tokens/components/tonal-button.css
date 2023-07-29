@@ -1,0 +1,38 @@
+:root, .MaterialTheme {
+  --md-comp-tonal-button-container-color: var(--md-sys-color-secondary-container);
+  --md-comp-tonal-button-container-shadow-color: var(--md-sys-color-shadow);
+  --md-comp-tonal-button-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-tonal-button-label-text-color: var(--md-sys-color-on-secondary-container);
+  --md-comp-tonal-button-label-text-font: var(--md-sys-typescale-label-large-font);
+  --md-comp-tonal-button-label-text-line-height: var(--md-sys-typescale-label-large-line-height);
+  --md-comp-tonal-button-label-text-size: var(--md-sys-typescale-label-large-size);
+  --md-comp-tonal-button-label-text-tracking: var(--md-sys-typescale-label-large-tracking);
+  --md-comp-tonal-button-label-text-weight: var(--md-sys-typescale-label-large-weight);
+  --md-comp-tonal-button-icon-color: var(--md-sys-color-on-secondary-container);
+
+  --md-comp-tonal-button-disabled-container-color: var(--md-sys-color-on-surface);
+  --md-comp-tonal-button-disabled-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-tonal-button-disabled-container-opacity: 12%;
+  --md-comp-tonal-button-disabled-label-text-color: var(--md-sys-color-on-surface);
+  --md-comp-tonal-button-disabled-label-text-opacity: 38%;
+  --md-comp-tonal-button-disabled-icon-color: var(--md-sys-color-on-surface);
+  --md-comp-tonal-button-disabled-icon-opacity: 38%;
+
+  --md-comp-tonal-button-hovered-container-state-layer-color: var(--md-sys-color-on-secondary-secondary);
+  --md-comp-tonal-button-hovered-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --md-comp-tonal-button-hovered-container-elevation: var(--md-sys-elevation-level1);
+  --md-comp-tonal-button-hovered-label-text-color: var(--md-sys-color-on-secondary-secondary);
+  --md-comp-tonal-button-hovered-icon-color: var(--md-sys-color-on-secondary-secondary);
+
+  --md-comp-tonal-button-focused-container-state-layer-color: var(--md-sys-color-on-secondary-container);
+  --md-comp-tonal-button-focused-container-state-layer-opacity: var(--md-sys-state-focus-state-layer-opacity);
+  --md-comp-tonal-button-focused-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-tonal-button-focused-label-text-color: var(--md-sys-color-on-secondary-container);
+  --md-comp-tonal-button-focused-icon-color: var(--md-sys-color-on-secondary-container);
+
+  --md-comp-tonal-button-pressed-container-state-layer-color: var(--md-sys-color-on-secondary-container);
+  --md-comp-tonal-button-pressed-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --md-comp-tonal-button-pressed-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-tonal-button-pressed-label-text-color: var(--md-sys-color-on-secondary-container);
+  --md-comp-tonal-button-pressed-icon-color: var(--md-sys-color-on-secondary-container);
+}

@@ -14,7 +14,7 @@
  limitations under the License.
 */
 
-:root {
+:root, .MaterialTheme {
   /* Surface tint color */
   --md-sys-elevation-surface-tint-color: var(--md-sys-color-primary);
   /* +5 */

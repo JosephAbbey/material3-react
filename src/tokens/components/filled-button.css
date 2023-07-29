@@ -1,6 +1,4 @@
-@import url(../baseline/baseline.css);
-
-:root {
+:root, .MaterialTheme {
   --md-comp-filled-button-container-color: var(--md-sys-color-primary);
   --md-comp-filled-button-container-shadow-color: var(--md-sys-color-shadow);
   --md-comp-filled-button-container-elevation: var(--md-sys-elevation-level0);
@@ -20,11 +18,11 @@
   --md-comp-filled-button-disabled-icon-color: var(--md-sys-color-on-surface);
   --md-comp-filled-button-disabled-icon-opacity: 38%;
 
-  --md-comp-filled-button-hover-container-state-layer-color: var(--md-sys-color-on-primary);
-  --md-comp-filled-button-hover-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
-  --md-comp-filled-button-hover-container-elevation: var(--md-sys-elevation-level1);
-  --md-comp-filled-button-hover-label-text-color: var(--md-sys-color-on-primary);
-  --md-comp-filled-button-hover-icon-color: var(--md-sys-color-on-primary);
+  --md-comp-filled-button-hovered-container-state-layer-color: var(--md-sys-color-on-primary);
+  --md-comp-filled-button-hovered-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --md-comp-filled-button-hovered-container-elevation: var(--md-sys-elevation-level1);
+  --md-comp-filled-button-hovered-label-text-color: var(--md-sys-color-on-primary);
+  --md-comp-filled-button-hovered-icon-color: var(--md-sys-color-on-primary);
 
   --md-comp-filled-button-focused-container-state-layer-color: var(--md-sys-color-on-primary);
   --md-comp-filled-button-focused-container-state-layer-opacity: var(--md-sys-state-focus-state-layer-opacity);

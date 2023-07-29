@@ -14,7 +14,7 @@
  limitations under the License.
 */
 
-:root {
+:root, .MaterialTheme {
   /* Error 0 */
   --md-ref-palette-error0: #000000ff;
   /* Error 10 */

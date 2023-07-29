@@ -1,9 +1,11 @@
 @import url(../tokens/components/standard-icon-button.css);
 @import url(../tokens/components/filled-icon-button.css);
 
-/* IconButtonDefaults */
-.IconButton {
-  --button-icon-color: var(--md-comp-standard-icon-button-default-icon-color);
+/* IconToggleButtonDefaults */
+.IconToggleButton {
+  --button-icon-color: var(
+    --md-comp-standard-icon-button-unselected-icon-color
+  );
   --button-disabled-icon-color: color-mix(
     in srgb,
     var(--md-comp-standard-icon-button-disabled-icon-color)
@@ -15,11 +17,11 @@
   --button-container-shape: var(--md-comp-standard-icon-button-container-shape);
   --button-icon-size: var(--md-comp-standard-icon-button-icon-size);
 }
-.IconButton.filled {
+.IconToggleButton.filled {
   --button-container-color: var(
-    --md-comp-filled-icon-button-default-container-color
+    --md-comp-filled-icon-button-unselected-container-color
   );
-  --button-icon-color: var(--md-comp-filled-icon-button-default-icon-color);
+  --button-icon-color: var(--md-comp-filled-icon-button-unselected-icon-color);
   --button-disabled-container-color: color-mix(
     in srgb,
     var(--md-comp-filled-icon-button-disabled-container-color)
@@ -37,9 +39,18 @@
   --button-container-shape: var(--md-comp-filled-icon-button-container-shape);
   --button-icon-size: var(--md-comp-filled-icon-button-icon-size);
 }
+.IconToggleButton.selected {
+  --button-icon-color: var(--md-comp-standard-icon-button-selected-icon-color);
+}
+.IconToggleButton.filled.selected {
+  --button-container-color: var(
+    --md-comp-filled-icon-button-selected-container-color
+  );
+  --button-icon-color: var(--md-comp-filled-icon-button-selected-icon-color);
+}
 
 /* https://m3.material.io/components/icon-buttons/specs#545cdffc-4b0f-4f4e-ae55-98031586b209 */
-.IconButton {
+.IconToggleButton {
   margin: 8px;
   width: var(--button-container-size);
   height: var(--button-container-size);
@@ -51,19 +62,19 @@
 
   border: none;
 }
-.IconButton > .Icon {
+.IconToggleButton > .Icon {
   --icon-size: var(--button-icon-size);
 }
-.IconButton:not(:disabled) {
+.IconToggleButton:not(:disabled) {
   cursor: pointer;
 }
 
-.IconButton {
+.IconToggleButton {
   color: var(--button-icon-color);
   background-color: var(--button-container-color);
 }
 
-.IconButton:disabled {
+.IconToggleButton:disabled {
   background-color: var(--button-disabled-container-color);
   color: var(--button-disabled-icon-color);
 }

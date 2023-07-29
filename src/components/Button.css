@@ -1,12 +1,80 @@
-@import url(../font.css);
+@import url(../tokens/components/elevated-button.css);
 @import url(../tokens/components/filled-button.css);
+@import url(../tokens/components/tonal-button.css);
+@import url(../tokens/components/outlined-button.css);
+@import url(../tokens/components/text-button.css);
 
 .Button {
   transition: box-shadow linear 100ms;
 }
 
 /* ButtonDefaults */
-.Button {
+.Button.Elevated {
+  --button-container-color: var(--md-comp-elevated-button-container-color);
+  --button-content-color: var(--md-comp-elevated-button-label-text-color);
+  --button-disabled-container-color: color-mix(
+    in srgb,
+    var(--md-comp-elevated-button-disabled-container-color)
+      var(--md-comp-elevated-button-disabled-container-opacity),
+    transparent
+  );
+  --button-disabled-content-color: color-mix(
+    in srgb,
+    var(--md-comp-elevated-button-disabled-label-text-color)
+      var(--md-comp-elevated-button-disabled-label-text-opacity),
+    transparent
+  );
+
+  --button-default-elevation: var(
+    --md-comp-elevated-button-container-elevation
+  );
+  --button-pressed-elevation: var(
+    --md-comp-elevated-button-pressed-container-elevation
+  );
+  --button-focused-elevation: var(
+    --md-comp-elevated-button-focused-container-elevation
+  );
+  --button-hovered-elevation: var(
+    --md-comp-elevated-button-hovered-container-elevation
+  );
+  --button-disabled-elevation: var(
+    --md-comp-elevated-button-disabled-container-elevation
+  );
+
+  --button-container-shadow-color: var(
+    --md-comp-elevated-button-container-shadow-color
+  );
+
+  --button-label-text-font: var(--md-comp-elevated-button-label-text-font);
+  --button-label-text-line-height: var(
+    --md-comp-elevated-button-label-text-line-height
+  );
+  --button-label-text-size: var(--md-comp-elevated-button-label-text-size);
+  --button-label-text-tracking: var(
+    --md-comp-elevated-button-label-text-tracking
+  );
+  --button-label-text-weight: var(--md-comp-elevated-button-label-text-weight);
+
+  --button-hovered-container-state-layer-color: var(
+    --md-comp-elevated-button-hovered-container-state-layer-color
+  );
+  --button-hovered-container-state-layer-opacity: var(
+    --md-comp-elevated-button-hovered-container-state-layer-opacity
+  );
+  --button-focused-container-state-layer-color: var(
+    --md-comp-elevated-button-focused-container-state-layer-color
+  );
+  --button-focused-container-state-layer-opacity: var(
+    --md-comp-elevated-button-focused-container-state-layer-opacity
+  );
+  --button-pressed-container-state-layer-color: var(
+    --md-comp-elevated-button-pressed-container-state-layer-color
+  );
+  --button-pressed-container-state-layer-opacity: var(
+    --md-comp-elevated-button-pressed-container-state-layer-opacity
+  );
+}
+.Button.Filled {
   --button-container-color: var(--md-comp-filled-button-container-color);
   --button-content-color: var(--md-comp-filled-button-label-text-color);
   --button-disabled-container-color: color-mix(
@@ -35,6 +103,196 @@
   --button-disabled-elevation: var(
     --md-comp-filled-button-disabled-container-elevation
   );
+
+  --button-container-shadow-color: var(
+    --md-comp-filled-button-container-shadow-color
+  );
+
+  --button-label-text-font: var(--md-comp-filled-button-label-text-font);
+  --button-label-text-line-height: var(
+    --md-comp-filled-button-label-text-line-height
+  );
+  --button-label-text-size: var(--md-comp-filled-button-label-text-size);
+  --button-label-text-tracking: var(
+    --md-comp-filled-button-label-text-tracking
+  );
+  --button-label-text-weight: var(--md-comp-filled-button-label-text-weight);
+
+  --button-hovered-container-state-layer-color: var(
+    --md-comp-filled-button-hovered-container-state-layer-color
+  );
+  --button-hovered-container-state-layer-opacity: var(
+    --md-comp-filled-button-hovered-container-state-layer-opacity
+  );
+  --button-focused-container-state-layer-color: var(
+    --md-comp-filled-button-focused-container-state-layer-color
+  );
+  --button-focused-container-state-layer-opacity: var(
+    --md-comp-filled-button-focused-container-state-layer-opacity
+  );
+  --button-pressed-container-state-layer-color: var(
+    --md-comp-filled-button-pressed-container-state-layer-color
+  );
+  --button-pressed-container-state-layer-opacity: var(
+    --md-comp-filled-button-pressed-container-state-layer-opacity
+  );
+}
+.Button.Tonal {
+  --button-container-color: var(--md-comp-tonal-button-container-color);
+  --button-content-color: var(--md-comp-tonal-button-label-text-color);
+  --button-disabled-container-color: color-mix(
+    in srgb,
+    var(--md-comp-tonal-button-disabled-container-color)
+      var(--md-comp-tonal-button-disabled-container-opacity),
+    transparent
+  );
+  --button-disabled-content-color: color-mix(
+    in srgb,
+    var(--md-comp-tonal-button-disabled-label-text-color)
+      var(--md-comp-tonal-button-disabled-label-text-opacity),
+    transparent
+  );
+
+  --button-default-elevation: var(--md-comp-tonal-button-container-elevation);
+  --button-pressed-elevation: var(
+    --md-comp-tonal-button-pressed-container-elevation
+  );
+  --button-focused-elevation: var(
+    --md-comp-tonal-button-focused-container-elevation
+  );
+  --button-hovered-elevation: var(
+    --md-comp-tonal-button-hovered-container-elevation
+  );
+  --button-disabled-elevation: var(
+    --md-comp-tonal-button-disabled-container-elevation
+  );
+
+  --button-container-shadow-color: var(
+    --md-comp-tonal-button-container-shadow-color
+  );
+
+  --button-label-text-font: var(--md-comp-tonal-button-label-text-font);
+  --button-label-text-line-height: var(
+    --md-comp-tonal-button-label-text-line-height
+  );
+  --button-label-text-size: var(--md-comp-tonal-button-label-text-size);
+  --button-label-text-tracking: var(--md-comp-tonal-button-label-text-tracking);
+  --button-label-text-weight: var(--md-comp-tonal-button-label-text-weight);
+
+  --button-hovered-container-state-layer-color: var(
+    --md-comp-tonal-button-hovered-container-state-layer-color
+  );
+  --button-hovered-container-state-layer-opacity: var(
+    --md-comp-tonal-button-hovered-container-state-layer-opacity
+  );
+  --button-focused-container-state-layer-color: var(
+    --md-comp-tonal-button-focused-container-state-layer-color
+  );
+  --button-focused-container-state-layer-opacity: var(
+    --md-comp-tonal-button-focused-container-state-layer-opacity
+  );
+  --button-pressed-container-state-layer-color: var(
+    --md-comp-tonal-button-pressed-container-state-layer-color
+  );
+  --button-pressed-container-state-layer-opacity: var(
+    --md-comp-tonal-button-pressed-container-state-layer-opacity
+  );
+}
+.Button.Outlined {
+  --button-container-outline-width: var(
+    --md-comp-outlined-button-container-outline-width
+  );
+  --button-container-outline-color: var(
+    --md-comp-outlined-button-container-outline-color
+  );
+  --button-disabled-container-outline-color: color-mix(
+    in srgb,
+    var(--md-comp-outlined-button-disabled-container-outline-color)
+      var(--md-comp-outlined-button-disabled-container-outline-opacity),
+    transparent
+  );
+  --button-hovered-container-outline-color: var(
+    --md-comp-outlined-button-hovered-container-outline-color
+  );
+  --button-focused-container-outline-color: var(
+    --md-comp-outlined-button-focused-container-outline-color
+  );
+  --button-pressed-container-outline-color: var(
+    --md-comp-outlined-button-pressed-container-outline-color
+  );
+
+  --button-content-color: var(--md-comp-outlined-button-label-text-color);
+  --button-disabled-content-color: color-mix(
+    in srgb,
+    var(--md-comp-outlined-button-disabled-label-text-color)
+      var(--md-comp-outlined-button-disabled-label-text-opacity),
+    transparent
+  );
+
+  --button-label-text-font: var(--md-comp-outlined-button-label-text-font);
+  --button-label-text-line-height: var(
+    --md-comp-outlined-button-label-text-line-height
+  );
+  --button-label-text-size: var(--md-comp-outlined-button-label-text-size);
+  --button-label-text-tracking: var(
+    --md-comp-outlined-button-label-text-tracking
+  );
+  --button-label-text-weight: var(--md-comp-outlined-button-label-text-weight);
+
+  --button-hovered-container-state-layer-color: var(
+    --md-comp-outlined-button-hovered-container-state-layer-color
+  );
+  --button-hovered-container-state-layer-opacity: var(
+    --md-comp-outlined-button-hovered-container-state-layer-opacity
+  );
+  --button-focused-container-state-layer-color: var(
+    --md-comp-outlined-button-focused-container-state-layer-color
+  );
+  --button-focused-container-state-layer-opacity: var(
+    --md-comp-outlined-button-focused-container-state-layer-opacity
+  );
+  --button-pressed-container-state-layer-color: var(
+    --md-comp-outlined-button-pressed-container-state-layer-color
+  );
+  --button-pressed-container-state-layer-opacity: var(
+    --md-comp-outlined-button-pressed-container-state-layer-opacity
+  );
+}
+.Button.Text {
+  --button-content-color: var(--md-comp-text-button-label-text-color);
+  --button-disabled-content-color: color-mix(
+    in srgb,
+    var(--md-comp-text-button-disabled-label-text-color)
+      var(--md-comp-text-button-disabled-label-text-opacity),
+    transparent
+  );
+
+  --button-label-text-font: var(--md-comp-text-button-label-text-font);
+  --button-label-text-line-height: var(
+    --md-comp-text-button-label-text-line-height
+  );
+  --button-label-text-size: var(--md-comp-text-button-label-text-size);
+  --button-label-text-tracking: var(--md-comp-text-button-label-text-tracking);
+  --button-label-text-weight: var(--md-comp-text-button-label-text-weight);
+
+  --button-hovered-container-state-layer-color: var(
+    --md-comp-text-button-hovered-container-state-layer-color
+  );
+  --button-hovered-container-state-layer-opacity: var(
+    --md-comp-text-button-hovered-container-state-layer-opacity
+  );
+  --button-focused-container-state-layer-color: var(
+    --md-comp-text-button-focused-container-state-layer-color
+  );
+  --button-focused-container-state-layer-opacity: var(
+    --md-comp-text-button-focused-container-state-layer-opacity
+  );
+  --button-pressed-container-state-layer-color: var(
+    --md-comp-text-button-pressed-container-state-layer-color
+  );
+  --button-pressed-container-state-layer-opacity: var(
+    --md-comp-text-button-pressed-container-state-layer-opacity
+  );
 }
 
 /* https://m3.material.io/components/buttons/specs#85e63496-f905-4978-ae35-69ab83b70536 */
@@ -50,55 +308,82 @@
 
   border: none;
 }
+.Button.Text {
+  padding-inline: 12px;
+}
 .Button:not(:disabled) {
   cursor: pointer;
 }
-.Button .icon:first-child {
+.Button > .Icon:first-child {
   --icon-size: 18px;
 }
-.Button:has(.icon:first-child) {
+.Button:has(> .Icon:first-child) {
   padding-left: 16px;
   padding-right: 24px;
 }
 
 .Button {
-  color: var(--button-content-color);
-  font-family: var(--md-comp-filled-button-label-text-font);
-  line-height: var(--md-comp-filled-button-label-text-line-height);
-  font-size: var(--md-comp-filled-button-label-text-size);
-  letter-spacing: var(--md-comp-filled-button-label-text-tracking);
-  font-weight: var(--md-comp-filled-button-label-text-weight);
+  font-family: var(--button-label-text-font);
+  line-height: var(--button-label-text-line-height);
+  font-size: var(--button-label-text-size);
+  letter-spacing: var(--button-label-text-tracking);
+  font-weight: var(--button-label-text-weight);
+}
 
+.Button:not(:disabled) {
+  color: var(--button-content-color);
   background-color: var(--button-container-color);
+  outline: var(--button-container-outline-color) solid
+    var(--button-container-outline-width);
   box-shadow: 0 0 var(--button-default-elevation)
-    var(--md-comp-filled-button-container-shadow-color);
+    var(--button-container-shadow-color);
+}
+.Button:not(:disabled) .Icon {
+  --icon-color: var(--button-content-color);
 }
 
 .Button:hover {
+  outline: var(--button-hovered-container-outline-color) solid
+    var(--button-container-outline-width);
   box-shadow: 0 0 var(--button-hovered-elevation)
-    var(--md-comp-filled-button-container-shadow-color);
+    var(--button-container-shadow-color);
 }
 
 .Button:focus {
+  outline: var(--button-focused-container-outline-color) solid
+    var(--button-container-outline-width);
   box-shadow: 0 0 var(--button-focused-elevation)
-    var(--md-comp-filled-button-container-shadow-color);
+    var(--button-container-shadow-color);
 }
 
 .Button:active {
+  outline: var(--button-pressed-container-outline-color) solid
+    var(--button-container-outline-width);
   box-shadow: 0 0 var(--button-pressed-elevation)
-    var(--md-comp-filled-button-container-shadow-color);
+    var(--button-container-shadow-color);
 }
 
 .Button:disabled {
   background-color: var(--button-disabled-container-color);
   color: var(--button-disabled-content-color);
+  outline: var(--button-disabled-container-outline-color) solid
+    var(--button-container-outline-width);
   box-shadow: 0 0 var(--button-disabled-elevation)
-    var(--md-comp-filled-button-container-shadow-color);
+    var(--button-container-shadow-color);
+}
+.Button:disabled .Icon {
+  --icon-color: var(--button-disabled-content-color);
 }
 
 .Button:focus {
   -webkit-tap-highlight-color: transparent;
-  outline: none;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
+}
+
+.Button > .Ripple {
+  --ripple-hovered-color: var(--button-hovered-container-state-layer-color);
+  --ripple-hovered-opacity: var(--button-hovered-container-state-layer-opacity);
+  --ripple-pressed-color: var(--button-pressed-container-state-layer-color);
+  --ripple-pressed-opacity: var(--button-pressed-container-state-layer-opacity);
 }

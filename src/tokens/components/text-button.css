@@ -1,0 +1,30 @@
+:root, .MaterialTheme {
+  --md-comp-text-button-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-text-button-label-text-color: var(--md-sys-color-primary);
+  --md-comp-text-button-label-text-font: var(--md-sys-typescale-label-large-font);
+  --md-comp-text-button-label-text-line-height: var(--md-sys-typescale-label-large-line-height);
+  --md-comp-text-button-label-text-size: var(--md-sys-typescale-label-large-size);
+  --md-comp-text-button-label-text-tracking: var(--md-sys-typescale-label-large-tracking);
+  --md-comp-text-button-label-text-weight: var(--md-sys-typescale-label-large-weight);
+  --md-comp-text-button-icon-color: var(--md-sys-color-primary);
+
+  --md-comp-text-button-disabled-label-text-color: var(--md-sys-color-on-surface);
+  --md-comp-text-button-disabled-label-text-opacity: 38%;
+  --md-comp-text-button-disabled-icon-color: var(--md-sys-color-on-surface);
+  --md-comp-text-button-disabled-icon-opacity: 38%;
+
+  --md-comp-text-button-hovered-container-state-layer-color: var(--md-sys-color-primary);
+  --md-comp-text-button-hovered-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --md-comp-text-button-hovered-label-text-color: var(--md-sys-color-primary);
+  --md-comp-text-button-hovered-icon-color: var(--md-sys-color-primary);
+
+  --md-comp-text-button-focused-container-state-layer-color: var(--md-sys-color-primary);
+  --md-comp-text-button-focused-container-state-layer-opacity: var(--md-sys-state-focus-state-layer-opacity);
+  --md-comp-text-button-focused-label-text-color: var(--md-sys-color-primary);
+  --md-comp-text-button-focused-icon-color: var(--md-sys-color-primary);
+
+  --md-comp-text-button-pressed-container-state-layer-color: var(--md-sys-color-primary);
+  --md-comp-text-button-pressed-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --md-comp-text-button-pressed-label-text-color: var(--md-sys-color-primary);
+  --md-comp-text-button-pressed-icon-color: var(--md-sys-color-primary);
+}

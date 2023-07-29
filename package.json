@@ -57,6 +57,7 @@
     "typescript": "^5.1.6"
   },
   "dependencies": {
+    "@geometricpanda/storybook-addon-badges": "^2.0.0",
     "@material/material-color-utilities": "^0.2.7"
   }
 }

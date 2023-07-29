@@ -1,1 +1,6 @@
-{ "files.associations": { "*.json": "jsonc" } }
+{
+  "files.associations": { "*.json": "jsonc" },
+  "explorer.fileNesting.patterns": {
+    "*.tsx": "${capture}.css, ${capture}.mdx, ${capture}.stories.tsx"
+  }
+}

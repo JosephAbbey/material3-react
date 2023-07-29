@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
 import { Ripple } from './Ripple';
 import React from 'react';
@@ -6,21 +7,6 @@ import React from 'react';
 const meta = {
   title: 'Components/Ripple',
   component: Ripple,
-  parameters: {
-    layout: 'centered',
-  },
-  argTypes: {
-    enabled: {
-      control: 'boolean',
-    },
-  },
-} satisfies Meta<typeof Ripple>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Box: Story = {
   render: (args) => (
     <div
       style={{
@@ -31,7 +17,23 @@ export const Box: Story = {
       <Ripple {...args} />
     </div>
   ),
+  parameters: {
+    layout: 'centered',
+    badges: [BADGE.EXPERIMENTAL],
+  },
+  argTypes: {
+    disabled: {
+      control: 'boolean',
+    },
+  },
+} satisfies Meta<typeof Ripple>;
+
+export default meta;
+type Story = StoryObj<typeof meta>;
+
+// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+export const Box: Story = {
   args: {
-    enabled: true,
+    disabled: false,
   },
 };

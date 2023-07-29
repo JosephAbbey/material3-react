@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
+import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
 import { Icon } from './Icon';
 
@@ -7,6 +8,7 @@ const meta = {
   component: Icon,
   parameters: {
     layout: 'centered',
+    badges: [BADGE.EXPERIMENTAL],
   },
   argTypes: {},
 } satisfies Meta<typeof Icon>;

@@ -10,6 +10,7 @@ const config: StorybookConfig = {
     '@storybook/addon-a11y',
     '@storybook/addon-storysource',
     '@storybook/addon-styling',
+    '@geometricpanda/storybook-addon-badges',
   ],
   core: {
     builder: {

@@ -1,6 +1,4 @@
-@import url(../baseline/baseline.css);
-
-:root {
+:root, .MaterialTheme {
   --md-comp-filled-icon-button-icon-size: 24px;
   --md-comp-filled-icon-button-default-icon-color: var(--md-sys-color-on-primary);
   --md-comp-filled-icon-button-unselected-icon-color: var(--md-sys-color-primary);
