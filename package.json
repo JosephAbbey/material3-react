@@ -59,5 +59,8 @@
   "dependencies": {
     "@geometricpanda/storybook-addon-badges": "^2.0.0",
     "@material/material-color-utilities": "^0.2.7"
+  },
+  "storybook": {
+    "url": "https://material3-react.josephabbey.dev"
   }
 }

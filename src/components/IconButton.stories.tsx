@@ -13,17 +13,22 @@ const meta = {
     badges: [BADGE.BETA],
   },
   argTypes: {
+    onClick: {
+      action: 'clicked',
+      description: 'Called when this icon button is clicked.',
+    },
     disabled: {
       control: 'boolean',
+      description:
+        'Controls the enabled state of this icon button. When true, this component will not respond to user input, and it will appear visually disabled and disabled to accessibility services.',
     },
     type: {
       control: 'select',
       options: IconButtonType,
       description: 'The type of button to display.',
     },
-    onClick: { action: 'clicked' },
-    children: {
-      control: 'string',
+    style: {
+      description: 'CSS styles to be applied to the HTMLButtonElement.',
     },
   },
 } satisfies Meta<typeof IconButton>;

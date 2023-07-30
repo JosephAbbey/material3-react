@@ -9,6 +9,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <MaterialTheme
+        // sourceColor={0x7f67be}
         style={{
           padding: '2rem',
           border:

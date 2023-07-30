@@ -15,7 +15,7 @@ const meta = {
   argTypes: {
     onClick: {
       action: 'clicked',
-      description: 'Called when this icon button is clicked.',
+      description: 'Called when this button is clicked.',
     },
     type: {
       control: 'select',
@@ -25,7 +25,7 @@ const meta = {
     disabled: {
       control: 'boolean',
       description:
-        'Controls the enabled state of this icon button. When true, this component will not respond to user input, and it will appear visually disabled and disabled to accessibility services.',
+        'Controls the enabled state of this button. When true, this component will not respond to user input, and it will appear visually disabled and disabled to accessibility services.',
     },
     style: {
       description: 'CSS styles to be applied to the HTMLButtonElement.',

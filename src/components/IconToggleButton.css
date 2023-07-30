@@ -1,27 +1,22 @@
-@import url(../tokens/components/standard-icon-button.css);
 @import url(../tokens/components/filled-icon-button.css);
+@import url(../tokens/components/tonal-icon-button.css);
+@import url(../tokens/components/outlined-icon-button.css);
+@import url(../tokens/components/standard-icon-button.css);
 
 /* IconToggleButtonDefaults */
-.IconToggleButton {
-  --button-icon-color: var(
-    --md-comp-standard-icon-button-unselected-icon-color
-  );
-  --button-disabled-icon-color: color-mix(
-    in srgb,
-    var(--md-comp-standard-icon-button-disabled-icon-color)
-      var(--md-comp-standard-icon-button-disabled-icon-opacity),
-    transparent
-  );
-
-  --button-container-size: var(--md-comp-standard-icon-button-container-size);
-  --button-container-shape: var(--md-comp-standard-icon-button-container-shape);
-  --button-icon-size: var(--md-comp-standard-icon-button-icon-size);
-}
-.IconToggleButton.filled {
-  --button-container-color: var(
+.IconToggleButton.Filled {
+  --button-unselected-container-color: var(
     --md-comp-filled-icon-button-unselected-container-color
   );
-  --button-icon-color: var(--md-comp-filled-icon-button-unselected-icon-color);
+  --button-selected-container-color: var(
+    --md-comp-filled-icon-button-selected-container-color
+  );
+  --button-unselected-icon-color: var(
+    --md-comp-filled-icon-button-unselected-icon-color
+  );
+  --button-selected-icon-color: var(
+    --md-comp-filled-icon-button-selected-icon-color
+  );
   --button-disabled-container-color: color-mix(
     in srgb,
     var(--md-comp-filled-icon-button-disabled-container-color)
@@ -38,15 +33,218 @@
   --button-container-size: var(--md-comp-filled-icon-button-container-size);
   --button-container-shape: var(--md-comp-filled-icon-button-container-shape);
   --button-icon-size: var(--md-comp-filled-icon-button-icon-size);
-}
-.IconToggleButton.selected {
-  --button-icon-color: var(--md-comp-standard-icon-button-selected-icon-color);
-}
-.IconToggleButton.filled.selected {
-  --button-container-color: var(
-    --md-comp-filled-icon-button-selected-container-color
+
+  --button-unselected-hovered-container-state-layer-color: var(
+    --md-comp-filled-icon-button-unselected-hovered-container-state-layer-color
   );
-  --button-icon-color: var(--md-comp-filled-icon-button-selected-icon-color);
+  --button-selected-hovered-container-state-layer-color: var(
+    --md-comp-filled-icon-button-selected-hovered-container-state-layer-color
+  );
+  --button-hovered-container-state-layer-opacity: var(
+    --md-comp-filled-icon-button-hovered-container-state-layer-opacity
+  );
+  --button-unselected-focused-container-state-layer-color: var(
+    --md-comp-filled-icon-button-unselected-focused-container-state-layer-color
+  );
+  --button-selected-focused-container-state-layer-color: var(
+    --md-comp-filled-icon-button-selected-focused-container-state-layer-color
+  );
+  --button-focused-container-state-layer-opacity: var(
+    --md-comp-filled-icon-button-focused-container-state-layer-opacity
+  );
+  --button-unselected-pressed-container-state-layer-color: var(
+    --md-comp-filled-icon-button-unselected-pressed-container-state-layer-color
+  );
+  --button-selected-pressed-container-state-layer-color: var(
+    --md-comp-filled-icon-button-selected-pressed-container-state-layer-color
+  );
+  --button-pressed-container-state-layer-opacity: var(
+    --md-comp-filled-icon-button-pressed-container-state-layer-opacity
+  );
+}
+.IconToggleButton.Tonal {
+  --button-unselected-container-color: var(
+    --md-comp-tonal-icon-button-unselected-container-color
+  );
+  --button-selected-container-color: var(
+    --md-comp-tonal-icon-button-selected-container-color
+  );
+  --button-unselected-icon-color: var(
+    --md-comp-tonal-icon-button-unselected-icon-color
+  );
+  --button-selected-icon-color: var(
+    --md-comp-tonal-icon-button-selected-icon-color
+  );
+  --button-disabled-container-color: color-mix(
+    in srgb,
+    var(--md-comp-tonal-icon-button-disabled-container-color)
+      var(--md-comp-tonal-icon-button-disabled-container-opacity),
+    transparent
+  );
+  --button-disabled-icon-color: color-mix(
+    in srgb,
+    var(--md-comp-tonal-icon-button-disabled-icon-color)
+      var(--md-comp-tonal-icon-button-disabled-icon-opacity),
+    transparent
+  );
+
+  --button-container-size: var(--md-comp-tonal-icon-button-container-size);
+  --button-container-shape: var(--md-comp-tonal-icon-button-container-shape);
+  --button-icon-size: var(--md-comp-tonal-icon-button-icon-size);
+
+  --button-unselected-hovered-container-state-layer-color: var(
+    --md-comp-tonal-icon-button-unselected-hovered-container-state-layer-color
+  );
+  --button-selected-hovered-container-state-layer-color: var(
+    --md-comp-tonal-icon-button-selected-hovered-container-state-layer-color
+  );
+  --button-hovered-container-state-layer-opacity: var(
+    --md-comp-tonal-icon-button-hovered-container-state-layer-opacity
+  );
+  --button-unselected-focused-container-state-layer-color: var(
+    --md-comp-tonal-icon-button-unselected-focused-container-state-layer-color
+  );
+  --button-selected-focused-container-state-layer-color: var(
+    --md-comp-tonal-icon-button-selected-focused-container-state-layer-color
+  );
+  --button-focused-container-state-layer-opacity: var(
+    --md-comp-tonal-icon-button-focused-container-state-layer-opacity
+  );
+  --button-unselected-pressed-container-state-layer-color: var(
+    --md-comp-tonal-icon-button-unselected-pressed-container-state-layer-color
+  );
+  --button-selected-pressed-container-state-layer-color: var(
+    --md-comp-tonal-icon-button-selected-pressed-container-state-layer-color
+  );
+  --button-pressed-container-state-layer-opacity: var(
+    --md-comp-tonal-icon-button-pressed-container-state-layer-opacity
+  );
+}
+.IconToggleButton.Outlined {
+  --button-unselected-container-outline-width: var(
+    --md-comp-outlined-icon-button-unselected-container-outline-width
+  );
+  --button-unselected-container-outline-color: var(
+    --md-comp-outlined-icon-button-unselected-container-outline-color
+  );
+  --button-selected-container-color: var(
+    --md-comp-outlined-icon-button-selected-container-color
+  );
+  --button-disabled-container-outline-color: color-mix(
+    in srgb,
+    var(--md-comp-outlined-icon-button-disabled-container-outline-color)
+      var(--md-comp-outlined-icon-button-disabled-container-outline-opacity),
+    transparent
+  );
+  --button-unselected-hovered-container-outline-color: var(
+    --md-comp-outlined-icon-button-unselected-hovered-container-outline-color
+  );
+  --button-selected-hovered-container-outline-color: var(
+    --md-comp-outlined-icon-button-selected-hovered-container-outline-color
+  );
+  --button-unselected-focused-container-outline-color: var(
+    --md-comp-outlined-icon-button-unselected-focused-container-outline-color
+  );
+  --button-selected-focused-container-outline-color: var(
+    --md-comp-outlined-icon-button-selected-focused-container-outline-color
+  );
+  --button-unselected-pressed-container-outline-color: var(
+    --md-comp-outlined-icon-button-unselected-pressed-container-outline-color
+  );
+  --button-selected-pressed-container-outline-color: var(
+    --md-comp-outlined-icon-button-selected-pressed-container-outline-color
+  );
+
+  --button-unselected-icon-color: var(
+    --md-comp-outlined-icon-button-unselected-icon-color
+  );
+  --button-selected-icon-color: var(
+    --md-comp-outlined-icon-button-selected-icon-color
+  );
+  --button-disabled-icon-color: color-mix(
+    in srgb,
+    var(--md-comp-outlined-icon-button-disabled-icon-color)
+      var(--md-comp-outlined-icon-button-disabled-icon-opacity),
+    transparent
+  );
+
+  --button-container-size: var(--md-comp-outlined-icon-button-container-size);
+  --button-container-shape: var(--md-comp-outlined-icon-button-container-shape);
+  --button-icon-size: var(--md-comp-outlined-icon-button-icon-size);
+
+  --button-unselected-hovered-container-state-layer-color: var(
+    --md-comp-outlined-icon-button-unselected-hovered-container-state-layer-color
+  );
+  --button-selected-hovered-container-state-layer-color: var(
+    --md-comp-outlined-icon-button-selected-hovered-container-state-layer-color
+  );
+  --button-hovered-container-state-layer-opacity: var(
+    --md-comp-outlined-icon-button-hovered-container-state-layer-opacity
+  );
+  --button-unselected-focused-container-state-layer-color: var(
+    --md-comp-outlined-icon-button-unselected-focused-container-state-layer-color
+  );
+  --button-selected-focused-container-state-layer-color: var(
+    --md-comp-outlined-icon-button-selected-focused-container-state-layer-color
+  );
+  --button-focused-container-state-layer-opacity: var(
+    --md-comp-outlined-icon-button-focused-container-state-layer-opacity
+  );
+  --button-unselected-pressed-container-state-layer-color: var(
+    --md-comp-outlined-icon-button-unselected-pressed-container-state-layer-color
+  );
+  --button-selected-pressed-container-state-layer-color: var(
+    --md-comp-outlined-icon-button-selected-pressed-container-state-layer-color
+  );
+  --button-pressed-container-state-layer-opacity: var(
+    --md-comp-outlined-icon-button-pressed-container-state-layer-opacity
+  );
+}
+.IconToggleButton.Standard {
+  --button-unselected-icon-color: var(
+    --md-comp-standard-icon-button-unselected-icon-color
+  );
+  --button-selected-icon-color: var(
+    --md-comp-standard-icon-button-selected-icon-color
+  );
+  --button-disabled-icon-color: color-mix(
+    in srgb,
+    var(--md-comp-standard-icon-button-disabled-icon-color)
+      var(--md-comp-standard-icon-button-disabled-icon-opacity),
+    transparent
+  );
+
+  --button-container-size: var(--md-comp-standard-icon-button-container-size);
+  --button-container-shape: var(--md-comp-standard-icon-button-container-shape);
+  --button-icon-size: var(--md-comp-standard-icon-button-icon-size);
+
+  --button-unselected-hovered-container-state-layer-color: var(
+    --md-comp-standard-icon-button-unselected-hovered-container-state-layer-color
+  );
+  --button-selected-hovered-container-state-layer-color: var(
+    --md-comp-standard-icon-button-selected-hovered-container-state-layer-color
+  );
+  --button-hovered-container-state-layer-opacity: var(
+    --md-comp-standard-icon-button-hovered-container-state-layer-opacity
+  );
+  --button-unselected-focused-container-state-layer-color: var(
+    --md-comp-standard-icon-button-unselected-focused-container-state-layer-color
+  );
+  --button-selected-focused-container-state-layer-color: var(
+    --md-comp-standard-icon-button-selected-focused-container-state-layer-color
+  );
+  --button-focused-container-state-layer-opacity: var(
+    --md-comp-standard-icon-button-focused-container-state-layer-opacity
+  );
+  --button-unselected-pressed-container-state-layer-color: var(
+    --md-comp-standard-icon-button-unselected-pressed-container-state-layer-color
+  );
+  --button-selected-pressed-container-state-layer-color: var(
+    --md-comp-standard-icon-button-selected-pressed-container-state-layer-color
+  );
+  --button-pressed-container-state-layer-opacity: var(
+    --md-comp-standard-icon-button-pressed-container-state-layer-opacity
+  );
 }
 
 /* https://m3.material.io/components/icon-buttons/specs#545cdffc-4b0f-4f4e-ae55-98031586b209 */
@@ -62,21 +260,88 @@
 
   border: none;
 }
-.IconToggleButton > .Icon {
-  --icon-size: var(--button-icon-size);
-}
 .IconToggleButton:not(:disabled) {
   cursor: pointer;
 }
+.IconToggleButton > .Icon {
+  --icon-size: var(--button-icon-size);
+}
 
-.IconToggleButton {
-  color: var(--button-icon-color);
-  background-color: var(--button-container-color);
+.IconToggleButton:not(:disabled):not(.selected) {
+  color: var(--button-unselected-icon-color);
+  background-color: var(--button-unselected-container-color);
+  outline: var(--button-unselected-container-outline-color) solid
+    var(--button-unselected-container-outline-width);
+}
+.IconToggleButton:not(:disabled):not(.selected) > .Icon {
+  --icon-color: var(--button-unselected-icon-color);
+}
+.IconToggleButton:not(:disabled).selected {
+  color: var(--button-selected-icon-color);
+  background-color: var(--button-selected-container-color);
+  outline: var(--button-selected-container-outline-color) solid
+    var(--button-selected-container-outline-width);
+}
+.IconToggleButton:not(:disabled).selected > .Icon {
+  --icon-color: var(--button-selected-icon-color);
+}
+
+.IconToggleButton:not(:disabled):not(.selected):hover {
+  outline: var(--button-unselected-hovered-container-outline-color) solid
+    var(--button-unselected-container-outline-width);
+}
+.IconToggleButton:not(:disabled).unselected:hover {
+  outline: var(--button-selected-hovered-container-outline-color) solid
+    var(--button-selected-container-outline-width);
+}
+
+.IconToggleButton:not(:disabled):not(.selected):focus {
+  outline: var(--button-unselected-focused-container-outline-color) solid
+    var(--button-unselected-container-outline-width);
+}
+.IconToggleButton:not(:disabled).selected:focus {
+  outline: var(--button-selected-focused-container-outline-color) solid
+    var(--button-selected-container-outline-width);
+}
+
+.IconToggleButton:not(:disabled):not(.selected):active {
+  outline: var(--button-unselected-pressed-container-outline-color) solid
+    var(--button-unselected-container-outline-width);
+}
+.IconToggleButton:not(:disabled).selected:active {
+  outline: var(--button-selected-pressed-container-outline-color) solid
+    var(--button-selected-container-outline-width);
 }
 
 .IconToggleButton:disabled {
   background-color: var(--button-disabled-container-color);
   color: var(--button-disabled-icon-color);
+  outline: var(--button-disabled-container-outline-color) solid
+    var(--button-unselected-container-outline-width);
+}
+.IconToggleButton:disabled > .Icon {
+  --icon-color: var(--button-disabled-icon-color);
+}
+
+.IconToggleButton:not(.selected) > .Ripple {
+  --ripple-hovered-color: var(
+    --button-unselected-hovered-container-state-layer-color
+  );
+  --ripple-hovered-opacity: var(--button-hovered-container-state-layer-opacity);
+  --ripple-pressed-color: var(
+    --button-unselected-pressed-container-state-layer-color
+  );
+  --ripple-pressed-opacity: var(--button-pressed-container-state-layer-opacity);
+}
+.IconToggleButton.selected > .Ripple {
+  --ripple-hovered-color: var(
+    --button-selected-hovered-container-state-layer-color
+  );
+  --ripple-hovered-opacity: var(--button-hovered-container-state-layer-opacity);
+  --ripple-pressed-color: var(
+    --button-selected-pressed-container-state-layer-color
+  );
+  --ripple-pressed-opacity: var(--button-pressed-container-state-layer-opacity);
 }
 
 .IconToggleButton {

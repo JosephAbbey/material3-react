@@ -1,31 +1,35 @@
 import React, { PropsWithChildren } from 'react';
 import './IconToggleButton.css';
 import { Ripple } from './Ripple';
+import { IconButtonType } from './IconButton';
 
 export type IconToggleButtonProps = PropsWithChildren<{
+  /** Called when this button is clicked. */
   onClick: () => void;
+  /** The type of button to display. */
   disabled?: boolean;
-  filled?: boolean;
+  /** Controls the enabled state of this button. When true, this component will not respond to user input, and it will appear visually disabled and disabled to accessibility services. */
+  type?: IconButtonType;
+  /** Controls the selected state of this button. */
   selected?: boolean;
+  /** CSS styles to be applied to the HTMLButtonElement. */
   style?: React.CSSProperties;
 }>;
 
 /**
- * Primary UI component for user interaction
+ * https://m3.material.io/components/icon-buttons/overview
  */
 export const IconToggleButton = ({
   onClick,
   disabled = false,
-  filled = false,
+  type = IconButtonType.Standard,
   selected = false,
   style,
   children,
 }: IconToggleButtonProps) => {
   return (
     <button
-      className={`IconToggleButton ${filled ? 'filled' : ''} ${
-        selected ? 'selected' : ''
-      }`}
+      className={`IconToggleButton ${type} ${selected ? 'selected' : ''}`}
       type='button'
       onClick={onClick}
       disabled={disabled}

@@ -40,7 +40,10 @@ export const MaterialTheme = ({
   useEffect(() => {
     if (theme) {
       const o: Record<`--${string}`, string> = {};
-      const tones = [0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 95, 99, 100];
+      const tones = [
+        0, 4, 6, 10, 12, 17, 20, 22, 24, 30, 40, 50, 60, 80, 87, 90, 92, 95, 96,
+        98, 100,
+      ];
       for (const [key, palette] of Object.entries(theme.palettes)) {
         const paletteKey = key
           .replace(/([a-z])([A-Z])/g, '$1-$2')

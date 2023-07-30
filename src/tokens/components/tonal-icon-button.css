@@ -1,7 +1,7 @@
 :root, .MaterialTheme {
   --md-comp-tonal-icon-button-icon-size: 24px;
   --md-comp-tonal-icon-button-default-icon-color: var(--md-sys-color-on-secondary-container);
-  --md-comp-tonal-icon-button-unselected-icon-color: var(--md-sys-color-surface-variant);
+  --md-comp-tonal-icon-button-unselected-icon-color: var(--md-sys-color-on-surface-variant);
   --md-comp-tonal-icon-button-selected-icon-color: var(--md-sys-color-on-secondary-container);
   --md-comp-tonal-icon-button-container-size: 40px;
   --md-comp-tonal-icon-button-container-shape: /* var(--md-sys-shape-corner-full) */ 50%;

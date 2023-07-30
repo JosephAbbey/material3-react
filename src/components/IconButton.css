@@ -225,7 +225,7 @@
     var(--button-container-outline-width);
 }
 .IconButton:disabled > .Icon {
-  --icon-color: var(--button-disabled-content-color);
+  --icon-color: var(--button-disabled-icon-color);
 }
 
 .IconButton > .Ripple {
