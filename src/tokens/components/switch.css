@@ -1,0 +1,41 @@
+:root, .MaterialTheme {
+  --md-comp-switch-checked-track-color: var(--md-sys-color-primary);
+  --md-comp-switch-unchecked-track-color: var(--md-sys-color-surface-container-highest);
+  --md-comp-switch-unchecked-track-outline-color: var(--md-sys-color-outline);
+  --md-comp-switch-checked-thumb-color: var(--md-sys-color-on-primary);
+  --md-comp-switch-unchecked-thumb-color: var(--md-sys-color-outline);
+  --md-comp-switch-checked-icon-color: var(--md-sys-color-on-primary-container);
+  --md-comp-switch-unchecked-icon-color: var(--md-sys-color-surface-container-highest);
+
+  --md-comp-switch-disabled-checked-track-color: var(--md-sys-color-on-surface);
+  --md-comp-switch-disabled-checked-track-opacity: 12%;
+  --md-comp-switch-disabled-unchecked-track-color: var(--md-sys-color-surface-container-highest);
+  --md-comp-switch-disabled-unchecked-track-opacity: 12%;
+  --md-comp-switch-disabled-unchecked-track-outline-color: var(--md-sys-color-on-surface);
+  --md-comp-switch-disabled-checked-thumb-color: var(--md-sys-color-surface);
+  --md-comp-switch-disabled-checked-thumb-opacity: 100%;
+  --md-comp-switch-disabled-unchecked-thumb-color: var(--md-sys-color-on-surface);
+  --md-comp-switch-disabled-unchecked-thumb-opacity: 38%;
+  --md-comp-switch-disabled-checked-icon-color: var(--md-sys-color-on-surface);
+  --md-comp-switch-disabled-checked-icon-opacity: 38%;
+  --md-comp-switch-disabled-unchecked-icon-color: var(--md-sys-color-surface-container-highest);
+  --md-comp-switch-disabled-unchecked-icon-opacity: 38%;
+
+  --md-comp-switch-hovered-thumb-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --md-comp-switch-checked-hovered-thumb-container-state-layer-color: var(--md-sys-color-primary);
+  --md-comp-switch-unchecked-hovered-thumb-container-state-layer-color: var(--md-sys-color-on-surface);
+  --md-comp-switch-checked-hovered-thumb-color: var(--md-sys-color-primary-container);
+  --md-comp-switch-unchecked-hovered-thumb-color: var(--md-sys-color-on-surface-variant);
+
+  --md-comp-switch-focused-thumb-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --md-comp-switch-checked-focused-thumb-container-state-layer-color: var(--md-sys-color-primary);
+  --md-comp-switch-unchecked-focused-thumb-container-state-layer-color: var(--md-sys-color-on-surface);
+  --md-comp-switch-checked-focused-thumb-color: var(--md-sys-color-primary-container);
+  --md-comp-switch-unchecked-focused-thumb-color: var(--md-sys-color-on-surface-variant);
+
+  --md-comp-switch-pressed-thumb-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --md-comp-switch-checked-pressed-thumb-container-state-layer-color: var(--md-sys-color-primary);
+  --md-comp-switch-unchecked-pressed-thumb-container-state-layer-color: var(--md-sys-color-on-surface);
+  --md-comp-switch-checked-pressed-thumb-color: var(--md-sys-color-primary-container);
+  --md-comp-switch-unchecked-pressed-thumb-color: var(--md-sys-color-on-surface-variant);
+}

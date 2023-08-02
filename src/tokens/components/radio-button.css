@@ -1,0 +1,30 @@
+:root, .MaterialTheme {
+  --md-comp-radio-button-checked-icon-color: var(--md-sys-color-primary);
+  --md-comp-radio-button-unchecked-icon-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-radio-button-icon-size: 20px;
+  --md-comp-radio-button-container-size: 40px;
+  --md-comp-radio-button-container-shape: /* var(--md-sys-shape-corner-full) */ 50%;
+
+  --md-comp-radio-button-disabled-checked-icon-color: var(--md-sys-color-on-surface);
+  --md-comp-radio-button-disabled-checked-icon-opacity: 38%;
+  --md-comp-radio-button-disabled-unchecked-icon-color: var(--md-sys-color-on-surface);
+  --md-comp-radio-button-disabled-unchecked-icon-opacity: 38%;
+
+  --md-comp-radio-button-hovered-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --md-comp-radio-button-unchecked-hovered-container-state-layer-color: var(--md-sys-color-on-surface);
+  --md-comp-radio-button-unchecked-hovered-icon-color: var(--md-sys-color-on-surface);
+  --md-comp-radio-button-checked-hovered-container-state-layer-color: var(--md-sys-color-primary);
+  --md-comp-radio-button-checked-hovered-icon-color: var(--md-sys-color-primary);
+
+  --md-comp-radio-button-focused-container-state-layer-opacity: var(--md-sys-state-focus-state-layer-opacity);
+  --md-comp-radio-button-unchecked-focused-container-state-layer-color: var(--md-sys-color-on-surface);
+  --md-comp-radio-button-unchecked-focused-icon-color: var(--md-sys-color-on-surface);
+  --md-comp-radio-button-checked-focused-container-state-layer-color: var(--md-sys-color-primary);
+  --md-comp-radio-button-checked-focused-icon-color: var(--md-sys-color-on-primary);
+
+  --md-comp-radio-button-pressed-container-state-layer-opacity: var(--md-sys-state-pressed-state-layer-opacity);
+  --md-comp-radio-button-unchecked-pressed-container-state-layer-color: var(--md-sys-color-primary);
+  --md-comp-radio-button-unchecked-pressed-icon-color: var(--md-sys-color-primary);
+  --md-comp-radio-button-checked-pressed-container-state-layer-color: var(--md-sys-color-on-surface);
+  --md-comp-radio-button-checked-pressed-icon-color: var(--md-sys-color-on-surface);
+}

@@ -17,7 +17,7 @@
 :root,
 .MaterialTheme {
   color-scheme: dark;
-  color: var(--md-sys-color);
+  color: var(--md-sys-color-on-background);
   background-color: var(--md-sys-color-background);
 
   /* Primary */

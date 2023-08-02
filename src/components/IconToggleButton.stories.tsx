@@ -3,7 +3,7 @@ import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
 import { IconToggleButton } from './IconToggleButton';
 import { Icon } from './Icon';
-import React from 'react';
+import React, { useState } from 'react';
 import { IconButtonType } from './IconButton';
 
 const meta = {
@@ -187,5 +187,39 @@ export const OutlinedDisabled: Story = {
         <Icon icon='cable' />
       </>
     ),
+  },
+};
+
+export const Interactive: Story = {
+  render: () => {
+    const [selected, setSelected] = useState(false);
+    return (
+      <>
+        <IconToggleButton
+          onClick={() => setSelected(!selected)}
+          selected={selected}
+          type={IconButtonType.Standard}>
+          <Icon icon='cable' />
+        </IconToggleButton>
+        <IconToggleButton
+          onClick={() => setSelected(!selected)}
+          selected={selected}
+          type={IconButtonType.Filled}>
+          <Icon icon='cable' />
+        </IconToggleButton>
+        <IconToggleButton
+          onClick={() => setSelected(!selected)}
+          selected={selected}
+          type={IconButtonType.Tonal}>
+          <Icon icon='cable' />
+        </IconToggleButton>
+        <IconToggleButton
+          onClick={() => setSelected(!selected)}
+          selected={selected}
+          type={IconButtonType.Outlined}>
+          <Icon icon='cable' />
+        </IconToggleButton>
+      </>
+    );
   },
 };
