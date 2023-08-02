@@ -346,10 +346,10 @@
   );
 }
 
-.Switch {
+:is(.Switch, .Switch *) {
   user-select: none;
 }
-.Switch:focus {
+:is(.Switch, .Switch *):focus {
   -webkit-tap-highlight-color: transparent;
   -ms-touch-action: manipulation;
   touch-action: manipulation;
