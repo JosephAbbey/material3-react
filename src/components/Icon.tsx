@@ -2,13 +2,16 @@ import React from 'react';
 import './Icon.css';
 
 export type IconProps = {
+  /** Which icon to display. */
   icon: icon;
+  /** Whether the icon is filled. */
   filled?: boolean;
+  /** CSS styles to be applied to the HTMLDivElement. */
   style?: React.CSSProperties;
 };
 
 /**
- * Primary UI component for user interaction
+ * https://m3.material.io/styles/icons/overview
  */
 export const Icon = ({ icon, filled = false, style }: IconProps) => {
   return (

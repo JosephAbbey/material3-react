@@ -24,7 +24,7 @@ export type RadioButtonProps = {
 };
 
 /**
- * https://m3.material.io/components/buttons/overview
+ * https://m3.material.io/components/radio-button/overview
  */
 export const RadioButton = ({
   onClick,
@@ -32,7 +32,8 @@ export const RadioButton = ({
   checked = false,
   style,
   ...props
-}: RadioButtonProps & React.InputHTMLAttributes<HTMLInputElement>) => {
+}: RadioButtonProps &
+  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onClick'>) => {
   return (
     <span
       className={`RadioButton ${checked ? 'checked' : ''}`}

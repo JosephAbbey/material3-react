@@ -6,9 +6,9 @@ import { IconButtonType } from './IconButton';
 export type IconToggleButtonProps = PropsWithChildren<{
   /** Called when this button is clicked. */
   onClick: () => void;
-  /** The type of button to display. */
-  disabled?: boolean;
   /** Controls the enabled state of this button. When true, this component will not respond to user input, and it will appear visually disabled and disabled to accessibility services. */
+  disabled?: boolean;
+  /** The type of button to display. */
   type?: IconButtonType;
   /** Controls the selected state of this button. */
   selected?: boolean;

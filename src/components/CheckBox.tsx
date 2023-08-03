@@ -13,9 +13,9 @@ export type CheckBoxState = valueof<typeof CheckBoxState>;
 export type CheckBoxProps = {
   /** Called when this checkbox is clicked. */
   onClick: () => void;
-  /** The type of checkbox to display. */
+  /** Controls the enabled state of this checkbox. When true, this component will not respond to user input, and it will appear visually disabled and disabled to accessibility services. */
   disabled?: boolean;
-  /***/
+  /** Whether to use the error color scheme. */
   error?: boolean;
   /** Controls the checked state of this checkbox. */
   state?: CheckBoxState;
@@ -24,7 +24,7 @@ export type CheckBoxProps = {
 };
 
 /**
- * https://m3.material.io/components/checkboxes/overview
+ * https://m3.material.io/components/checkbox/overview
  */
 export const CheckBox = ({
   onClick,
@@ -33,7 +33,8 @@ export const CheckBox = ({
   state = CheckBoxState.Unchecked,
   style,
   ...props
-}: CheckBoxProps & React.InputHTMLAttributes<HTMLInputElement>) => {
+}: CheckBoxProps &
+  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onClick'>) => {
   return (
     <div
       className={`CheckBox ${state} ${error ? 'error' : ''} ${
