@@ -1,0 +1,216 @@
+@import url(../tokens/components/checkbox.css);
+
+.CheckBox {
+  --checkbox-unchecked-container-outline-color: var(
+    --md-comp-checkbox-unchecked-container-outline-color
+  );
+  --checkbox-checked-container-color: var(
+    --md-comp-checkbox-checked-container-color
+  );
+  --checkbox-checked-icon-color: var(--md-comp-checkbox-checked-icon-color);
+  --checkbox-error-unchecked-container-outline-color: var(
+    --md-comp-checkbox-error-unchecked-container-outline-color
+  );
+  --checkbox-error-checked-container-color: var(
+    --md-comp-checkbox-error-checked-container-color
+  );
+  --checkbox-error-checked-icon-color: var(
+    --md-comp-checkbox-error-checked-icon-color
+  );
+
+  --checkbox-container-size: var(--md-comp-checkbox-container-size);
+  --checkbox-container-shape: var(--md-comp-checkbox-container-shape);
+  --checkbox-unchecked-container-outline-width: var(
+    --md-comp-checkbox-unchecked-container-outline-width
+  );
+  --checkbox-checked-container-outline-width: var(
+    --md-comp-checkbox-checked-container-outline-width
+  );
+  --checkbox-icon-size: var(--md-comp-checkbox-icon-size);
+  --checkbox-state-layer-size: var(--md-comp-checkbox-state-layer-size);
+  --checkbox-state-layer-shape: var(--md-comp-checkbox-state-layer-shape);
+
+  --checkbox-disabled-unchecked-container-outline-color: color-mix(
+    in srgb,
+    var(--md-comp-checkbox-disabled-unchecked-container-outline-color)
+      var(--md-comp-checkbox-disabled-unchecked-container-outline-opacity),
+    transparent
+  );
+  --checkbox-disabled-unchecked-container-outline-width: var(
+    --md-comp-checkbox-disabled-unchecked-container-outline-width
+  );
+  --checkbox-disabled-checked-container-color: color-mix(
+    in srgb,
+    var(--md-comp-checkbox-disabled-checked-container-color)
+      var(--md-comp-checkbox-disabled-checked-container-opacity),
+    transparent
+  );
+  --checkbox-disabled-checked-container-outline-width: var(
+    --md-comp-checkbox-disabled-checked-container-outline-width
+  );
+  --checkbox-disabled-checked-icon-color: var(
+    --md-comp-checkbox-disabled-checked-icon-color
+  );
+
+  --checkbox-unchecked-hovered-container-state-layer-color: var(
+    --md-comp-checkbox-unchecked-hovered-container-state-layer-color
+  );
+  --checkbox-checked-hovered-container-state-layer-color: var(
+    --md-comp-checkbox-checked-hovered-container-state-layer-color
+  );
+  --checkbox-error-hovered-container-state-layer-color: var(
+    --md-comp-checkbox-error-hovered-container-state-layer-color
+  );
+  --checkbox-hovered-container-state-layer-opacity: var(
+    --md-comp-checkbox-hovered-container-state-layer-opacity
+  );
+  --checkbox-unchecked-focused-container-state-layer-color: var(
+    --md-comp-checkbox-unchecked-focused-container-state-layer-color
+  );
+  --checkbox-checked-focused-container-state-layer-color: var(
+    --md-comp-checkbox-checked-focused-container-state-layer-color
+  );
+  --checkbox-error-focused-container-state-layer-color: var(
+    --md-comp-checkbox-error-focused-container-state-layer-color
+  );
+  --checkbox-focused-container-state-layer-opacity: var(
+    --md-comp-checkbox-focused-container-state-layer-opacity
+  );
+  --checkbox-unchecked-pressed-container-state-layer-color: var(
+    --md-comp-checkbox-unchecked-pressed-container-state-layer-color
+  );
+  --checkbox-checked-pressed-container-state-layer-color: var(
+    --md-comp-checkbox-checked-pressed-container-state-layer-color
+  );
+  --checkbox-error-pressed-container-state-layer-color: var(
+    --md-comp-checkbox-error-pressed-container-state-layer-color
+  );
+  --checkbox-pressed-container-state-layer-opacity: var(
+    --md-comp-checkbox-pressed-container-state-layer-opacity
+  );
+}
+
+.CheckBox {
+  width: var(--checkbox-state-layer-size);
+  height: var(--checkbox-state-layer-size);
+  border-radius: var(--checkbox-state-layer-shape);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+}
+.CheckBox > input[type='checkbox'] {
+  opacity: 0;
+  position: absolute;
+}
+.CheckBox:not(.disabled) {
+  cursor: pointer;
+}
+.CheckBox > .Container {
+  width: var(--checkbox-container-size);
+  height: var(--checkbox-container-size);
+  border-radius: var(--checkbox-container-shape);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+
+  border: none;
+}
+.CheckBox > .Container > .Icon {
+  --icon-size: var(--checkbox-icon-size);
+}
+
+.CheckBox.unchecked > .Container {
+  border: var(--checkbox-unchecked-container-outline-color) solid
+    var(--checkbox-unchecked-container-outline-width);
+  box-sizing: border-box;
+}
+.CheckBox:is(.checked, .indeterminate) > .Container {
+  background-color: var(--checkbox-checked-container-color);
+}
+.CheckBox:is(.checked, .indeterminate) > .Container > .Icon {
+  --icon-color: var(--checkbox-checked-icon-color);
+  color: var(--checkbox-checked-icon-color);
+  font-weight: bold;
+}
+.CheckBox.unchecked.error > .Container {
+  border: var(--checkbox-error-unchecked-container-outline-color) solid
+    var(--checkbox-unchecked-container-outline-width);
+  box-sizing: border-box;
+}
+.CheckBox:is(.checked, .indeterminate).error > .Container {
+  background-color: var(--checkbox-error-checked-container-color);
+}
+.CheckBox:is(.checked, .indeterminate).error > .Container > .Icon {
+  --icon-color: var(--checkbox-error-checked-icon-color);
+  color: var(--checkbox-error-checked-icon-color);
+  font-weight: bold;
+}
+.CheckBox.unchecked.disabled > .Container {
+  border: var(--checkbox-disabled-unchecked-container-outline-color) solid
+    var(--checkbox-unchecked-container-outline-width);
+  box-sizing: border-box;
+}
+.CheckBox:is(.checked, .indeterminate).disabled > .Container {
+  background-color: var(--checkbox-disabled-checked-container-color);
+}
+.CheckBox:is(.checked, .indeterminate).disabled > .Container > .Icon {
+  --icon-color: var(--checkbox-disabled-checked-icon-color);
+  color: var(--checkbox-disabled-checked-icon-color);
+  font-weight: bold;
+}
+
+.CheckBox.unchecked > .Ripple {
+  --ripple-hovered-color: var(
+    --checkbox-unchecked-hovered-container-state-layer-color
+  );
+  --ripple-hovered-opacity: var(
+    --checkbox-hovered-container-state-layer-opacity
+  );
+  --ripple-pressed-color: var(
+    --checkbox-unchecked-pressed-container-state-layer-color
+  );
+  --ripple-pressed-opacity: var(
+    --checkbox-pressed-container-state-layer-opacity
+  );
+}
+.CheckBox:is(.checked, .indeterminate) > .Ripple {
+  --ripple-hovered-color: var(
+    --checkbox-checked-hovered-container-state-layer-color
+  );
+  --ripple-hovered-opacity: var(
+    --checkbox-hovered-container-state-layer-opacity
+  );
+  --ripple-pressed-color: var(
+    --checkbox-checked-pressed-container-state-layer-color
+  );
+  --ripple-pressed-opacity: var(
+    --checkbox-pressed-container-state-layer-opacity
+  );
+}
+.CheckBox.error > .Ripple {
+  --ripple-hovered-color: var(
+    --checkbox-error-hovered-container-state-layer-color
+  );
+  --ripple-hovered-opacity: var(
+    --checkbox-hovered-container-state-layer-opacity
+  );
+  --ripple-pressed-color: var(
+    --checkbox-error-pressed-container-state-layer-color
+  );
+  --ripple-pressed-opacity: var(
+    --checkbox-pressed-container-state-layer-opacity
+  );
+}
+
+.CheckBox {
+  user-select: none;
+}
+.CheckBox:focus {
+  -webkit-tap-highlight-color: transparent;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
+}

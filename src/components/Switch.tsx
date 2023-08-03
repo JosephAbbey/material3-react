@@ -30,13 +30,17 @@ export const Switch = ({
 }: SwitchProps & React.InputHTMLAttributes<HTMLInputElement>) => {
   return (
     <div
-      className={`Switch ${checked ? 'checked' : ''}`}
+      className={`Switch ${checked ? 'checked' : ''} ${
+        disabled ? 'disabled' : ''
+      }`}
       onClick={onClick}
       style={style}>
       <input type='checkbox' disabled={disabled} checked={checked} {...props} />
       <div className='Thumb'>
-        {checkedIcon && <span class='CheckedIcon'>{checkedIcon}</span>}
-        {uncheckedIcon && <span class='UncheckedIcon'>{uncheckedIcon}</span>}
+        {checkedIcon && <span className='CheckedIcon'>{checkedIcon}</span>}
+        {uncheckedIcon && (
+          <span className='UncheckedIcon'>{uncheckedIcon}</span>
+        )}
         <Ripple disabled={disabled} />
       </div>
     </div>

@@ -69,6 +69,13 @@ export const Interactive: Story = {
           onClick={() => setSelected(2)}
           checked={selected == 2}
         />
+        <RadioButton
+          name='Interactive'
+          id='3'
+          disabled
+          onClick={() => {}}
+          checked={selected == 3}
+        />
       </>
     );
   },

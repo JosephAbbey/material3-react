@@ -79,6 +79,14 @@ export const Interactive: Story = {
           checkedIcon={<Icon icon='surfing' />}
           uncheckedIcon={<Icon icon='beach_access' />}
         />
+        <br />
+        <Switch
+          onClick={() => {}}
+          checked={checked}
+          disabled
+          checkedIcon={<Icon icon='surfing' />}
+          uncheckedIcon={<Icon icon='beach_access' />}
+        />
       </>
     );
   },

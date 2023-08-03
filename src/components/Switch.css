@@ -95,7 +95,7 @@
   box-sizing: border-box;
 }
 
-.Switch:not(:has(> :disabled)) {
+.Switch:not(.disabled) {
   cursor: pointer;
 }
 
@@ -107,11 +107,11 @@
   background-color: var(--switch-unchecked-track-color);
   border: 2px solid var(--switch-unchecked-track-outline-color);
 }
-.Switch.checked:has(> :disabled) {
+.Switch.checked.disabled {
   background-color: var(--switch-disabled-checked-track-color);
   border: 2px solid transparent;
 }
-.Switch:not(.checked):has(> :disabled) {
+.Switch:not(.checked).disabled {
   background-color: var(--switch-disabled-unchecked-track-color);
   border: 2px solid var(--switch-disabled-unchecked-track-outline-color);
 }
@@ -133,14 +133,14 @@
 
   background-color: var(--switch-checked-thumb-color);
 }
-.Switch.checked:has(> :disabled) > .Thumb {
+.Switch.checked.disabled > .Thumb {
   background-color: var(--switch-disabled-checked-thumb-color);
 }
 .Switch.checked > .Thumb > .CheckedIcon > .Icon {
   --icon-color: var(--switch-checked-icon-color);
   color: var(--switch-checked-icon-color);
 }
-.Switch.checked:has(> :disabled) > .Thumb > .CheckedIcon > .Icon {
+.Switch.checked.disabled > .Thumb > .CheckedIcon > .Icon {
   --icon-color: var(--switch-disabled-checked-icon-color);
   color: var(--switch-disabled-checked-icon-color);
 }
@@ -157,14 +157,14 @@
 
   background-color: var(--switch-unchecked-thumb-color);
 }
-.Switch:not(.checked):has(> :disabled) > .Thumb {
+.Switch:not(.checked).disabled > .Thumb {
   background-color: var(--switch-disabled-unchecked-thumb-color);
 }
 .Switch:not(.checked) > .Thumb > .UncheckedIcon > .Icon {
   --icon-color: var(--switch-unchecked-icon-color);
   color: var(--switch-unchecked-icon-color);
 }
-.Switch:not(.checked):has(> :disabled) > .Thumb > .UncheckedIcon > .Icon {
+.Switch:not(.checked).disabled > .Thumb > .UncheckedIcon > .Icon {
   --icon-color: var(--switch-disabled-unchecked-icon-color);
   color: var(--switch-disabled-unchecked-icon-color);
 }
@@ -297,16 +297,16 @@
   opacity: 0;
 }
 
-.Switch:not(:has(> :disabled)):not(.checked):hover > .Thumb {
+.Switch:not(.disabled):not(.checked):hover > .Thumb {
   background-color: var(--switch-unchecked-hovered-thumb-color);
 }
-.Switch:not(:has(> :disabled)).checked:hover > .Thumb {
+.Switch:not(.disabled).checked:hover > .Thumb {
   background-color: var(--switch-checked-hovered-thumb-color);
 }
-.Switch:not(:has(> :disabled)):not(.checked):active > .Thumb {
+.Switch:not(.disabled):not(.checked):active > .Thumb {
   background-color: var(--switch-unchecked-pressed-thumb-color);
 }
-.Switch:not(:has(> :disabled)).checked:active > .Thumb {
+.Switch:not(.disabled).checked:active > .Thumb {
   background-color: var(--switch-checked-pressed-thumb-color);
 }
 .Switch > .Thumb > .Ripple {
