@@ -1,0 +1,102 @@
+@import url(../tokens/components/rich-tooltip.css);
+
+.RichTooltip {
+  --rich-tooltip-container-color: var(--md-comp-rich-tooltip-container-color);
+  --rich-tooltip-container-elevation: var(
+    --md-comp-rich-tooltip-container-elevation
+  );
+  --rich-tooltip-container-shadow-color: var(
+    --md-comp-rich-tooltip-container-shadow-color
+  );
+  --rich-tooltip-container-shape: var(--md-comp-rich-tooltip-container-shape);
+  --rich-tooltip-subhead-text-color: var(
+    --md-comp-rich-tooltip-subhead-text-color
+  );
+  --rich-tooltip-subhead-text-font: var(
+    --md-comp-rich-tooltip-subhead-text-font
+  );
+  --rich-tooltip-subhead-text-line-height: var(
+    --md-comp-rich-tooltip-subhead-text-line-height
+  );
+  --rich-tooltip-subhead-text-size: var(
+    --md-comp-rich-tooltip-subhead-text-size
+  );
+  --rich-tooltip-subhead-text-tracking: var(
+    --md-comp-rich-tooltip-subhead-text-tracking
+  );
+  --rich-tooltip-subhead-text-weight: var(
+    --md-comp-rich-tooltip-subhead-text-weight
+  );
+  --rich-tooltip-text-color: var(--md-comp-rich-tooltip-text-color);
+  --rich-tooltip-text-font: var(--md-comp-rich-tooltip-text-font);
+  --rich-tooltip-text-line-height: var(--md-comp-rich-tooltip-text-line-height);
+  --rich-tooltip-text-size: var(--md-comp-rich-tooltip-text-size);
+  --rich-tooltip-text-tracking: var(--md-comp-rich-tooltip-text-tracking);
+  --rich-tooltip-text-weight: var(--md-comp-rich-tooltip-text-weight);
+}
+
+.RichTooltipBox {
+  position: relative;
+}
+
+.RichTooltip {
+  position: absolute;
+  bottom: -4px;
+  right: -4px;
+  transform: translate(100%, 100%);
+  background-color: var(--rich-tooltip-container-color);
+  width: 300px;
+  padding: 12px 16px 8px 16px;
+  border-radius: var(--rich-tooltip-container-shape);
+  cursor: help;
+  user-select: none;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.RichTooltipTitle {
+  color: var(--rich-tooltip-subhead-text-color);
+  font: var(--rich-tooltip-subhead-text-font);
+  line-height: var(--rich-tooltip-subhead-text-line-height);
+  font-size: var(--rich-tooltip-subhead-text-size);
+  letter-spacing: var(--rich-tooltip-subhead-text-tracking);
+  font-weight: var(--rich-tooltip-subhead-text-weight);
+
+  padding-bottom: 4px;
+}
+
+.RichTooltipContent {
+  color: var(--rich-tooltip-text-color);
+  font: var(--rich-tooltip-text-font);
+  line-height: var(--rich-tooltip-text-line-height);
+  font-size: var(--rich-tooltip-text-size);
+  letter-spacing: var(--rich-tooltip-text-tracking);
+  font-weight: var(--rich-tooltip-text-weight);
+}
+
+.RichTooltipActions {
+  display: flex;
+  gap: 16px;
+  padding-top: 12px;
+}
+
+.RichTooltip:not(.persistent) {
+  transition: opacity 150ms 1500ms, visibility 0s 1650ms;
+}
+.RichTooltip.persistent {
+  transition: opacity 150ms, visibility 0s 150ms;
+}
+.RichTooltipBox:hover > .RichTooltip:not(.persistent),
+.RichTooltip:not(.persistent):hover {
+  transition: opacity 150ms 1500ms, visibility 0s 1500ms;
+}
+.RichTooltip.persistent.visible {
+  transition: opacity 150ms, visibility 0s 0s;
+}
+
+.RichTooltipBox:hover > .RichTooltip:not(.persistent),
+.RichTooltip:not(.persistent):hover,
+.RichTooltip.persistent.visible {
+  opacity: 1;
+  visibility: visible;
+}

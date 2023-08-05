@@ -1,0 +1,41 @@
+import {
+  Meta,
+  Primary,
+  Controls,
+  Title,
+  Subtitle,
+  Canvas,
+  ColorPalette,
+  Stories,
+} from '@storybook/blocks';
+import * as RichTooltipBoxStories from './RichTooltipBox.stories';
+
+<Meta of={RichTooltipBoxStories} />
+
+<Title />
+<Subtitle />
+
+<p
+  style={{
+    fontSize: '20px',
+    margin: '20px 0 8px',
+    padding: '0',
+    cursor: 'text',
+    position: 'relative',
+    color: '#C9CDCF',
+    fontWeight: '700',
+  }}>
+  Rich tooltips provide more details, like describing the value of a feature
+</p>
+
+Check it out on [material.io](https://m3.material.io/components/tooltips/overview).
+
+See also: [PlainTooltipBox](/docs/components-plaintooltipbox--docs)
+
+<Primary />
+
+## Props
+
+<Controls exclude={['children', 'action']} />
+
+<Stories />

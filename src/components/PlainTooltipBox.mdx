@@ -1,0 +1,41 @@
+import {
+  Meta,
+  Primary,
+  Controls,
+  Title,
+  Subtitle,
+  Canvas,
+  ColorPalette,
+  Stories,
+} from '@storybook/blocks';
+import * as PlainTooltipBoxStories from './PlainTooltipBox.stories';
+
+<Meta of={PlainTooltipBoxStories} />
+
+<Title />
+<Subtitle />
+
+<p
+  style={{
+    fontSize: '20px',
+    margin: '20px 0 8px',
+    padding: '0',
+    cursor: 'text',
+    position: 'relative',
+    color: '#C9CDCF',
+    fontWeight: '700',
+  }}>
+  Plain tooltips describe elements or actions of icon buttons
+</p>
+
+Check it out on [material.io](https://m3.material.io/components/tooltips/overview).
+
+See also: [RichTooltipBox](/docs/components-richtooltipbox--docs)
+
+<Primary />
+
+## Props
+
+<Controls exclude={['children']} />
+
+<Stories />

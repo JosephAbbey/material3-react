@@ -1,0 +1,58 @@
+@import url(../tokens/components/plain-tooltip.css);
+
+.PlainTooltip {
+  --plain-tooltip-container-color: var(--md-comp-plain-tooltip-container-color);
+  --plain-tooltip-container-shape: var(--md-comp-plain-tooltip-container-shape);
+  --plain-tooltip-text-color: var(--md-comp-plain-tooltip-text-color);
+  --plain-tooltip-text-font: var(--md-comp-plain-tooltip-text-font);
+  --plain-tooltip-text-line-height: var(
+    --md-comp-plain-tooltip-text-line-height
+  );
+  --plain-tooltip-text-size: var(--md-comp-plain-tooltip-text-size);
+  --plain-tooltip-text-tracking: var(--md-comp-plain-tooltip-text-tracking);
+  --plain-tooltip-text-weight: var(--md-comp-plain-tooltip-text-weight);
+}
+
+.PlainTooltipBox {
+  position: relative;
+}
+
+.PlainTooltip {
+  position: absolute;
+  top: -8px;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  background-color: var(--plain-tooltip-container-color);
+  min-height: 24px;
+  padding-inline: 8px;
+  border-radius: var(--plain-tooltip-container-shape);
+  color: var(--plain-tooltip-text-color);
+  font-family: var(--plain-tooltip-text-font);
+  line-height: var(--plain-tooltip-text-line-height);
+  font-size: var(--plain-tooltip-text-size);
+  font-weight: var(--plain-tooltip-text-weight);
+  letter-spacing: var(--plain-tooltip-text-tracking);
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: help;
+  user-select: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 150ms 1500ms, visibility 0s 1650ms;
+}
+
+.PlainTooltipBox:hover > .PlainTooltip,
+.PlainTooltip:hover {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 150ms 1500ms, visibility 0s 1500ms;
+}
+
+.TopAppBar .PlainTooltip {
+  bottom: -8px;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  top: unset;
+}

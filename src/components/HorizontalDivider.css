@@ -1,0 +1,12 @@
+@import url(../tokens/components/divider.css);
+
+hr {
+  --divider-color: var(--md-comp-divider-color);
+  --divider-thickness: var(--md-comp-divider-thickness);
+}
+
+hr {
+  border-width: var(--divider-thickness) 0 0 0;
+  border-style: solid;
+  border-color: var(--divider-color);
+}
