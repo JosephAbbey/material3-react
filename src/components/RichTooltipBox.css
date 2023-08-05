@@ -56,7 +56,7 @@
 
 .RichTooltipTitle {
   color: var(--rich-tooltip-subhead-text-color);
-  font: var(--rich-tooltip-subhead-text-font);
+  font-family: var(--rich-tooltip-subhead-text-font);
   line-height: var(--rich-tooltip-subhead-text-line-height);
   font-size: var(--rich-tooltip-subhead-text-size);
   letter-spacing: var(--rich-tooltip-subhead-text-tracking);
@@ -67,7 +67,7 @@
 
 .RichTooltipContent {
   color: var(--rich-tooltip-text-color);
-  font: var(--rich-tooltip-text-font);
+  font-family: var(--rich-tooltip-text-font);
   line-height: var(--rich-tooltip-text-line-height);
   font-size: var(--rich-tooltip-text-size);
   letter-spacing: var(--rich-tooltip-text-tracking);
