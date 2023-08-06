@@ -1,38 +1,79 @@
-:root, .MaterialTheme {
+*,
+::backdrop {
   --md-comp-filled-button-container-color: var(--md-sys-color-primary);
   --md-comp-filled-button-container-shadow-color: var(--md-sys-color-shadow);
   --md-comp-filled-button-container-elevation: var(--md-sys-elevation-level0);
   --md-comp-filled-button-label-text-color: var(--md-sys-color-on-primary);
-  --md-comp-filled-button-label-text-font: var(--md-sys-typescale-label-large-font);
-  --md-comp-filled-button-label-text-line-height: var(--md-sys-typescale-label-large-line-height);
-  --md-comp-filled-button-label-text-size: var(--md-sys-typescale-label-large-size);
-  --md-comp-filled-button-label-text-tracking: var(--md-sys-typescale-label-large-tracking);
-  --md-comp-filled-button-label-text-weight: var(--md-sys-typescale-label-large-weight);
+  --md-comp-filled-button-label-text-font: var(
+    --md-sys-typescale-label-large-font
+  );
+  --md-comp-filled-button-label-text-line-height: var(
+    --md-sys-typescale-label-large-line-height
+  );
+  --md-comp-filled-button-label-text-size: var(
+    --md-sys-typescale-label-large-size
+  );
+  --md-comp-filled-button-label-text-tracking: var(
+    --md-sys-typescale-label-large-tracking
+  );
+  --md-comp-filled-button-label-text-weight: var(
+    --md-sys-typescale-label-large-weight
+  );
   --md-comp-filled-button-icon-color: var(--md-sys-color-on-primary);
 
-  --md-comp-filled-button-disabled-container-color: var(--md-sys-color-on-surface);
-  --md-comp-filled-button-disabled-container-elevation: var(--md-sys-elevation-level0);
+  --md-comp-filled-button-disabled-container-color: var(
+    --md-sys-color-on-surface
+  );
+  --md-comp-filled-button-disabled-container-elevation: var(
+    --md-sys-elevation-level0
+  );
   --md-comp-filled-button-disabled-container-opacity: 12%;
-  --md-comp-filled-button-disabled-label-text-color: var(--md-sys-color-on-surface);
+  --md-comp-filled-button-disabled-label-text-color: var(
+    --md-sys-color-on-surface
+  );
   --md-comp-filled-button-disabled-label-text-opacity: 38%;
   --md-comp-filled-button-disabled-icon-color: var(--md-sys-color-on-surface);
   --md-comp-filled-button-disabled-icon-opacity: 38%;
 
-  --md-comp-filled-button-hovered-container-state-layer-color: var(--md-sys-color-on-primary);
-  --md-comp-filled-button-hovered-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
-  --md-comp-filled-button-hovered-container-elevation: var(--md-sys-elevation-level1);
-  --md-comp-filled-button-hovered-label-text-color: var(--md-sys-color-on-primary);
+  --md-comp-filled-button-hovered-container-state-layer-color: var(
+    --md-sys-color-on-primary
+  );
+  --md-comp-filled-button-hovered-container-state-layer-opacity: var(
+    --md-sys-state-hover-state-layer-opacity
+  );
+  --md-comp-filled-button-hovered-container-elevation: var(
+    --md-sys-elevation-level1
+  );
+  --md-comp-filled-button-hovered-label-text-color: var(
+    --md-sys-color-on-primary
+  );
   --md-comp-filled-button-hovered-icon-color: var(--md-sys-color-on-primary);
 
-  --md-comp-filled-button-focused-container-state-layer-color: var(--md-sys-color-on-primary);
-  --md-comp-filled-button-focused-container-state-layer-opacity: var(--md-sys-state-focus-state-layer-opacity);
-  --md-comp-filled-button-focused-container-elevation: var(--md-sys-elevation-level0);
-  --md-comp-filled-button-focused-label-text-color: var(--md-sys-color-on-primary);
+  --md-comp-filled-button-focused-container-state-layer-color: var(
+    --md-sys-color-on-primary
+  );
+  --md-comp-filled-button-focused-container-state-layer-opacity: var(
+    --md-sys-state-focus-state-layer-opacity
+  );
+  --md-comp-filled-button-focused-container-elevation: var(
+    --md-sys-elevation-level0
+  );
+  --md-comp-filled-button-focused-label-text-color: var(
+    --md-sys-color-on-primary
+  );
   --md-comp-filled-button-focused-icon-color: var(--md-sys-color-on-primary);
 
-  --md-comp-filled-button-pressed-container-state-layer-color: var(--md-sys-color-on-primary);
-  --md-comp-filled-button-pressed-container-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
-  --md-comp-filled-button-pressed-container-elevation: var(--md-sys-elevation-level0);
-  --md-comp-filled-button-pressed-label-text-color: var(--md-sys-color-on-primary);
+  --md-comp-filled-button-pressed-container-state-layer-color: var(
+    --md-sys-color-on-primary
+  );
+  --md-comp-filled-button-pressed-container-state-layer-opacity: var(
+    --md-sys-state-hover-state-layer-opacity
+  );
+  --md-comp-filled-button-pressed-container-elevation: var(
+    --md-sys-elevation-level0
+  );
+  --md-comp-filled-button-pressed-label-text-color: var(
+    --md-sys-color-on-primary
+  );
   --md-comp-filled-button-pressed-icon-color: var(--md-sys-color-on-primary);
 }

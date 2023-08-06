@@ -18,7 +18,8 @@
 
 /* DO NOT EDIT */
 
-:root, .MaterialTheme {
+*,
+::backdrop {
   /* Label Small */
   --md-sys-typescale-label-small-text-transform: unset;
   --md-sys-typescale-label-small-axis-value: unset;

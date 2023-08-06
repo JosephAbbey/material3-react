@@ -13,7 +13,7 @@ export type RichTooltipBoxProps = PropsWithChildren<{
   content: ReactNode;
   persistent?: boolean;
   visible?: boolean;
-  onHide?: () => void;
+  onDismiss?: () => void;
   style?: CSSProperties;
 }>;
 
@@ -26,7 +26,7 @@ export const RichTooltipBox = ({
   content,
   persistent = false,
   visible = false,
-  onHide = () => {},
+  onDismiss = () => {},
   style,
   children,
 }: RichTooltipBoxProps) => {
@@ -38,14 +38,14 @@ export const RichTooltipBox = ({
         ev.target &&
         !ref.current.contains(ev.target as Node)
       ) {
-        persistent && visible && onHide && onHide();
+        persistent && visible && onDismiss && onDismiss();
       }
     };
     document.addEventListener('click', handle, true);
     return () => {
       document.removeEventListener('click', handle, true);
     };
-  }, [onHide]);
+  }, [onDismiss]);
   return (
     <div ref={ref} className='RichTooltipBox'>
       <div

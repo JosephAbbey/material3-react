@@ -19,7 +19,10 @@
   color-scheme: dark;
   color: var(--md-sys-color-on-background);
   background-color: var(--md-sys-color-background);
+}
 
+*,
+::backdrop {
   /* Primary */
   --md-sys-color-primary: var(--md-ref-palette-primary80);
   /* Primary container */

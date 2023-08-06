@@ -1,0 +1,102 @@
+@import url(../tokens/components/basic-dialog.css);
+
+._BasicDialog,
+._BasicDialog::backdrop {
+  --dialog-container-color: var(--md-comp-basic-dialog-container-color);
+  --dialog-container-elevation: var(--md-comp-basic-dialog-container-elevation);
+  --dialog-icon-color: var(--md-comp-basic-dialog-icon-color);
+  --dialog-headline-color: var(--md-comp-basic-dialog-headline-color);
+  --dialog-headline-font: var(--md-comp-basic-dialog-headline-font);
+  --dialog-headline-line: var(--md-comp-basic-dialog-headline-line);
+  --dialog-headline-size: var(--md-comp-basic-dialog-headline-size);
+  --dialog-headline-weight: var(--md-comp-basic-dialog-headline-weight);
+  --dialog-headline-tracking: var(--md-comp-basic-dialog-headline-tracking);
+  --dialog-text-color: var(--md-comp-basic-dialog-text-color);
+  --dialog-text-font: var(--md-comp-basic-dialog-text-font);
+  --dialog-text-line: var(--md-comp-basic-dialog-text-line);
+  --dialog-text-size: var(--md-comp-basic-dialog-text-size);
+  --dialog-text-weight: var(--md-comp-basic-dialog-text-weight);
+  --dialog-text-tracking: var(--md-comp-basic-dialog-text-tracking);
+  --dialog-scrim-color: var(--md-comp-basic-dialog-scrim-color);
+  --dialog-scrim-opacity: var(--md-comp-basic-dialog-scrim-opacity);
+}
+
+body:has(._BasicDialog[open]),
+body:has(._BasicDialog[open]) :not(._BasicDialog[open]) {
+  overflow: hidden;
+}
+
+._BasicDialog {
+  position: fixed;
+  border-width: 0;
+  padding: 0;
+  background-color: transparent;
+}
+
+._BasicDialog::backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--dialog-scrim-color);
+  opacity: var(--dialog-scrim-opacity);
+  animation: none;
+}
+
+.BasicDialog {
+  padding: 24px;
+  border-radius: 28px;
+  min-width: 280px;
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--dialog-container-color);
+}
+
+.BasicDialog hr {
+  --divider-thickness: 1px;
+}
+
+.BasicDialogIcon > .Icon {
+  --icon-size: 24px;
+  font-size: 24px;
+}
+.BasicDialog:has(> .BasicDialogIcon) {
+  text-align: center;
+  align-items: center;
+}
+.BasicDialog:not(:has(> .BasicDialogIcon)) {
+  text-align: left;
+  align-items: flex-start;
+}
+.BasicDialogIcon {
+  padding-bottom: 8px;
+}
+
+.BasicDialogTitle {
+  color: var(--dialog-headline-color);
+  font-family: var(--dialog-headline-font);
+  line-height: var(--dialog-headline-line);
+  font-size: var(--dialog-headline-size);
+  font-weight: var(--dialog-headline-weight);
+  letter-spacing: var(--dialog-headline-tracking);
+  padding-bottom: 16px;
+}
+
+.BasicDialogContent {
+  color: var(--dialog-text-color);
+  font-family: var(--dialog-text-font);
+  line-height: var(--dialog-text-line);
+  font-size: var(--dialog-text-size);
+  font-weight: var(--dialog-text-weight);
+  letter-spacing: var(--dialog-text-tracking);
+}
+
+.BasicDialogButtons {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  width: 100%;
+  padding-top: 24px;
+}

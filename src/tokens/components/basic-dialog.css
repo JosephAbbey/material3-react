@@ -1,0 +1,38 @@
+*,
+::backdrop {
+  --md-comp-basic-dialog-container-color: var(
+    --md-sys-color-surface-container-high
+  );
+  --md-comp-basic-dialog-container-elevation: var(--md-sys-elevation-level3);
+  --md-comp-basic-dialog-icon-color: var(--md-sys-color-secondary);
+  --md-comp-basic-dialog-headline-color: var(--md-sys-color-on-surface);
+  --md-comp-basic-dialog-headline-font: var(
+    --md-sys-typescale-headline-small-font
+  );
+  --md-comp-basic-dialog-headline-line: var(
+    --md-sys-typescale-headline-small-line-height
+  );
+  --md-comp-basic-dialog-headline-size: var(
+    --md-sys-typescale-headline-small-size
+  );
+  --md-comp-basic-dialog-headline-weight: var(
+    --md-sys-typescale-headline-small-weight
+  );
+  --md-comp-basic-dialog-headline-tracking: var(
+    --md-sys-typescale-headline-small-tracking
+  );
+  --md-comp-basic-dialog-text-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-basic-dialog-text-font: var(--md-sys-typescale-body-medium-font);
+  --md-comp-basic-dialog-text-line: var(
+    --md-sys-typescale-body-medium-line-height
+  );
+  --md-comp-basic-dialog-text-size: var(--md-sys-typescale-body-medium-size);
+  --md-comp-basic-dialog-text-weight: var(
+    --md-sys-typescale-body-medium-weight
+  );
+  --md-comp-basic-dialog-text-tracking: var(
+    --md-sys-typescale-body-medium-tracking
+  );
+  --md-comp-basic-dialog-scrim-color: var(--md-sys-color-scrim);
+  --md-comp-basic-dialog-scrim-opacity: 35%;
+}

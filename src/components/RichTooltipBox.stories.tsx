@@ -15,8 +15,8 @@ const meta = {
     badges: [BADGE.EXPERIMENTAL],
   },
   argTypes: {
-    onHide: {
-      action: 'hide',
+    onDismiss: {
+      action: 'dismiss',
       description:
         'Called when the user navigates away from a persistent tooltip by interacting with another ui element.',
     },

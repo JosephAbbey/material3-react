@@ -14,8 +14,8 @@
  limitations under the License.
 */
 
-:root,
-.MaterialTheme {
+*,
+::backdrop {
   --md-ref-palette-primary0: #000000;
   --md-ref-palette-primary4: #13003a;
   --md-ref-palette-primary6: #190047;

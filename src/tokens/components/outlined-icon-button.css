@@ -1,5 +1,5 @@
-:root,
-.MaterialTheme {
+*,
+::backdrop {
   --md-comp-outlined-icon-button-icon-size: 24px;
   --md-comp-outlined-icon-button-default-icon-color: var(
     --md-sys-color-on-surface-variant

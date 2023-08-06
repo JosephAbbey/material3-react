@@ -19,6 +19,13 @@
   color-scheme: light;
   color: var(--md-sys-color-on-background);
   background-color: var(--md-sys-color-background);
+}
+
+*,
+::backdrop {
+  color-scheme: light;
+  color: var(--md-sys-color-on-background);
+  background-color: var(--md-sys-color-background);
 
   /* Primary */
   --md-sys-color-primary: var(--md-ref-palette-primary40);
