@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import './Button.css';
 import { Ripple } from './Ripple';
+import { cls } from '~/utils';
 
 export const ButtonType = {
   Elevated: 'Elevated',
@@ -34,7 +35,7 @@ export const Button = ({
 }: ButtonProps) => {
   return (
     <button
-      className={`Button ${type}`}
+      className={cls`Button ${type} ${{ disabled }}`}
       type='button'
       onClick={onClick}
       disabled={disabled}

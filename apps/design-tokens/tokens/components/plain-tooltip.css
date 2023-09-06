@@ -1,0 +1,10 @@
+*, ::backdrop {
+  --md-comp-plain-tooltip-container-color: var(--md-sys-color-inverse-surface);
+  --md-comp-plain-tooltip-container-shape: var(--md-sys-shape-corner-extra-small);
+  --md-comp-plain-tooltip-supporting-text-color: var(--md-sys-color-on-inverse-surface);
+  --md-comp-plain-tooltip-supporting-text-font: var(--md-sys-typescale-body-small-font);
+  --md-comp-plain-tooltip-supporting-text-line-height: var(--md-sys-typescale-body-small-line-height);
+  --md-comp-plain-tooltip-supporting-text-size: var(--md-sys-typescale-body-small-size);
+  --md-comp-plain-tooltip-supporting-text-weight: var(--md-sys-typescale-body-small-weight);
+  --md-comp-plain-tooltip-supporting-text-tracking: var(--md-sys-typescale-body-small-tracking);
+}

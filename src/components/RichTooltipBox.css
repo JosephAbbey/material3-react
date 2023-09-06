@@ -1,40 +1,3 @@
-@import url(../tokens/components/rich-tooltip.css);
-
-.RichTooltip {
-  --rich-tooltip-container-color: var(--md-comp-rich-tooltip-container-color);
-  --rich-tooltip-container-elevation: var(
-    --md-comp-rich-tooltip-container-elevation
-  );
-  --rich-tooltip-container-shadow-color: var(
-    --md-comp-rich-tooltip-container-shadow-color
-  );
-  --rich-tooltip-container-shape: var(--md-comp-rich-tooltip-container-shape);
-  --rich-tooltip-subhead-text-color: var(
-    --md-comp-rich-tooltip-subhead-text-color
-  );
-  --rich-tooltip-subhead-text-font: var(
-    --md-comp-rich-tooltip-subhead-text-font
-  );
-  --rich-tooltip-subhead-text-line-height: var(
-    --md-comp-rich-tooltip-subhead-text-line-height
-  );
-  --rich-tooltip-subhead-text-size: var(
-    --md-comp-rich-tooltip-subhead-text-size
-  );
-  --rich-tooltip-subhead-text-tracking: var(
-    --md-comp-rich-tooltip-subhead-text-tracking
-  );
-  --rich-tooltip-subhead-text-weight: var(
-    --md-comp-rich-tooltip-subhead-text-weight
-  );
-  --rich-tooltip-text-color: var(--md-comp-rich-tooltip-text-color);
-  --rich-tooltip-text-font: var(--md-comp-rich-tooltip-text-font);
-  --rich-tooltip-text-line-height: var(--md-comp-rich-tooltip-text-line-height);
-  --rich-tooltip-text-size: var(--md-comp-rich-tooltip-text-size);
-  --rich-tooltip-text-tracking: var(--md-comp-rich-tooltip-text-tracking);
-  --rich-tooltip-text-weight: var(--md-comp-rich-tooltip-text-weight);
-}
-
 .RichTooltipBox {
   position: relative;
 }
@@ -54,24 +17,24 @@
   visibility: hidden;
 }
 
-.RichTooltipTitle {
-  color: var(--rich-tooltip-subhead-text-color);
-  font-family: var(--rich-tooltip-subhead-text-font);
-  line-height: var(--rich-tooltip-subhead-text-line-height);
-  font-size: var(--rich-tooltip-subhead-text-size);
-  letter-spacing: var(--rich-tooltip-subhead-text-tracking);
-  font-weight: var(--rich-tooltip-subhead-text-weight);
+.RichTooltipSubhead {
+  color: var(--rich-tooltip-subhead-color);
+  font-family: var(--rich-tooltip-subhead-font);
+  line-height: var(--rich-tooltip-subhead-line-height);
+  font-size: var(--rich-tooltip-subhead-size);
+  letter-spacing: var(--rich-tooltip-subhead-tracking);
+  font-weight: var(--rich-tooltip-subhead-weight);
 
   padding-bottom: 4px;
 }
 
-.RichTooltipContent {
-  color: var(--rich-tooltip-text-color);
-  font-family: var(--rich-tooltip-text-font);
-  line-height: var(--rich-tooltip-text-line-height);
-  font-size: var(--rich-tooltip-text-size);
-  letter-spacing: var(--rich-tooltip-text-tracking);
-  font-weight: var(--rich-tooltip-text-weight);
+.RichTooltipSupportingText {
+  color: var(--rich-tooltip-supporting-text-color);
+  font-family: var(--rich-tooltip-supporting-text-font);
+  line-height: var(--rich-tooltip-supporting-text-line-height);
+  font-size: var(--rich-tooltip-supporting-text-size);
+  letter-spacing: var(--rich-tooltip-supporting-text-tracking);
+  font-weight: var(--rich-tooltip-supporting-text-weight);
 }
 
 .RichTooltipActions {

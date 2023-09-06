@@ -1,12 +1,12 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
-import { CheckBox, CheckBoxState } from './CheckBox';
+import { Checkbox, CheckboxState } from '..';
 import React, { useState } from 'react';
 
 const meta = {
-  title: 'Components/CheckBox',
-  component: CheckBox,
+  title: 'Components/Checkbox',
+  component: Checkbox,
   parameters: {
     layout: 'centered',
     badges: [BADGE.BETA],
@@ -27,14 +27,14 @@ const meta = {
     },
     state: {
       control: 'select',
-      options: CheckBoxState,
-      description: 'Controls the checked state of this button.',
+      options: CheckboxState,
+      description: 'Controls the selected state of this button.',
     },
     style: {
       description: 'CSS styles to be applied to the HTMLButtonElement.',
     },
   },
-} satisfies Meta<typeof CheckBox>;
+} satisfies Meta<typeof Checkbox>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -44,21 +44,21 @@ export const Standard: Story = {
   args: {
     disabled: false,
     error: false,
-    state: CheckBoxState.Unchecked,
+    state: CheckboxState.Unselected,
   },
 };
-export const Checked: Story = {
+export const Selected: Story = {
   args: {
     disabled: false,
     error: false,
-    state: CheckBoxState.Checked,
+    state: CheckboxState.Selected,
   },
 };
 export const Indeterminate: Story = {
   args: {
     disabled: false,
     error: false,
-    state: CheckBoxState.Indeterminate,
+    state: CheckboxState.Indeterminate,
   },
 };
 
@@ -66,21 +66,21 @@ export const Error: Story = {
   args: {
     disabled: false,
     error: true,
-    state: CheckBoxState.Unchecked,
+    state: CheckboxState.Unselected,
   },
 };
-export const ErrorChecked: Story = {
+export const ErrorSelected: Story = {
   args: {
     disabled: false,
     error: true,
-    state: CheckBoxState.Checked,
+    state: CheckboxState.Selected,
   },
 };
 export const ErrorIndeterminate: Story = {
   args: {
     disabled: false,
     error: true,
-    state: CheckBoxState.Indeterminate,
+    state: CheckboxState.Indeterminate,
   },
 };
 
@@ -88,21 +88,21 @@ export const Disabled: Story = {
   args: {
     disabled: true,
     error: false,
-    state: CheckBoxState.Unchecked,
+    state: CheckboxState.Unselected,
   },
 };
-export const DisabledChecked: Story = {
+export const DisabledSelected: Story = {
   args: {
     disabled: true,
     error: false,
-    state: CheckBoxState.Checked,
+    state: CheckboxState.Selected,
   },
 };
 export const DisabledIndeterminate: Story = {
   args: {
     disabled: true,
     error: false,
-    state: CheckBoxState.Indeterminate,
+    state: CheckboxState.Indeterminate,
   },
 };
 
@@ -111,19 +111,19 @@ export const Interactive: Story = {
     const [selected, setSelected] = useState(false);
     return (
       <>
-        <CheckBox
+        <Checkbox
           onClick={() => setSelected(!selected)}
-          state={selected ? CheckBoxState.Checked : CheckBoxState.Unchecked}
+          state={selected ? CheckboxState.Selected : CheckboxState.Unselected}
         />
-        <CheckBox
+        <Checkbox
           onClick={() => setSelected(!selected)}
           error
-          state={selected ? CheckBoxState.Checked : CheckBoxState.Unchecked}
+          state={selected ? CheckboxState.Selected : CheckboxState.Unselected}
         />
-        <CheckBox
+        <Checkbox
           onClick={() => {}}
           disabled
-          state={selected ? CheckBoxState.Checked : CheckBoxState.Unchecked}
+          state={selected ? CheckboxState.Selected : CheckboxState.Unselected}
         />
       </>
     );

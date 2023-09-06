@@ -1,0 +1,23 @@
+*, ::backdrop {
+  --md-comp-text-field-filled-error-active-indicator-active-indicator-color: var(--md-sys-color-error);
+  --md-comp-text-field-filled-error-label-text-color: var(--md-sys-color-error);
+  --md-comp-text-field-filled-error-input-text-color: var(--md-sys-color-on-surface);
+  --md-comp-text-field-filled-error-supporting-text-color: var(--md-sys-color-error);
+  --md-comp-text-field-filled-error-leading-icon-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-text-field-filled-error-trailing-icon-color: var(--md-sys-color-error);
+  --md-comp-text-field-filled-error-focused-active-indicator-active-indicator-color: var(--md-sys-color-error);
+  --md-comp-text-field-filled-error-focused-label-text-color: var(--md-sys-color-error);
+  --md-comp-text-field-filled-error-focused-input-text-color: var(--md-sys-color-on-surface);
+  --md-comp-text-field-filled-error-focused-supporting-text-color: var(--md-sys-color-error);
+  --md-comp-text-field-filled-error-focused-leading-icon-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-text-field-filled-error-focused-trailing-icon-color: var(--md-sys-color-error);
+  --md-comp-text-field-filled-error-focused-caret-color: var(--md-sys-color-error);
+  --md-comp-text-field-filled-error-hovered-active-indicator-active-indicator-color: var(--md-sys-color-on-error-container);
+  --md-comp-text-field-filled-error-hovered-label-text-color: var(--md-sys-color-on-error-container);
+  --md-comp-text-field-filled-error-hovered-input-text-color: var(--md-sys-color-on-surface);
+  --md-comp-text-field-filled-error-hovered-supporting-text-color: var(--md-sys-color-error);
+  --md-comp-text-field-filled-error-hovered-leading-icon-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-text-field-filled-error-hovered-trailing-icon-color: var(--md-sys-color-on-error-container);
+  --md-comp-text-field-filled-error-hovered-state-layer-color: var(--md-sys-color-on-surface);
+  --md-comp-text-field-filled-error-hovered-state-layer-opacity: var(--md-sys-state-hover-state-layer-opacity);
+}

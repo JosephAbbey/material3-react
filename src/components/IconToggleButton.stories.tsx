@@ -1,10 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
-import { IconToggleButton } from './IconToggleButton';
-import { Icon } from './Icon';
+import { IconToggleButton, IconButtonType, Icon } from '..';
 import React, { useState } from 'react';
-import { IconButtonType } from './IconButton';
 
 const meta = {
   title: 'Components/IconToggleButton',
@@ -49,7 +47,7 @@ export const Standard: Story = {
     selected: false,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' />
       </>
     ),
   },
@@ -61,7 +59,7 @@ export const StandardSelected: Story = {
     selected: true,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' filled />
       </>
     ),
   },
@@ -73,7 +71,7 @@ export const StandardDisabled: Story = {
     selected: false,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' />
       </>
     ),
   },
@@ -86,7 +84,7 @@ export const Filled: Story = {
     selected: false,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' />
       </>
     ),
   },
@@ -98,7 +96,7 @@ export const FilledSelected: Story = {
     selected: true,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' filled />
       </>
     ),
   },
@@ -110,7 +108,7 @@ export const FilledDisabled: Story = {
     selected: false,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' />
       </>
     ),
   },
@@ -123,7 +121,7 @@ export const Tonal: Story = {
     selected: false,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' />
       </>
     ),
   },
@@ -135,7 +133,7 @@ export const TonalSelected: Story = {
     selected: true,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' filled />
       </>
     ),
   },
@@ -147,7 +145,7 @@ export const TonalDisabled: Story = {
     selected: false,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' />
       </>
     ),
   },
@@ -160,7 +158,7 @@ export const Outlined: Story = {
     selected: false,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' />
       </>
     ),
   },
@@ -172,7 +170,7 @@ export const OutlinedSelected: Story = {
     selected: true,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' filled />
       </>
     ),
   },
@@ -184,7 +182,7 @@ export const OutlinedDisabled: Story = {
     selected: false,
     children: (
       <>
-        <Icon icon='cable' />
+        <Icon icon='settings' />
       </>
     ),
   },
@@ -199,25 +197,25 @@ export const Interactive: Story = {
           onClick={() => setSelected(!selected)}
           selected={selected}
           type={IconButtonType.Standard}>
-          <Icon icon='cable' />
+          <Icon icon='settings' filled={selected} />
         </IconToggleButton>
         <IconToggleButton
           onClick={() => setSelected(!selected)}
           selected={selected}
           type={IconButtonType.Filled}>
-          <Icon icon='cable' />
+          <Icon icon='settings' filled={selected} />
         </IconToggleButton>
         <IconToggleButton
           onClick={() => setSelected(!selected)}
           selected={selected}
           type={IconButtonType.Tonal}>
-          <Icon icon='cable' />
+          <Icon icon='settings' filled={selected} />
         </IconToggleButton>
         <IconToggleButton
           onClick={() => setSelected(!selected)}
           selected={selected}
           type={IconButtonType.Outlined}>
-          <Icon icon='cable' />
+          <Icon icon='settings' filled={selected} />
         </IconToggleButton>
       </>
     );

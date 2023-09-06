@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
-import { RadioButton } from './RadioButton';
+import { RadioButton } from '..';
 import React, { useState } from 'react';
 
 const meta = {
@@ -25,25 +25,25 @@ type Story = StoryObj<typeof meta>;
 export const Standard: Story = {
   args: {
     disabled: false,
-    checked: false,
+    selected: false,
   },
 };
-export const StandardChecked: Story = {
+export const Selected: Story = {
   args: {
     disabled: false,
-    checked: true,
+    selected: true,
   },
 };
-export const StandardDisabled: Story = {
+export const Disabled: Story = {
   args: {
     disabled: true,
-    checked: false,
+    selected: false,
   },
 };
-export const StandardCheckedDisabled: Story = {
+export const SelectedDisabled: Story = {
   args: {
     disabled: true,
-    checked: true,
+    selected: true,
   },
 };
 export const Interactive: Story = {
@@ -55,26 +55,26 @@ export const Interactive: Story = {
           name='Interactive'
           id='0'
           onClick={() => setSelected(0)}
-          checked={selected == 0}
+          selected={selected == 0}
         />
         <RadioButton
           name='Interactive'
           id='1'
           onClick={() => setSelected(1)}
-          checked={selected == 1}
+          selected={selected == 1}
         />
         <RadioButton
           name='Interactive'
           id='2'
           onClick={() => setSelected(2)}
-          checked={selected == 2}
+          selected={selected == 2}
         />
         <RadioButton
           name='Interactive'
           id='3'
           disabled
           onClick={() => {}}
-          checked={selected == 3}
+          selected={selected == 3}
         />
       </>
     );

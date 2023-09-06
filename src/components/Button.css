@@ -1,301 +1,3 @@
-@import url(../tokens/components/elevated-button.css);
-@import url(../tokens/components/filled-button.css);
-@import url(../tokens/components/tonal-button.css);
-@import url(../tokens/components/outlined-button.css);
-@import url(../tokens/components/text-button.css);
-
-.Button {
-  transition: box-shadow linear 100ms;
-}
-
-/* ButtonDefaults */
-.Button.Elevated {
-  --button-container-color: var(--md-comp-elevated-button-container-color);
-  --button-content-color: var(--md-comp-elevated-button-label-text-color);
-  --button-disabled-container-color: color-mix(
-    in srgb,
-    var(--md-comp-elevated-button-disabled-container-color)
-      var(--md-comp-elevated-button-disabled-container-opacity),
-    transparent
-  );
-  --button-disabled-content-color: color-mix(
-    in srgb,
-    var(--md-comp-elevated-button-disabled-label-text-color)
-      var(--md-comp-elevated-button-disabled-label-text-opacity),
-    transparent
-  );
-
-  --button-default-elevation: var(
-    --md-comp-elevated-button-container-elevation
-  );
-  --button-pressed-elevation: var(
-    --md-comp-elevated-button-pressed-container-elevation
-  );
-  --button-focused-elevation: var(
-    --md-comp-elevated-button-focused-container-elevation
-  );
-  --button-hovered-elevation: var(
-    --md-comp-elevated-button-hovered-container-elevation
-  );
-  --button-disabled-elevation: var(
-    --md-comp-elevated-button-disabled-container-elevation
-  );
-
-  --button-container-shadow-color: var(
-    --md-comp-elevated-button-container-shadow-color
-  );
-
-  --button-label-text-font: var(--md-comp-elevated-button-label-text-font);
-  --button-label-text-line-height: var(
-    --md-comp-elevated-button-label-text-line-height
-  );
-  --button-label-text-size: var(--md-comp-elevated-button-label-text-size);
-  --button-label-text-tracking: var(
-    --md-comp-elevated-button-label-text-tracking
-  );
-  --button-label-text-weight: var(--md-comp-elevated-button-label-text-weight);
-
-  --button-hovered-container-state-layer-color: var(
-    --md-comp-elevated-button-hovered-container-state-layer-color
-  );
-  --button-hovered-container-state-layer-opacity: var(
-    --md-comp-elevated-button-hovered-container-state-layer-opacity
-  );
-  --button-focused-container-state-layer-color: var(
-    --md-comp-elevated-button-focused-container-state-layer-color
-  );
-  --button-focused-container-state-layer-opacity: var(
-    --md-comp-elevated-button-focused-container-state-layer-opacity
-  );
-  --button-pressed-container-state-layer-color: var(
-    --md-comp-elevated-button-pressed-container-state-layer-color
-  );
-  --button-pressed-container-state-layer-opacity: var(
-    --md-comp-elevated-button-pressed-container-state-layer-opacity
-  );
-}
-.Button.Filled {
-  --button-container-color: var(--md-comp-filled-button-container-color);
-  --button-content-color: var(--md-comp-filled-button-label-text-color);
-  --button-disabled-container-color: color-mix(
-    in srgb,
-    var(--md-comp-filled-button-disabled-container-color)
-      var(--md-comp-filled-button-disabled-container-opacity),
-    transparent
-  );
-  --button-disabled-content-color: color-mix(
-    in srgb,
-    var(--md-comp-filled-button-disabled-label-text-color)
-      var(--md-comp-filled-button-disabled-label-text-opacity),
-    transparent
-  );
-
-  --button-default-elevation: var(--md-comp-filled-button-container-elevation);
-  --button-pressed-elevation: var(
-    --md-comp-filled-button-pressed-container-elevation
-  );
-  --button-focused-elevation: var(
-    --md-comp-filled-button-focused-container-elevation
-  );
-  --button-hovered-elevation: var(
-    --md-comp-filled-button-hovered-container-elevation
-  );
-  --button-disabled-elevation: var(
-    --md-comp-filled-button-disabled-container-elevation
-  );
-
-  --button-container-shadow-color: var(
-    --md-comp-filled-button-container-shadow-color
-  );
-
-  --button-label-text-font: var(--md-comp-filled-button-label-text-font);
-  --button-label-text-line-height: var(
-    --md-comp-filled-button-label-text-line-height
-  );
-  --button-label-text-size: var(--md-comp-filled-button-label-text-size);
-  --button-label-text-tracking: var(
-    --md-comp-filled-button-label-text-tracking
-  );
-  --button-label-text-weight: var(--md-comp-filled-button-label-text-weight);
-
-  --button-hovered-container-state-layer-color: var(
-    --md-comp-filled-button-hovered-container-state-layer-color
-  );
-  --button-hovered-container-state-layer-opacity: var(
-    --md-comp-filled-button-hovered-container-state-layer-opacity
-  );
-  --button-focused-container-state-layer-color: var(
-    --md-comp-filled-button-focused-container-state-layer-color
-  );
-  --button-focused-container-state-layer-opacity: var(
-    --md-comp-filled-button-focused-container-state-layer-opacity
-  );
-  --button-pressed-container-state-layer-color: var(
-    --md-comp-filled-button-pressed-container-state-layer-color
-  );
-  --button-pressed-container-state-layer-opacity: var(
-    --md-comp-filled-button-pressed-container-state-layer-opacity
-  );
-}
-.Button.Tonal {
-  --button-container-color: var(--md-comp-tonal-button-container-color);
-  --button-content-color: var(--md-comp-tonal-button-label-text-color);
-  --button-disabled-container-color: color-mix(
-    in srgb,
-    var(--md-comp-tonal-button-disabled-container-color)
-      var(--md-comp-tonal-button-disabled-container-opacity),
-    transparent
-  );
-  --button-disabled-content-color: color-mix(
-    in srgb,
-    var(--md-comp-tonal-button-disabled-label-text-color)
-      var(--md-comp-tonal-button-disabled-label-text-opacity),
-    transparent
-  );
-
-  --button-default-elevation: var(--md-comp-tonal-button-container-elevation);
-  --button-pressed-elevation: var(
-    --md-comp-tonal-button-pressed-container-elevation
-  );
-  --button-focused-elevation: var(
-    --md-comp-tonal-button-focused-container-elevation
-  );
-  --button-hovered-elevation: var(
-    --md-comp-tonal-button-hovered-container-elevation
-  );
-  --button-disabled-elevation: var(
-    --md-comp-tonal-button-disabled-container-elevation
-  );
-
-  --button-container-shadow-color: var(
-    --md-comp-tonal-button-container-shadow-color
-  );
-
-  --button-label-text-font: var(--md-comp-tonal-button-label-text-font);
-  --button-label-text-line-height: var(
-    --md-comp-tonal-button-label-text-line-height
-  );
-  --button-label-text-size: var(--md-comp-tonal-button-label-text-size);
-  --button-label-text-tracking: var(--md-comp-tonal-button-label-text-tracking);
-  --button-label-text-weight: var(--md-comp-tonal-button-label-text-weight);
-
-  --button-hovered-container-state-layer-color: var(
-    --md-comp-tonal-button-hovered-container-state-layer-color
-  );
-  --button-hovered-container-state-layer-opacity: var(
-    --md-comp-tonal-button-hovered-container-state-layer-opacity
-  );
-  --button-focused-container-state-layer-color: var(
-    --md-comp-tonal-button-focused-container-state-layer-color
-  );
-  --button-focused-container-state-layer-opacity: var(
-    --md-comp-tonal-button-focused-container-state-layer-opacity
-  );
-  --button-pressed-container-state-layer-color: var(
-    --md-comp-tonal-button-pressed-container-state-layer-color
-  );
-  --button-pressed-container-state-layer-opacity: var(
-    --md-comp-tonal-button-pressed-container-state-layer-opacity
-  );
-}
-.Button.Outlined {
-  --button-container-outline-width: var(
-    --md-comp-outlined-button-container-outline-width
-  );
-  --button-container-outline-color: var(
-    --md-comp-outlined-button-container-outline-color
-  );
-  --button-disabled-container-outline-color: color-mix(
-    in srgb,
-    var(--md-comp-outlined-button-disabled-container-outline-color)
-      var(--md-comp-outlined-button-disabled-container-outline-opacity),
-    transparent
-  );
-  --button-hovered-container-outline-color: var(
-    --md-comp-outlined-button-hovered-container-outline-color
-  );
-  --button-focused-container-outline-color: var(
-    --md-comp-outlined-button-focused-container-outline-color
-  );
-  --button-pressed-container-outline-color: var(
-    --md-comp-outlined-button-pressed-container-outline-color
-  );
-
-  --button-content-color: var(--md-comp-outlined-button-label-text-color);
-  --button-disabled-content-color: color-mix(
-    in srgb,
-    var(--md-comp-outlined-button-disabled-label-text-color)
-      var(--md-comp-outlined-button-disabled-label-text-opacity),
-    transparent
-  );
-
-  --button-label-text-font: var(--md-comp-outlined-button-label-text-font);
-  --button-label-text-line-height: var(
-    --md-comp-outlined-button-label-text-line-height
-  );
-  --button-label-text-size: var(--md-comp-outlined-button-label-text-size);
-  --button-label-text-tracking: var(
-    --md-comp-outlined-button-label-text-tracking
-  );
-  --button-label-text-weight: var(--md-comp-outlined-button-label-text-weight);
-
-  --button-hovered-container-state-layer-color: var(
-    --md-comp-outlined-button-hovered-container-state-layer-color
-  );
-  --button-hovered-container-state-layer-opacity: var(
-    --md-comp-outlined-button-hovered-container-state-layer-opacity
-  );
-  --button-focused-container-state-layer-color: var(
-    --md-comp-outlined-button-focused-container-state-layer-color
-  );
-  --button-focused-container-state-layer-opacity: var(
-    --md-comp-outlined-button-focused-container-state-layer-opacity
-  );
-  --button-pressed-container-state-layer-color: var(
-    --md-comp-outlined-button-pressed-container-state-layer-color
-  );
-  --button-pressed-container-state-layer-opacity: var(
-    --md-comp-outlined-button-pressed-container-state-layer-opacity
-  );
-}
-.Button.Text {
-  --button-content-color: var(--md-comp-text-button-label-text-color);
-  --button-disabled-content-color: color-mix(
-    in srgb,
-    var(--md-comp-text-button-disabled-label-text-color)
-      var(--md-comp-text-button-disabled-label-text-opacity),
-    transparent
-  );
-
-  --button-label-text-font: var(--md-comp-text-button-label-text-font);
-  --button-label-text-line-height: var(
-    --md-comp-text-button-label-text-line-height
-  );
-  --button-label-text-size: var(--md-comp-text-button-label-text-size);
-  --button-label-text-tracking: var(--md-comp-text-button-label-text-tracking);
-  --button-label-text-weight: var(--md-comp-text-button-label-text-weight);
-
-  --button-hovered-container-state-layer-color: var(
-    --md-comp-text-button-hovered-container-state-layer-color
-  );
-  --button-hovered-container-state-layer-opacity: var(
-    --md-comp-text-button-hovered-container-state-layer-opacity
-  );
-  --button-focused-container-state-layer-color: var(
-    --md-comp-text-button-focused-container-state-layer-color
-  );
-  --button-focused-container-state-layer-opacity: var(
-    --md-comp-text-button-focused-container-state-layer-opacity
-  );
-  --button-pressed-container-state-layer-color: var(
-    --md-comp-text-button-pressed-container-state-layer-color
-  );
-  --button-pressed-container-state-layer-opacity: var(
-    --md-comp-text-button-pressed-container-state-layer-opacity
-  );
-}
-
-/* https://m3.material.io/components/buttons/specs#85e63496-f905-4978-ae35-69ab83b70536 */
 .Button {
   height: 40px;
   border-radius: 20px;
@@ -305,13 +7,14 @@
   text-align: center;
   justify-content: center;
   align-items: center;
+  transition: box-shadow linear 100ms;
 
   border: none;
 }
 .Button.Text {
   padding-inline: 12px;
 }
-.Button:not(:disabled) {
+.Button:not(.disabled) {
   cursor: pointer;
 }
 .Button > .Icon:first-child {
@@ -323,56 +26,75 @@
 }
 
 .Button {
-  font-family: var(--button-label-text-font);
-  line-height: var(--button-label-text-line-height);
-  font-size: var(--button-label-text-size);
-  letter-spacing: var(--button-label-text-tracking);
-  font-weight: var(--button-label-text-weight);
+  font-family: var(--button-enabled-label-text-font);
+  line-height: var(--button-enabled-label-text-line-height);
+  font-size: var(--button-enabled-label-text-size);
+  letter-spacing: var(--button-enabled-label-text-tracking);
+  font-weight: var(--button-enabled-label-text-weight);
 }
 
-.Button:not(:disabled) {
-  color: var(--button-content-color);
-  background-color: var(--button-container-color);
-  outline: var(--button-container-outline-color) solid
-    var(--button-container-outline-width);
+.Button:not(.disabled) {
+  color: var(--button-enabled-label-text-color);
+  background-color: var(--button-enabled-container-color);
+  outline: var(--button-enabled-container-outline-color) solid
+    var(--button-enabled-container-outline-width);
   box-shadow: 0 0 var(--button-default-elevation)
     var(--button-container-shadow-color);
 }
-.Button:not(:disabled) .Icon {
-  --icon-color: var(--button-content-color);
+.Button:not(.disabled) .Icon {
+  --icon-color: var(--button-enabled-icon-color);
 }
 
 .Button:hover {
   outline: var(--button-hovered-container-outline-color) solid
-    var(--button-container-outline-width);
-  box-shadow: 0 0 var(--button-hovered-elevation)
-    var(--button-container-shadow-color);
+    var(--button-enabled-container-outline-width);
+  box-shadow: 0 0 var(--button-hovered-container-elevation)
+    var(--button-enabled-container-shadow-color);
 }
 
 .Button:focus {
   outline: var(--button-focused-container-outline-color) solid
-    var(--button-container-outline-width);
-  box-shadow: 0 0 var(--button-focused-elevation)
-    var(--button-container-shadow-color);
+    var(--button-enabled-container-outline-width);
+  box-shadow: 0 0 var(--button-focused-container-elevation)
+    var(--button-enabled-container-shadow-color);
 }
 
 .Button:active {
   outline: var(--button-pressed-container-outline-color) solid
-    var(--button-container-outline-width);
-  box-shadow: 0 0 var(--button-pressed-elevation)
-    var(--button-container-shadow-color);
+    var(--button-enabled-container-outline-width);
+  box-shadow: 0 0 var(--button-pressed-container-elevation)
+    var(--button-enabled-container-shadow-color);
 }
 
-.Button:disabled {
-  background-color: var(--button-disabled-container-color);
-  color: var(--button-disabled-content-color);
-  outline: var(--button-disabled-container-outline-color) solid
-    var(--button-container-outline-width);
-  box-shadow: 0 0 var(--button-disabled-elevation)
-    var(--button-container-shadow-color);
+.Button.disabled {
+  background-color: color-mix(
+    in srgb,
+    var(--button-disabled-container-color)
+      var(--button-disabled-container-opacity),
+    transparent
+  );
+  color: color-mix(
+    in srgb,
+    var(--button-disabled-label-text-color)
+      var(--button-disabled-label-text-opacity),
+    transparent
+  );
+  outline: color-mix(
+      in srgb,
+      var(--button-disabled-container-outline-color)
+        var(--button-disabled-container-outline-opacity),
+      transparent
+    )
+    solid var(--button-enabled-container-outline-width);
+  box-shadow: 0 0 var(--button-disabled-container-elevation)
+    var(--button-enabled-container-shadow-color);
 }
-.Button:disabled .Icon {
-  --icon-color: var(--button-disabled-content-color);
+.Button.disabled .Icon {
+  --icon-color: color-mix(
+    in srgb,
+    var(--button-disabled-icon-color) var(--button-disabled-icon-opacity),
+    transparent
+  );
 }
 
 .Button > .Ripple {
@@ -387,6 +109,5 @@
 }
 .Button:focus {
   -webkit-tap-highlight-color: transparent;
-  -ms-touch-action: manipulation;
   touch-action: manipulation;
 }

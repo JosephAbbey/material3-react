@@ -1,0 +1,5 @@
+/* prettier-ignore */
+.Divider, .Divider * {
+  --divider-divider-thickness: var(--md-comp-divider-divider-thickness);
+  --divider-divider-color: var(--md-comp-divider-divider-color);
+}

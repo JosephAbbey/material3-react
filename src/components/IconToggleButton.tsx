@@ -2,6 +2,7 @@ import React, { PropsWithChildren } from 'react';
 import './IconToggleButton.css';
 import { Ripple } from './Ripple';
 import { IconButtonType } from './IconButton';
+import { cls } from '~/utils';
 
 export type IconToggleButtonProps = PropsWithChildren<{
   /** Called when this button is clicked. */
@@ -29,7 +30,7 @@ export const IconToggleButton = ({
 }: IconToggleButtonProps) => {
   return (
     <button
-      className={`IconToggleButton ${type} ${selected ? 'selected' : ''}`}
+      className={cls`IconToggleButton ${type} ${{ selected, disabled }}`}
       type='button'
       onClick={onClick}
       disabled={disabled}

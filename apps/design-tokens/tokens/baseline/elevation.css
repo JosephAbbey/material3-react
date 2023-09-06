@@ -1,0 +1,8 @@
+*, ::backdrop {
+  --md-sys-elevation-level0: 0px;
+  --md-sys-elevation-level1: 1px;
+  --md-sys-elevation-level2: 3px;
+  --md-sys-elevation-level3: 6px;
+  --md-sys-elevation-level4: 8px;
+  --md-sys-elevation-level5: 12px;
+}

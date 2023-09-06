@@ -6,7 +6,7 @@ import React, {
   useEffect,
   useRef,
 } from 'react';
-import './BasicDialog.css';
+// import './BasicDialog.css';
 
 export type BasicEmptyDialogProps = PropsWithChildren<{
   open?: boolean;

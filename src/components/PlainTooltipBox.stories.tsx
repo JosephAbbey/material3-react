@@ -1,9 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
-import { PlainTooltipBox } from './PlainTooltipBox';
-import { IconButton } from './IconButton';
-import { Icon } from './Icon';
+import { PlainTooltipBox, IconButton, IconButtonType, Icon } from '..';
 import React from 'react';
 
 const meta = {
@@ -28,7 +26,7 @@ export const Standard: Story = {
   args: {
     content: 'Help',
     children: (
-      <IconButton onClick={() => {}}>
+      <IconButton onClick={() => {}} type={IconButtonType.Filled}>
         <Icon icon='help' />
       </IconButton>
     ),

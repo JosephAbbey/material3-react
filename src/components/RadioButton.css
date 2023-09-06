@@ -1,60 +1,7 @@
-@import url(../tokens/components/radio-button.css);
-
 .RadioButton {
-  --button-unchecked-icon-color: var(
-    --md-comp-radio-button-unchecked-icon-color
-  );
-  --button-checked-icon-color: var(--md-comp-radio-button-checked-icon-color);
-  --button-disabled-checked-icon-color: color-mix(
-    in srgb,
-    var(--md-comp-radio-button-disabled-checked-icon-color)
-      var(--md-comp-radio-button-disabled-checked-icon-opacity),
-    transparent
-  );
-  --button-disabled-unchecked-icon-color: color-mix(
-    in srgb,
-    var(--md-comp-radio-button-disabled-unchecked-icon-color)
-      var(--md-comp-radio-button-disabled-unchecked-icon-opacity),
-    transparent
-  );
-
-  --button-container-size: var(--md-comp-radio-button-container-size);
-  --button-container-shape: var(--md-comp-radio-button-container-shape);
-  --button-icon-size: var(--md-comp-radio-button-icon-size);
-
-  --button-unchecked-hovered-container-state-layer-color: var(
-    --md-comp-radio-button-unchecked-hovered-container-state-layer-color
-  );
-  --button-checked-hovered-container-state-layer-color: var(
-    --md-comp-radio-button-checked-hovered-container-state-layer-color
-  );
-  --button-hovered-container-state-layer-opacity: var(
-    --md-comp-radio-button-hovered-container-state-layer-opacity
-  );
-  --button-unchecked-focused-container-state-layer-color: var(
-    --md-comp-radio-button-unchecked-focused-container-state-layer-color
-  );
-  --button-checked-focused-container-state-layer-color: var(
-    --md-comp-radio-button-checked-focused-container-state-layer-color
-  );
-  --button-focused-container-state-layer-opacity: var(
-    --md-comp-radio-button-focused-container-state-layer-opacity
-  );
-  --button-unchecked-pressed-container-state-layer-color: var(
-    --md-comp-radio-button-unchecked-pressed-container-state-layer-color
-  );
-  --button-checked-pressed-container-state-layer-color: var(
-    --md-comp-radio-button-checked-pressed-container-state-layer-color
-  );
-  --button-pressed-container-state-layer-opacity: var(
-    --md-comp-radio-button-pressed-container-state-layer-opacity
-  );
-}
-
-.RadioButton {
-  width: var(--button-container-size);
-  height: var(--button-container-size);
-  border-radius: var(--button-container-shape);
+  width: var(--radio-button-enabled-icon-state-layer-size);
+  height: var(--radio-button-enabled-icon-state-layer-size);
+  border-radius: 50%;
   display: flex;
   text-align: center;
   justify-content: center;
@@ -62,13 +9,12 @@
 
   border: none;
 }
-.RadioButton:not(:has(> :disabled)) {
+.RadioButton:not(.disabled) {
   cursor: pointer;
 }
 
 .RadioButton > .Icon {
-  --icon-size: var(--button-icon-size);
-  font-size: var(--icon-size);
+  --icon-size: var(--radio-button-enabled-icon-size);
 }
 
 .RadioButton > input[type='radio'] {
@@ -79,51 +25,75 @@
   opacity: 0;
 }
 
-.RadioButton:not(:has(> :disabled)):not(.checked) {
-  color: var(--button-unchecked-icon-color);
+.RadioButton:not(.disabled):not(.selected) > .Icon {
+  --icon-color: var(--radio-button-enabled-unselected-icon-color);
 }
-.RadioButton:not(:has(> :disabled)):not(.checked) > .Icon {
-  --icon-color: var(--button-unchecked-icon-color);
+.RadioButton:not(.disabled).selected > .Icon {
+  --icon-color: var(--radio-button-enabled-selected-icon-color);
 }
-.RadioButton:not(:has(> :disabled)).checked {
-  color: var(--button-checked-icon-color);
+.RadioButton:not(.disabled):hover:not(.selected) > .Icon {
+  --icon-color: var(--radio-button-hovered-unselected-icon-color);
 }
-.RadioButton:not(:has(> :disabled)).checked > .Icon {
-  --icon-color: var(--button-checked-icon-color);
+.RadioButton:not(.disabled):hover.selected > .Icon {
+  --icon-color: var(--radio-button-hovered-selected-icon-color);
+}
+.RadioButton:not(.disabled):focus:not(.selected) > .Icon {
+  --icon-color: var(--radio-button-focused-unselected-icon-color);
+}
+.RadioButton:not(.disabled):focus.selected > .Icon {
+  --icon-color: var(--radio-button-focused-selected-icon-color);
+}
+.RadioButton:not(.disabled):active:not(.selected) > .Icon {
+  --icon-color: var(--radio-button-pressed-unselected-icon-color);
+}
+.RadioButton:not(.disabled):active.selected > .Icon {
+  --icon-color: var(--radio-button-pressed-selected-icon-color);
 }
 
-.RadioButton:has(> :disabled):not(.checked) {
-  color: var(--button-disabled-unchecked-icon-color);
+.RadioButton.disabled:not(.selected) > .Icon {
+  --icon-color: color-mix(
+    in srgb,
+    var(--radio-button-disabled-unselected-icon-color)
+      var(--radio-button-disabled-unselected-icon-opacity),
+    transparent
+  );
 }
-.RadioButton:has(> :disabled):not(.checked) > .Icon {
-  --icon-color: var(--button-disabled-unchecked-icon-color);
-}
-.RadioButton:has(> :disabled).checked {
-  color: var(--button-disabled-checked-icon-color);
-}
-.RadioButton:has(> :disabled).checked > .Icon {
-  --icon-color: var(--button-disabled-checked-icon-color);
+.RadioButton.disabled.selected > .Icon {
+  --icon-color: color-mix(
+    in srgb,
+    var(--radio-button-disabled-selected-icon-color)
+      var(--radio-button-disabled-selected-icon-opacity),
+    transparent
+  );
 }
 
-.RadioButton:not(.checked) > .Ripple {
+.RadioButton:not(.selected) > .Ripple {
   --ripple-hovered-color: var(
-    --button-unchecked-hovered-container-state-layer-color
+    --radio-button-hovered-unselected-icon-state-layer-color
   );
-  --ripple-hovered-opacity: var(--button-hovered-container-state-layer-opacity);
+  --ripple-hovered-opacity: var(
+    --radio-button-hovered-unselected-icon-state-layer-opacity
+  );
   --ripple-pressed-color: var(
-    --button-unchecked-pressed-container-state-layer-color
+    --radio-button-pressed-unselected-icon-state-layer-color
   );
-  --ripple-pressed-opacity: var(--button-pressed-container-state-layer-opacity);
+  --ripple-pressed-opacity: var(
+    --radio-button-pressed-unselected-icon-state-layer-opacity
+  );
 }
-.RadioButton.checked > .Ripple {
+.RadioButton.selected > .Ripple {
   --ripple-hovered-color: var(
-    --button-checked-hovered-container-state-layer-color
+    --radio-button-hovered-selected-icon-state-layer-color
   );
-  --ripple-hovered-opacity: var(--button-hovered-container-state-layer-opacity);
+  --ripple-hovered-opacity: var(
+    --radio-button-hovered-selected-icon-state-layer-opacity
+  );
   --ripple-pressed-color: var(
-    --button-checked-pressed-container-state-layer-color
+    --radio-button-pressed-selected-icon-state-layer-color
   );
-  --ripple-pressed-opacity: var(--button-pressed-container-state-layer-opacity);
+  --ripple-pressed-opacity: var(
+    --radio-button-pressed-selected-icon-state-layer-opacity
+  );
 }
 
 .RadioButton {

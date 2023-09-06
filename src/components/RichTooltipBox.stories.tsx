@@ -1,11 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
-import { RichTooltipBox } from './RichTooltipBox';
-import { IconButton } from './IconButton';
-import { Icon } from './Icon';
+import { RichTooltipBox, Button, ButtonType, Icon, IconButton } from '..';
 import React from 'react';
-import { Button, ButtonType } from './Button';
 
 const meta = {
   title: 'Components/RichTooltipBox',

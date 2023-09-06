@@ -8,17 +8,30 @@ import React, {
 import './MaterialTheme.css';
 
 import {
-  themeFromSourceColor,
-  themeFromImage,
-  Theme,
+  palettesFromSourceColor,
+  palettesFromImage,
   hexFromArgb,
-} from '@material/material-color-utilities';
+  Palettes,
+} from 'design-color';
 
 export type MaterialThemeProps = PropsWithChildren<{
   sourceColor?: number;
   sourceImage?: HTMLImageElement;
   style?: React.CSSProperties;
 }>;
+
+const CSS = {
+  convertPropertyName: (name: string) =>
+    name
+      .split(/(?=[A-Z])/)
+      .join('-')
+      .toLowerCase(),
+  stringify: (styles: CSSProperties) =>
+    (Object.keys(styles) as (keyof CSSProperties)[]).reduce(
+      (acc, key) => acc + `${CSS.convertPropertyName(key)}:${styles[key]};`,
+      ''
+    ),
+} as const;
 
 /**
  * Primary UI component for user interaction
@@ -29,38 +42,41 @@ export const MaterialTheme = ({
   style,
   children,
 }: MaterialThemeProps) => {
-  const [theme, setTheme] = useState<Theme>();
+  const [palettes, setPalettes] = useState<Palettes>();
   useEffect(() => {
-    if (sourceImage) themeFromImage(sourceImage).then(setTheme);
-    else if (sourceColor) setTheme(themeFromSourceColor(sourceColor));
-    else setTheme(undefined);
+    if (sourceImage) palettesFromImage(sourceImage).then(setPalettes);
+    else if (sourceColor) setPalettes(palettesFromSourceColor(sourceColor));
+    else setPalettes(undefined);
   }, [sourceColor, sourceImage]);
 
   const [props, setProps] = useState<CSSProperties>({});
   useEffect(() => {
-    if (theme) {
+    if (palettes) {
       const o: Record<`--${string}`, string> = {};
       const tones = [
         0, 4, 6, 10, 12, 17, 20, 22, 24, 30, 40, 50, 60, 80, 87, 90, 92, 95, 96,
         98, 100,
       ];
-      for (const [key, palette] of Object.entries(theme.palettes)) {
+      for (const [key, palette] of Object.entries(palettes)) {
         const paletteKey = key
           .replace(/([a-z])([A-Z])/g, '$1-$2')
           .toLowerCase();
         for (const tone of tones)
-          o[`--md-ref-palette-${paletteKey}${tone}`] = hexFromArgb(
-            palette.tone(tone)
-          );
+          o[`--md-ref-palette-${paletteKey}${tone}`] =
+            hexFromArgb(palette.tone(tone)) + ' !important';
       }
       setProps(o);
     } else {
       setProps({});
     }
-  }, [theme]);
+  }, [palettes]);
 
   return (
-    <div className='MaterialTheme' style={{ ...props, ...style }}>
+    <div className='MaterialTheme' style={{ ...style }}>
+      <style
+        dangerouslySetInnerHTML={{
+          __html: '*,::backdrop{' + CSS.stringify(props) + '}',
+        }}></style>
       {children}
     </div>
   );

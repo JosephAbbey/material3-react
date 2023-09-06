@@ -1,0 +1,29 @@
+/* prettier-ignore */
+.RadioButton, .RadioButton * {
+  --radio-button-enabled-selected-icon-color: var(--md-comp-radio-button-enabled-selected-icon-color);
+  --radio-button-enabled-unselected-icon-color: var(--md-comp-radio-button-enabled-unselected-icon-color);
+  --radio-button-enabled-icon-size: var(--md-comp-radio-button-enabled-icon-size);
+  --radio-button-enabled-icon-state-layer-size: var(--md-comp-radio-button-enabled-icon-state-layer-size);
+  --radio-button-hovered-selected-icon-state-layer-color: var(--md-comp-radio-button-hovered-selected-icon-state-layer-color);
+  --radio-button-hovered-selected-icon-state-layer-opacity: var(--md-comp-radio-button-hovered-selected-icon-state-layer-opacity);
+  --radio-button-hovered-selected-icon-color: var(--md-comp-radio-button-hovered-selected-icon-color);
+  --radio-button-hovered-unselected-icon-state-layer-color: var(--md-comp-radio-button-hovered-unselected-icon-state-layer-color);
+  --radio-button-hovered-unselected-icon-state-layer-opacity: var(--md-comp-radio-button-hovered-unselected-icon-state-layer-opacity);
+  --radio-button-hovered-unselected-icon-color: var(--md-comp-radio-button-hovered-unselected-icon-color);
+  --radio-button-focused-selected-icon-state-layer-color: var(--md-comp-radio-button-focused-selected-icon-state-layer-color);
+  --radio-button-focused-selected-icon-state-layer-opacity: var(--md-comp-radio-button-focused-selected-icon-state-layer-opacity);
+  --radio-button-focused-selected-icon-color: var(--md-comp-radio-button-focused-selected-icon-color);
+  --radio-button-focused-unselected-icon-state-layer-color: var(--md-comp-radio-button-focused-unselected-icon-state-layer-color);
+  --radio-button-focused-unselected-icon-state-layer-opacity: var(--md-comp-radio-button-focused-unselected-icon-state-layer-opacity);
+  --radio-button-focused-unselected-icon-color: var(--md-comp-radio-button-focused-unselected-icon-color);
+  --radio-button-pressed-selected-icon-state-layer-color: var(--md-comp-radio-button-pressed-selected-icon-state-layer-color);
+  --radio-button-pressed-selected-icon-state-layer-opacity: var(--md-comp-radio-button-pressed-selected-icon-state-layer-opacity);
+  --radio-button-pressed-selected-icon-color: var(--md-comp-radio-button-pressed-selected-icon-color);
+  --radio-button-pressed-unselected-icon-state-layer-color: var(--md-comp-radio-button-pressed-unselected-icon-state-layer-color);
+  --radio-button-pressed-unselected-icon-state-layer-opacity: var(--md-comp-radio-button-pressed-unselected-icon-state-layer-opacity);
+  --radio-button-pressed-unselected-icon-color: var(--md-comp-radio-button-pressed-unselected-icon-color);
+  --radio-button-disabled-selected-icon-color: var(--md-comp-radio-button-disabled-selected-icon-color);
+  --radio-button-disabled-selected-icon-opacity: var(--md-comp-radio-button-disabled-selected-icon-opacity);
+  --radio-button-disabled-unselected-icon-color: var(--md-comp-radio-button-disabled-unselected-icon-color);
+  --radio-button-disabled-unselected-icon-opacity: var(--md-comp-radio-button-disabled-unselected-icon-opacity);
+}

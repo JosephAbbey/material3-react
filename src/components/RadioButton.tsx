@@ -2,6 +2,7 @@ import React from 'react';
 import './RadioButton.css';
 import { Ripple } from './Ripple';
 import { Icon } from './Icon';
+import { cls } from '~/utils';
 
 export const RadioButtonType = {
   Elevated: 'Elevated',
@@ -17,8 +18,8 @@ export type RadioButtonProps = {
   onClick: () => void;
   /** Controls the enabled state of this button. When true, this component will not respond to user input, and it will appear visually disabled and disabled to accessibility services. */
   disabled?: boolean;
-  /** Controls the checked state of this button. */
-  checked?: boolean;
+  /** Controls the selected state of this button. */
+  selected?: boolean;
   /** CSS styles to be applied to the HTMLButtonElement. */
   style?: React.CSSProperties;
 };
@@ -29,18 +30,18 @@ export type RadioButtonProps = {
 export const RadioButton = ({
   onClick,
   disabled = false,
-  checked = false,
+  selected = false,
   style,
   ...props
 }: RadioButtonProps &
   Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onClick'>) => {
   return (
     <span
-      className={`RadioButton ${checked ? 'checked' : ''}`}
+      className={cls`RadioButton ${{ selected, disabled }}`}
       onClick={onClick}
       style={style}>
-      <input type='radio' disabled={disabled} checked={checked} {...props} />
-      {checked ? (
+      <input type='radio' disabled={disabled} checked={selected} {...props} />
+      {selected ? (
         <Icon icon='radio_button_checked' />
       ) : (
         <Icon icon='radio_button_unchecked' />

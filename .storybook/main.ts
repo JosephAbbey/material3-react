@@ -11,15 +11,14 @@ const config: StorybookConfig = {
     '@storybook/addon-styling',
     '@geometricpanda/storybook-addon-badges',
   ],
-  core: {
-    builder: {
-      name: '@storybook/builder-vite',
-      options: { viteConfigPath: './vite.storybook.config.js' },
-    },
-  },
+  core: {},
   framework: {
     name: '@storybook/react-vite',
-    options: {},
+    options: {
+      builder: {
+        viteConfigPath: './vite.storybook.config.js'
+      }
+    },
   },
   docs: {
     autodocs: true,

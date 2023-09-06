@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+.App {
+  /* .heading {
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+
+    .Icon {
+      user-select: none;
+    }
+  }
+
+  .editing {
+    background: var(--md-sys-color-surface-container-high);
+    color: var(--md-sys-color-on-surface-variant);
+  }
+
+  .value {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Roboto Mono', monospace;
+
+    > .IconToggleButton {
+      margin: 0;
+      margin-left: 1em;
+    }
+  } */
+}

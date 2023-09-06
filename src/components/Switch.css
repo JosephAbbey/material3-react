@@ -1,92 +1,3 @@
-@import url(../tokens/components/switch.css);
-
-.Switch {
-  --switch-checked-track-color: var(--md-comp-switch-checked-track-color);
-  --switch-unchecked-track-color: var(--md-comp-switch-unchecked-track-color);
-  --switch-unchecked-track-outline-color: var(
-    --md-comp-switch-unchecked-track-outline-color
-  );
-  --switch-checked-thumb-color: var(--md-comp-switch-checked-thumb-color);
-  --switch-unchecked-thumb-color: var(--md-comp-switch-unchecked-thumb-color);
-  --switch-checked-icon-color: var(--md-comp-switch-checked-icon-color);
-  --switch-unchecked-icon-color: var(--md-comp-switch-unchecked-icon-color);
-
-  --switch-disabled-checked-track-color: color-mix(
-    in srgb,
-    var(--md-comp-switch-disabled-checked-track-color)
-      var(--md-comp-switch-disabled-checked-track-opacity),
-    transparent
-  );
-  --switch-disabled-unchecked-track-color: color-mix(
-    in srgb,
-    var(--md-comp-switch-disabled-unchecked-track-color)
-      var(--md-comp-switch-disabled-unchecked-track-opacity),
-    transparent
-  );
-  --switch-disabled-unchecked-track-outline-color: color-mix(
-    in srgb,
-    var(--md-comp-switch-disabled-unchecked-track-outline-color)
-      var(--md-comp-switch-disabled-unchecked-track-opacity),
-    transparent
-  );
-  --switch-disabled-checked-thumb-color: color-mix(
-    in srgb,
-    var(--md-comp-switch-disabled-checked-thumb-color)
-      var(--md-comp-switch-disabled-checked-thumb-opacity),
-    transparent
-  );
-  --switch-disabled-unchecked-thumb-color: color-mix(
-    in srgb,
-    var(--md-comp-switch-disabled-unchecked-thumb-color)
-      var(--md-comp-switch-disabled-unchecked-thumb-opacity),
-    transparent
-  );
-  --switch-disabled-checked-icon-color: color-mix(
-    in srgb,
-    var(--md-comp-switch-disabled-checked-icon-color)
-      var(--md-comp-switch-disabled-checked-icon-opacity),
-    transparent
-  );
-  --switch-disabled-unchecked-icon-color: color-mix(
-    in srgb,
-    var(--md-comp-switch-disabled-unchecked-icon-color)
-      var(--md-comp-switch-disabled-unchecked-icon-opacity),
-    transparent
-  );
-
-  --switch-hovered-thumb-container-state-layer-opacity: var(
-    --md-comp-switch-hovered-thumb-container-state-layer-opacity
-  );
-  --switch-unchecked-hovered-thumb-container-state-layer-color: var(
-    --md-comp-switch-unchecked-hovered-thumb-container-state-layer-color
-  );
-  --switch-checked-hovered-thumb-container-state-layer-color: var(
-    --md-comp-switch-checked-hovered-thumb-container-state-layer-color
-  );
-  --switch-checked-hovered-thumb-color: var(
-    --md-comp-switch-checked-hovered-thumb-color
-  );
-  --switch-unchecked-hovered-thumb-color: var(
-    --md-comp-switch-unchecked-hovered-thumb-color
-  );
-
-  --switch-pressed-thumb-container-state-layer-opacity: var(
-    --md-comp-switch-pressed-thumb-container-state-layer-opacity
-  );
-  --switch-unchecked-pressed-thumb-container-state-layer-color: var(
-    --md-comp-switch-unchecked-pressed-thumb-container-state-layer-color
-  );
-  --switch-checked-pressed-thumb-container-state-layer-color: var(
-    --md-comp-switch-checked-pressed-thumb-container-state-layer-color
-  );
-  --switch-checked-pressed-thumb-color: var(
-    --md-comp-switch-checked-pressed-thumb-color
-  );
-  --switch-unchecked-pressed-thumb-color: var(
-    --md-comp-switch-unchecked-pressed-thumb-color
-  );
-}
-
 .Switch {
   width: 52px;
   height: 32px;
@@ -99,28 +10,44 @@
   cursor: pointer;
 }
 
-.Switch.checked {
-  background-color: var(--switch-checked-track-color);
+.Switch.selected {
+  background-color: var(--switch-enabled-selected-track-color);
   border: 2px solid transparent;
 }
-.Switch:not(.checked) {
-  background-color: var(--switch-unchecked-track-color);
-  border: 2px solid var(--switch-unchecked-track-outline-color);
+.Switch:not(.selected) {
+  background-color: var(--switch-enabled-unselected-track-color);
+  border: 2px solid var(--switch-enabled-unselected-track-outline-color);
 }
-.Switch.checked.disabled {
-  background-color: var(--switch-disabled-checked-track-color);
+.Switch.selected.disabled {
+  background-color: color-mix(
+    in srgb,
+    var(--switch-disabled-selected-track-color)
+      var(--switch-disabled-track-opacity),
+    transparent
+  );
   border: 2px solid transparent;
 }
-.Switch:not(.checked).disabled {
-  background-color: var(--switch-disabled-unchecked-track-color);
-  border: 2px solid var(--switch-disabled-unchecked-track-outline-color);
+.Switch:not(.selected).disabled {
+  background-color: color-mix(
+    in srgb,
+    var(--switch-disabled-unselected-track-color)
+      var(--switch-disabled-track-opacity),
+    transparent
+  );
+  border: 2px solid
+    color-mix(
+      in srgb,
+      var(--switch-disabled-unselected-track-outline-color)
+        var(--switch-disabled-track-opacity),
+      transparent
+    );
 }
 
-.Switch > .Thumb {
+.Switch > .SwitchThumb {
   position: absolute;
 }
 
-.Switch.checked > .Thumb {
+.Switch.selected > .SwitchThumb {
   animation: 500ms switchOn;
 
   right: 0;
@@ -128,23 +55,31 @@
   height: 24px;
   border-radius: 12px;
   margin: 2px;
-  --switch-checked-icon-opacity: 1;
-  --switch-unchecked-icon-opacity: 0;
+  --switch-selected-icon-opacity: 1;
+  --switch-unselected-icon-opacity: 0;
 
-  background-color: var(--switch-checked-thumb-color);
+  background-color: var(--switch-enabled-selected-thumb-color);
 }
-.Switch.checked.disabled > .Thumb {
-  background-color: var(--switch-disabled-checked-thumb-color);
+.Switch.selected.disabled > .SwitchThumb {
+  background-color: color-mix(
+    in srgb,
+    var(--switch-disabled-selected-thumb-color)
+      var(--switch-disabled-selected-thumb-opacity),
+    transparent
+  );
 }
-.Switch.checked > .Thumb > .CheckedIcon > .Icon {
-  --icon-color: var(--switch-checked-icon-color);
-  color: var(--switch-checked-icon-color);
+.Switch.selected > .SwitchThumb .Icon {
+  --icon-color: var(--switch-enabled-selected-icon-color);
 }
-.Switch.checked.disabled > .Thumb > .CheckedIcon > .Icon {
-  --icon-color: var(--switch-disabled-checked-icon-color);
-  color: var(--switch-disabled-checked-icon-color);
+.Switch.selected.disabled > .SwitchThumb .Icon {
+  --icon-color: color-mix(
+    in srgb,
+    var(--switch-disabled-selected-icon-color)
+      var(--switch-disabled-selected-icon-opacity),
+    transparent
+  );
 }
-.Switch:not(.checked) > .Thumb {
+.Switch:not(.selected) > .SwitchThumb {
   animation: 500ms switchOff;
 
   right: 20px;
@@ -152,53 +87,63 @@
   height: var(--switch-off-height);
   border-radius: var(--switch-off-border-radius);
   margin: var(--switch-off-margin);
-  --switch-checked-icon-opacity: 0;
-  --switch-unchecked-icon-opacity: 1;
+  --switch-selected-icon-opacity: 0;
+  --switch-unselected-icon-opacity: 1;
 
-  background-color: var(--switch-unchecked-thumb-color);
+  background-color: var(--switch-enabled-unselected-thumb-color);
 }
-.Switch:not(.checked).disabled > .Thumb {
-  background-color: var(--switch-disabled-unchecked-thumb-color);
+.Switch:not(.selected).disabled > .SwitchThumb {
+  background-color: color-mix(
+    in srgb,
+    var(--switch-disabled-unselected-thumb-color)
+      var(--switch-disabled-unselected-thumb-opacity),
+    transparent
+  );
 }
-.Switch:not(.checked) > .Thumb > .UncheckedIcon > .Icon {
-  --icon-color: var(--switch-unchecked-icon-color);
-  color: var(--switch-unchecked-icon-color);
+.Switch:not(.selected) > .SwitchThumb .Icon {
+  --icon-color: var(--switch-enabled-unselected-icon-color);
 }
-.Switch:not(.checked).disabled > .Thumb > .UncheckedIcon > .Icon {
-  --icon-color: var(--switch-disabled-unchecked-icon-color);
-  color: var(--switch-disabled-unchecked-icon-color);
+.Switch:not(.selected).disabled > .SwitchThumb .Icon {
+  --icon-color: color-mix(
+    in srgb,
+    var(--switch-disabled-unselected-icon-color)
+      var(--switch-disabled-unselected-icon-opacity),
+    transparent
+  );
 }
 
-.Switch > .Thumb:not(:has(> .UncheckedIcon)) {
+.Switch > .SwitchThumb:not(:has(> .SwitchUnselectedIcon)) {
   --switch-off-width: 16px;
   --switch-off-height: 16px;
   --switch-off-border-radius: 8px;
   --switch-off-margin: 6px;
 }
-.Switch > .Thumb:has(> .UncheckedIcon) {
+.Switch > .SwitchThumb:has(> .SwitchUnselectedIcon) {
   --switch-off-width: 24px;
   --switch-off-height: 24px;
   --switch-off-border-radius: 12px;
   --switch-off-margin: 2px;
 }
 
-.Switch > .Thumb > .CheckedIcon,
-.Switch > .Thumb > .UncheckedIcon {
+.Switch > .SwitchThumb > .SwitchSelectedIcon,
+.Switch > .SwitchThumb > .SwitchUnselectedIcon {
   position: absolute;
+  display: flex;
+  align-items: center;
 }
-.Switch > .Thumb > .CheckedIcon {
-  opacity: var(--switch-checked-icon-opacity);
+.Switch > .SwitchThumb > .SwitchSelectedIcon {
+  opacity: var(--switch-selected-icon-opacity);
 }
-.Switch > .Thumb > .UncheckedIcon {
-  opacity: var(--switch-unchecked-icon-opacity);
+.Switch > .SwitchThumb > .SwitchUnselectedIcon {
+  opacity: var(--switch-unselected-icon-opacity);
 }
 
-@property --switch-checked-icon-opacity {
+@property --switch-selected-icon-opacity {
   syntax: '<number>';
   inherits: true;
   initial-value: 0;
 }
-@property --switch-unchecked-icon-opacity {
+@property --switch-unselected-icon-opacity {
   syntax: '<number>';
   inherits: true;
   initial-value: 1;
@@ -211,8 +156,8 @@
     height: var(--switch-off-height);
     border-radius: var(--switch-off-border-radius);
     margin: var(--switch-off-margin);
-    --switch-checked-icon-opacity: 0;
-    --switch-unchecked-icon-opacity: 1;
+    --switch-selected-icon-opacity: 0;
+    --switch-unselected-icon-opacity: 1;
   }
   20% {
     right: 20px;
@@ -222,8 +167,8 @@
     margin: 0;
   }
   50% {
-    --switch-checked-icon-opacity: 0;
-    --switch-unchecked-icon-opacity: 0;
+    --switch-selected-icon-opacity: 0;
+    --switch-unselected-icon-opacity: 0;
   }
   80% {
     right: 0;
@@ -238,8 +183,8 @@
     height: 24px;
     border-radius: 12px;
     margin: 2px;
-    --switch-checked-icon-opacity: 1;
-    --switch-unchecked-icon-opacity: 0;
+    --switch-selected-icon-opacity: 1;
+    --switch-unselected-icon-opacity: 0;
   }
 }
 @keyframes switchOff {
@@ -249,8 +194,8 @@
     height: 24px;
     border-radius: 12px;
     margin: 2px;
-    --switch-checked-icon-opacity: 1;
-    --switch-unchecked-icon-opacity: 0;
+    --switch-selected-icon-opacity: 1;
+    --switch-unselected-icon-opacity: 0;
   }
   20% {
     right: 0;
@@ -260,8 +205,8 @@
     margin: 0;
   }
   50% {
-    --switch-checked-icon-opacity: 0;
-    --switch-unchecked-icon-opacity: 0;
+    --switch-selected-icon-opacity: 0;
+    --switch-unselected-icon-opacity: 0;
   }
   80% {
     right: 20px;
@@ -276,20 +221,15 @@
     height: var(--switch-off-height);
     border-radius: var(--switch-off-border-radius);
     margin: var(--switch-off-margin);
-    --switch-checked-icon-opacity: 0;
-    --switch-unchecked-icon-opacity: 1;
+    --switch-selected-icon-opacity: 0;
+    --switch-unselected-icon-opacity: 1;
   }
 }
 
-.Switch > .Thumb {
+.Switch > .SwitchThumb {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.Switch > .Thumb .Icon {
-  --icon-size: 16px;
-  font-size: 16px;
 }
 
 .Switch > input[type='checkbox'] {
@@ -297,19 +237,52 @@
   opacity: 0;
 }
 
-.Switch:not(.disabled):not(.checked):hover > .Thumb {
-  background-color: var(--switch-unchecked-hovered-thumb-color);
+.Switch > .SwitchThumb .Icon {
+  --icon-size: 16px;
 }
-.Switch:not(.disabled).checked:hover > .Thumb {
-  background-color: var(--switch-checked-hovered-thumb-color);
+
+.Switch:not(.disabled):not(.selected):hover {
+  background-color: var(--switch-hovered-unselected-track-color);
+  border: 2px solid var(--switch-hovered-unselected-track-outline-color);
 }
-.Switch:not(.disabled):not(.checked):active > .Thumb {
-  background-color: var(--switch-unchecked-pressed-thumb-color);
+.Switch:not(.disabled).selected:hover {
+  background-color: var(--switch-hovered-selected-track-color);
 }
-.Switch:not(.disabled).checked:active > .Thumb {
-  background-color: var(--switch-checked-pressed-thumb-color);
+.Switch:not(.disabled):not(.selected):active {
+  background-color: var(--switch-pressed-unselected-track-color);
+  border: 2px solid var(--switch-pressed-unselected-track-outline-color);
 }
-.Switch > .Thumb > .Ripple {
+.Switch:not(.disabled).selected:active {
+  background-color: var(--switch-pressed-selected-track-color);
+}
+
+.Switch:not(.disabled):not(.selected):hover > .SwitchThumb .Icon {
+  --icon-color: var(--switch-hovered-unselected-icon-color);
+}
+.Switch:not(.disabled).selected:hover > .SwitchThumb .Icon {
+  --icon-color: var(--switch-hovered-selected-icon-color);
+}
+.Switch:not(.disabled):not(.selected):active > .SwitchThumb .Icon {
+  --icon-color: var(--switch-pressed-unselected-icon-color);
+}
+.Switch:not(.disabled).selected:active > .SwitchThumb .Icon {
+  --icon-color: var(--switch-pressed-selected-icon-color);
+}
+
+.Switch:not(.disabled):not(.selected):hover > .SwitchThumb {
+  background-color: var(--switch-hovered-unselected-thumb-color);
+}
+.Switch:not(.disabled).selected:hover > .SwitchThumb {
+  background-color: var(--switch-hovered-selected-thumb-color);
+}
+.Switch:not(.disabled):not(.selected):active > .SwitchThumb {
+  background-color: var(--switch-pressed-unselected-thumb-color);
+}
+.Switch:not(.disabled).selected:active > .SwitchThumb {
+  background-color: var(--switch-pressed-selected-thumb-color);
+}
+
+.Switch > .SwitchThumb > .Ripple {
   width: 40px;
   height: 40px;
   top: 50%;
@@ -317,32 +290,32 @@
   transform: translate(-50%, -50%);
   border-radius: 20px;
 }
-.Switch:not(.checked) > .Thumb > .Ripple {
+.Switch:not(.selected) > .SwitchThumb > .Ripple {
   --ripple-hovered-color: var(
-    --switch-unchecked-hovered-thumb-container-state-layer-color
+    --switch-hovered-unselected-track-state-layer-color
   );
   --ripple-hovered-opacity: var(
-    --switch-hovered-thumb-container-state-layer-opacity
+    --switch-hovered-unselected-track-state-layer-opacity
   );
   --ripple-pressed-color: var(
-    --switch-unchecked-pressed-thumb-container-state-layer-color
+    --switch-pressed-unselected-track-state-layer-color
   );
   --ripple-pressed-opacity: var(
-    --switch-pressed-thumb-container-state-layer-opacity
+    --switch-pressed-unselected-track-state-layer-opacity
   );
 }
-.Switch.checked > .Thumb > .Ripple {
+.Switch.selected > .SwitchThumb > .Ripple {
   --ripple-hovered-color: var(
-    --switch-checked-hovered-thumb-container-state-layer-color
+    --switch-hovered-selected-track-state-layer-color
   );
   --ripple-hovered-opacity: var(
-    --switch-hovered-thumb-container-state-layer-opacity
+    --switch-hovered-selected-track-state-layer-opacity
   );
   --ripple-pressed-color: var(
-    --switch-checked-pressed-thumb-container-state-layer-color
+    --switch-pressed-selected-track-state-layer-color
   );
   --ripple-pressed-opacity: var(
-    --switch-pressed-thumb-container-state-layer-opacity
+    --switch-pressed-selected-track-state-layer-opacity
   );
 }
 

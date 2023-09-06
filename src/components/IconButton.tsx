@@ -1,6 +1,7 @@
 import React, { PropsWithChildren } from 'react';
 import './IconButton.css';
 import { Ripple } from './Ripple';
+import { cls } from '~/utils';
 
 export const IconButtonType = {
   Filled: 'Filled',
@@ -33,7 +34,7 @@ export const IconButton = ({
 }: IconButtonProps) => {
   return (
     <button
-      className={`IconButton ${type}`}
+      className={cls`IconButton ${type} ${{ disabled }}`}
       type='button'
       onClick={onClick}
       disabled={disabled}

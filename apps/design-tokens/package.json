@@ -1,0 +1,47 @@
+{
+  "name": "design-tokens",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./lib/index.js",
+  "module": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/index.js",
+      "types": "./lib/index.d.ts"
+    },
+    "./tokens/**/*.csv": {
+      "default": "./tokens/**/*.csv"
+    },
+    "./tokens/**/*.css": {
+      "default": "./tokens/**/*.css"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "generate": "node ./lib/index.js",
+    "lint": "eslint . --ext ts --report-unused-disable-directives --max-warnings 0",
+    "prepublish": "npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/d3-dsv": "^3.0.2",
+    "@types/node": "^20.5.7",
+    "@typescript-eslint/eslint-plugin": "^6.2.0",
+    "@typescript-eslint/parser": "^6.2.0",
+    "eslint": "^8.45.0",
+    "typescript": "^5.2.2"
+  },
+  "dependencies": {
+    "d3-dsv": "^3.0.1",
+    "design-color": "../design-color",
+    "puppeteer": "^21.1.1"
+  },
+  "files": [
+    "./lib/*"
+  ]
+}

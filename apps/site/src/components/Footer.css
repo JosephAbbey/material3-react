@@ -1,0 +1,79 @@
+.Footer {
+  margin-top: 120px;
+
+  > .about {
+    margin-top: 64px;
+    display: grid;
+    justify-content: space-between;
+    max-width: 1200px;
+    grid-column-gap: 20px;
+    -moz-column-gap: 20px;
+    column-gap: 20px;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+
+    & a {
+      color: var(--md-sys-color-primary);
+    }
+
+    & p {
+      font-family: var(--md-sys-typescale-body-large-font);
+      line-height: var(--md-sys-typescale-body-large-line-height);
+      font-size: var(--md-sys-typescale-body-large-size);
+      letter-spacing: var(--md-sys-typescale-body-large-tracking);
+      font-weight: var(--md-sys-typescale-body-large-weight);
+    }
+
+    & ul {
+      display: flex;
+      flex-flow: column wrap;
+      margin-top: 24px;
+      row-gap: 20px;
+      list-style: none;
+
+      & li {
+        font-family: var(--md-sys-typescale-title-small-font);
+        line-height: var(--md-sys-typescale-title-small-line-height);
+        font-size: var(--md-sys-typescale-title-small-size);
+        letter-spacing: var(--md-sys-typescale-title-small-tracking);
+        font-weight: var(--md-sys-typescale-title-small-weight);
+        color: var(--md-sys-color-on-surface-variant);
+
+        > a {
+          font-family: var(--md-sys-typescale-title-medium-font);
+          line-height: var(--md-sys-typescale-title-medium-line-height);
+          font-size: var(--md-sys-typescale-title-medium-size);
+          letter-spacing: var(--md-sys-typescale-title-medium-tracking);
+          font-weight: var(--md-sys-typescale-title-medium-weight);
+          color: var(--md-sys-color-primary);
+          text-decoration: none;
+
+          &:hover,
+          &:focus,
+          &:focus-visible {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  > .legal {
+    margin-block: 64px;
+
+    & a {
+      font-family: var(--md-sys-typescale-title-medium-font);
+      line-height: var(--md-sys-typescale-title-medium-line-height);
+      font-size: var(--md-sys-typescale-title-medium-size);
+      letter-spacing: var(--md-sys-typescale-title-medium-tracking);
+      font-weight: var(--md-sys-typescale-title-medium-weight);
+      color: var(--md-sys-color-primary);
+      text-decoration: none;
+
+      &:hover,
+      &:focus,
+      &:focus-visible {
+        text-decoration: underline;
+      }
+    }
+  }
+}

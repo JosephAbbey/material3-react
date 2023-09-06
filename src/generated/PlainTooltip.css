@@ -1,0 +1,11 @@
+/* prettier-ignore */
+.PlainTooltip, .PlainTooltip * {
+  --plain-tooltip-container-color: var(--md-comp-plain-tooltip-container-color);
+  --plain-tooltip-container-shape: var(--md-comp-plain-tooltip-container-shape);
+  --plain-tooltip-supporting-text-color: var(--md-comp-plain-tooltip-supporting-text-color);
+  --plain-tooltip-supporting-text-font: var(--md-comp-plain-tooltip-supporting-text-font);
+  --plain-tooltip-supporting-text-line-height: var(--md-comp-plain-tooltip-supporting-text-line-height);
+  --plain-tooltip-supporting-text-size: var(--md-comp-plain-tooltip-supporting-text-size);
+  --plain-tooltip-supporting-text-weight: var(--md-comp-plain-tooltip-supporting-text-weight);
+  --plain-tooltip-supporting-text-tracking: var(--md-comp-plain-tooltip-supporting-text-tracking);
+}

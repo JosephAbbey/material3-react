@@ -1,0 +1,21 @@
+*, ::backdrop {
+  --md-comp-text-field-outlined-error-outline-outline-color: var(--md-sys-color-error);
+  --md-comp-text-field-outlined-error-label-text-color: var(--md-sys-color-error);
+  --md-comp-text-field-outlined-error-input-text-color: var(--md-sys-color-on-surface);
+  --md-comp-text-field-outlined-error-supporting-text-color: var(--md-sys-color-error);
+  --md-comp-text-field-outlined-error-leading-icon-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-text-field-outlined-error-trailing-icon-color: var(--md-sys-color-error);
+  --md-comp-text-field-outlined-error-focused-outline-outline-color: var(--md-sys-color-error);
+  --md-comp-text-field-outlined-error-focused-label-text-color: var(--md-sys-color-error);
+  --md-comp-text-field-outlined-error-focused-input-text-color: var(--md-sys-color-on-surface);
+  --md-comp-text-field-outlined-error-focused-supporting-text-color: var(--md-sys-color-error);
+  --md-comp-text-field-outlined-error-focused-leading-icon-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-text-field-outlined-error-focused-trailing-icon-color: var(--md-sys-color-error);
+  --md-comp-text-field-outlined-error-focused-caret-color: var(--md-sys-color-error);
+  --md-comp-text-field-outlined-error-hovered-outline-outline-color: var(--md-sys-color-on-error-container);
+  --md-comp-text-field-outlined-error-hovered-label-text-color: var(--md-sys-color-on-error-container);
+  --md-comp-text-field-outlined-error-hovered-input-text-color: var(--md-sys-color-on-surface);
+  --md-comp-text-field-outlined-error-hovered-supporting-text-color: var(--md-sys-color-error);
+  --md-comp-text-field-outlined-error-hovered-leading-icon-color: var(--md-sys-color-on-surface-variant);
+  --md-comp-text-field-outlined-error-hovered-trailing-icon-color: var(--md-sys-color-on-error-container);
+}

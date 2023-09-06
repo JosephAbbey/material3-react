@@ -1,0 +1,404 @@
+.TextField.Filled,
+.TextField.Filled .Icon {
+  --text-field-container-color: var(
+    --md-comp-filled-text-field-container-color
+  );
+  --text-field-container-shape: var(
+    --md-comp-filled-text-field-container-shape
+  );
+  --text-field-leading-icon-color: var(
+    --md-comp-filled-text-field-leading-icon-color
+  );
+  --text-field-leading-icon-size: var(
+    --md-comp-filled-text-field-leading-icon-size
+  );
+  --text-field-label-text-color: var(
+    --md-comp-filled-text-field-label-text-color
+  );
+  --text-field-label-text-font: var(
+    --md-comp-filled-text-field-label-text-font
+  );
+  --text-field-label-text-line-height: var(
+    --md-comp-filled-text-field-label-text-line-height
+  );
+  --text-field-label-text-size: var(
+    --md-comp-filled-text-field-label-text-size
+  );
+  --text-field-label-text-weight: var(
+    --md-comp-filled-text-field-label-text-weight
+  );
+  --text-field-label-text-tracking: var(
+    --md-comp-filled-text-field-label-text-tracking
+  );
+  --text-field-populated-label-text-line-height: var(
+    --md-comp-filled-text-field-populated-label-text-line-height
+  );
+  --text-field-populated-label-text-size: var(
+    --md-comp-filled-text-field-populated-label-text-size
+  );
+  --text-field-trailing-icon-color: var(
+    --md-comp-filled-text-field-trailing-icon-color
+  );
+  --text-field-trailing-icon-size: var(
+    --md-comp-filled-text-field-trailing-icon-size
+  );
+  --text-field-active-indicator-height: var(
+    --md-comp-filled-text-field-active-indicator-height
+  );
+  --text-field-active-indicator-color: var(
+    --md-comp-filled-text-field-active-indicator-color
+  );
+  --text-field-caret-color: var(--md-comp-filled-text-field-caret-color);
+  --text-field-input-text-color: var(
+    --md-comp-filled-text-field-input-text-color
+  );
+  --text-field-input-text-font: var(
+    --md-comp-filled-text-field-input-text-font
+  );
+  --text-field-input-text-line-height: var(
+    --md-comp-filled-text-field-input-text-line-height
+  );
+  --text-field-input-text-size: var(
+    --md-comp-filled-text-field-input-text-size
+  );
+  --text-field-input-text-weight: var(
+    --md-comp-filled-text-field-input-text-weight
+  );
+  --text-field-input-text-tracking: var(
+    --md-comp-filled-text-field-input-text-tracking
+  );
+  --text-field-supporting-text-color: var(
+    --md-comp-filled-text-field-supporting-text-color
+  );
+  --text-field-supporting-text-font: var(
+    --md-comp-filled-text-field-supporting-text-font
+  );
+  --text-field-supporting-text-line-height: var(
+    --md-comp-filled-text-field-supporting-text-line-height
+  );
+  --text-field-supporting-text-size: var(
+    --md-comp-filled-text-field-supporting-text-size
+  );
+  --text-field-supporting-text-weight: var(
+    --md-comp-filled-text-field-supporting-text-weight
+  );
+  --text-field-supporting-text-tracking: var(
+    --md-comp-filled-text-field-supporting-text-tracking
+  );
+  --text-field-placeholder-input-text-color: var(
+    --md-comp-filled-text-field-placeholder-input-text-color
+  );
+  --text-field-prefix-input-label-color: var(
+    --md-comp-filled-text-field-prefix-input-label-color
+  );
+  --text-field-suffix-input-label-color: var(
+    --md-comp-filled-text-field-suffix-input-label-color
+  );
+
+  --text-field-focused-active-indicator-height: var(
+    --md-comp-filled-text-field-focused-active-indicator-height
+  );
+  --text-field-focused-active-indicator-color: var(
+    --md-comp-filled-text-field-focused-active-indicator-color
+  );
+  --text-field-focused-label-text-color: var(
+    --md-comp-filled-text-field-focused-label-text-color
+  );
+  --text-field-focused-input-text-color: var(
+    --md-comp-filled-text-field-focused-input-text-color
+  );
+  --text-field-focused-supporting-text-color: var(
+    --md-comp-filled-text-field-focused-supporting-text-color
+  );
+  --text-field-focused-leading-icon-color: var(
+    --md-comp-filled-text-field-focused-leading-icon-color
+  );
+  --text-field-focused-trailing-icon-color: var(
+    --md-comp-filled-text-field-focused-trailing-icon-color
+  );
+
+  --text-field-hovered-active-indicator-height: var(
+    --md-comp-filled-text-field-hovered-active-indicator-height
+  );
+  --text-field-hovered-active-indicator-color: var(
+    --md-comp-filled-text-field-hovered-active-indicator-color
+  );
+  --text-field-hovered-label-text-color: var(
+    --md-comp-filled-text-field-hovered-label-text-color
+  );
+  --text-field-hovered-input-text-color: var(
+    --md-comp-filled-text-field-hovered-input-text-color
+  );
+  --text-field-hovered-supporting-text-color: var(
+    --md-comp-filled-text-field-hovered-supporting-text-color
+  );
+  --text-field-hovered-leading-icon-color: var(
+    --md-comp-filled-text-field-hovered-leading-icon-color
+  );
+  --text-field-hovered-trailing-icon-color: var(
+    --md-comp-filled-text-field-hovered-trailing-icon-color
+  );
+  --text-field-hovered-container-state-layer-color: var(
+    --md-comp-filled-text-field-hovered-container-state-layer-color
+  );
+  --text-field-hovered-container-state-layer-opacity: var(
+    --md-comp-filled-text-field-hovered-container-state-layer-opacity
+  );
+
+  --text-field-disabled-container-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-text-field-disabled-container-color)
+      var(--md-comp-filled-text-field-disabled-container-opacity),
+    transparent
+  );
+  --text-field-disabled-active-indicator-height: var(
+    --md-comp-filled-text-field-disabled-active-indicator-height
+  );
+  --text-field-disabled-active-indicator-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-text-field-disabled-active-indicator-color)
+      var(--md-comp-filled-text-field-disabled-active-indicator-opacity),
+    transparent
+  );
+  --text-field-disabled-label-text-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-text-field-disabled-label-text-color)
+      var(--md-comp-filled-text-field-disabled-label-text-opacity),
+    transparent
+  );
+  --text-field-disabled-input-text-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-text-field-disabled-input-text-color)
+      var(--md-comp-filled-text-field-disabled-input-text-opacity),
+    transparent
+  );
+  --text-field-disabled-supporting-text-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-text-field-disabled-supporting-text-color)
+      var(--md-comp-filled-text-field-disabled-supporting-text-opacity),
+    transparent
+  );
+  --text-field-disabled-leading-icon-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-text-field-disabled-leading-icon-color)
+      var(--md-comp-filled-text-field-disabled-leading-icon-opacity),
+    transparent
+  );
+  --text-field-disabled-trailing-icon-color: color-mix(
+    in srgb,
+    var(--md-comp-filled-text-field-disabled-trailing-icon-color)
+      var(--md-comp-filled-text-field-disabled-trailing-icon-opacity),
+    transparent
+  );
+}
+
+.TextFieldContainer {
+  display: flex;
+  align-items: center;
+  height: 56px;
+  background-color: var(--text-field-container-color);
+  border-radius: var(--text-field-container-shape);
+  border-bottom: var(--text-field-active-indicator-height) solid
+    var(--text-field-active-indicator-color);
+  padding-bottom: calc(
+    var(--text-field-focused-active-indicator-height) -
+      var(--text-field-active-indicator-height)
+  );
+}
+.TextFieldContainer:has(input[type='text']:disabled) {
+  background-color: var(--text-field-disabled-container-color);
+  border-bottom: var(--text-field-disabled-active-indicator-height) solid
+    var(--text-field-disabled-active-indicator-color);
+  padding-bottom: calc(
+    var(--text-field-focused-active-indicator-height) -
+      var(--text-field-disabled-active-indicator-height)
+  );
+}
+.TextFieldContainer:hover {
+  border-bottom: var(--text-field-hovered-active-indicator-height) solid
+    var(--text-field-hovered-active-indicator-color);
+  padding-bottom: calc(
+    var(--text-field-focused-active-indicator-height) -
+      var(--text-field-hovered-active-indicator-height)
+  );
+}
+.TextFieldContainer:has(input[type='text']:focus) {
+  border-bottom: var(--text-field-focused-active-indicator-height) solid
+    var(--text-field-focused-active-indicator-color);
+  padding-bottom: 0;
+}
+
+.TextFieldLeadingIcon {
+  margin-left: 12px;
+}
+.TextFieldLeadingIcon > .Icon {
+  --icon-color: var(--text-field-leading-icon-color);
+  --icon-size: var(--text-field-leading-icon-size);
+  font-size: var(--text-field-leading-icon-size);
+}
+.TextFieldLeadingIcon:has(~ .TextFieldText input[type='text']:disabled)
+  > .Icon {
+  --icon-color: var(--text-field-disabled-leading-icon-color);
+}
+.TextFieldLeadingIcon:has(~ .TextFieldText input[type='text']:focus) > .Icon {
+  --icon-color: var(--text-field-focused-leading-icon-color);
+}
+.TextFieldTrailingIcon {
+  margin-right: 12px;
+}
+.TextFieldTrailingIcon > .Icon {
+  --icon-color: var(--text-field-trailing-icon-color);
+  --icon-size: var(--text-field-trailing-icon-size);
+  font-size: var(--text-field-trailing-icon-size);
+}
+.TextFieldText:has(input[type='text']:disabled)
+  ~ .TextFieldTrailingIcon
+  > .Icon {
+  --icon-color: var(--text-field-disabled-trailing-icon-color);
+}
+.TextFieldText:has(input[type='text']:focus) ~ .TextFieldTrailingIcon > .Icon {
+  --icon-color: var(--text-field-focused-trailing-icon-color);
+}
+
+.TextFieldLeadingIcon,
+.TextFieldTrailingIcon,
+.TextFieldText {
+  user-select: none;
+}
+
+.TextFieldText {
+  margin-inline: 16px;
+  height: var(--text-field-input-text-line-height);
+  color: var(--text-field-input-text-color);
+  font-family: var(--text-field-input-text-font);
+  line-height: var(--text-field-input-text-line-height);
+  font-size: var(--text-field-input-text-size);
+  letter-spacing: var(--text-field-input-text-tracking);
+  font-weight: var(--text-field-input-text-weight);
+}
+.TextFieldText:has(input[type='text']:disabled) {
+  color: var(--text-field-disabled-input-text-color);
+}
+.TextFieldText:has(input[type='text']:focus) {
+  color: var(--text-field-focused-input-text-color);
+}
+
+.TextFieldText {
+  position: relative;
+  display: flex;
+  transition: transform 300ms linear;
+}
+
+.TextFieldInputText {
+  position: relative;
+  min-width: 200px;
+}
+
+.TextFieldInputText > input[type='text'] {
+  position: absolute;
+  inset: 0;
+  border: none;
+  border-radius: 0;
+  background-color: transparent;
+  outline: none;
+  padding: 0;
+  color: var(--text-field-input-text-color);
+  font-family: var(--text-field-input-text-font);
+  line-height: var(--text-field-input-text-line-height);
+  font-size: var(--text-field-input-text-size);
+  letter-spacing: var(--text-field-input-text-tracking);
+  font-weight: var(--text-field-input-text-weight);
+  caret-color: transparent;
+}
+.TextFieldInputText > input[type='text']:is(:not([value='']), :focus) {
+  caret-color: var(--text-field-caret-color);
+  transition: caret-color 0s 300ms linear;
+}
+.TextFieldInputText > input[type='text']:disabled {
+  color: var(--text-field-disabled-input-text-color);
+}
+.TextFieldInputText > input[type='text']:focus {
+  color: var(--text-field-focused-input-text-color);
+}
+
+.TextFieldPlaceholder {
+  user-select: none;
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  color: var(--text-field-placeholder-input-text-color);
+}
+.TextFieldPlaceholder:has(~ input[type='text'][value='']:focus) {
+  visibility: visible;
+  transition: visibility 0s 300ms linear;
+}
+.TextFieldPlaceholder:has(~ input[type='text']:disabled) {
+  color: var(--text-field-disabled-placeholder-input-text-color);
+}
+
+.TextFieldPrefix,
+.TextFieldSuffix {
+  visibility: hidden;
+}
+.TextFieldText:has(
+    > .TextFieldInputText > input[type='text']:is(:not([value='']), :focus)
+  )
+  > :is(.TextFieldPrefix, .TextFieldSuffix) {
+  visibility: visible;
+  transition: visibility 0s 300ms linear;
+}
+
+.TextFieldLabel {
+  user-select: none;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  color: var(--text-field-label-text-color);
+  font-family: var(--text-field-label-text-font);
+  line-height: var(--text-field-label-text-line-height);
+  font-size: var(--text-field-label-text-size);
+  letter-spacing: var(--text-field-label-text-tracking);
+  font-weight: var(--text-field-label-text-weight);
+  transition: transform 300ms linear, line-height 300ms linear,
+    font-size 300ms linear;
+}
+.TextFieldLabel:has(~ .TextFieldInputText > input[type='text']:disabled) {
+  color: var(--text-field-disabled-label-text-color);
+}
+.TextFieldLabel:has(~ .TextFieldInputText > input[type='text']:focus) {
+  color: var(--text-field-focused-label-text-color);
+}
+
+.TextFieldText:has(
+    .TextFieldInputText > input[type='text']:is(:not([value='']), :focus)
+  ) {
+  transform: translateY(8px);
+}
+.TextFieldLabel:has(
+    ~ .TextFieldInputText > input[type='text']:is(:not([value='']), :focus)
+  ) {
+  transform: translateY(
+    calc(var(--text-field-populated-label-text-line-height) * -1)
+  );
+  line-height: var(--text-field-populated-label-text-line-height);
+  font-size: var(--text-field-populated-label-text-size);
+}
+
+.TextFieldSupportingText {
+  color: var(--text-field-supporting-text-color);
+  font-family: var(--text-field-supporting-text-font);
+  line-height: var(--text-field-supporting-text-line-height);
+  font-size: var(--text-field-supporting-text-size);
+  letter-spacing: var(--text-field-supporting-text-tracking);
+  font-weight: var(--text-field-supporting-text-weight);
+  margin-top: 4px;
+  margin-inline: 16px;
+}
+.TextFieldContainer:has(input[type='text']:disabled)
+  ~ .TextFieldSupportingText {
+  color: var(--text-field-disabled-supporting-text-color);
+}
+.TextFieldContainer:has(input[type='text']:focus) ~ .TextFieldSupportingText {
+  color: var(--text-field-focused-supporting-text-color);
+}

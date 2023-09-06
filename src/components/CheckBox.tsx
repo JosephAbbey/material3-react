@@ -2,23 +2,24 @@ import React from 'react';
 import './CheckBox.css';
 import { Ripple } from './Ripple';
 import { Icon } from './Icon';
+import { cls } from '~/utils';
 
-export const CheckBoxState = {
-  Checked: 'checked',
-  Unchecked: 'unchecked',
+export const CheckboxState = {
+  Selected: 'selected',
+  Unselected: 'unselected',
   Indeterminate: 'indeterminate',
 } as const;
-export type CheckBoxState = valueof<typeof CheckBoxState>;
+export type CheckboxState = valueof<typeof CheckboxState>;
 
-export type CheckBoxProps = {
+export type CheckboxProps = {
   /** Called when this checkbox is clicked. */
   onClick: () => void;
   /** Controls the enabled state of this checkbox. When true, this component will not respond to user input, and it will appear visually disabled and disabled to accessibility services. */
   disabled?: boolean;
   /** Whether to use the error color scheme. */
   error?: boolean;
-  /** Controls the checked state of this checkbox. */
-  state?: CheckBoxState;
+  /** Controls the selected state of this checkbox. */
+  state?: CheckboxState;
   /** CSS styles to be applied to the HTMLDivElement. */
   style?: React.CSSProperties;
 };
@@ -26,30 +27,28 @@ export type CheckBoxProps = {
 /**
  * https://m3.material.io/components/checkbox/overview
  */
-export const CheckBox = ({
+export const Checkbox = ({
   onClick,
   disabled = false,
   error = false,
-  state = CheckBoxState.Unchecked,
+  state = CheckboxState.Unselected,
   style,
   ...props
-}: CheckBoxProps &
+}: CheckboxProps &
   Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onClick'>) => {
   return (
     <div
-      className={`CheckBox ${state} ${error ? 'error' : ''} ${
-        disabled ? 'disabled' : ''
-      }`}
+      className={cls`Checkbox ${state} ${{ error, disabled }}`}
       onClick={onClick}
       style={style}>
       <div className='Container'>
-        {state == CheckBoxState.Checked && <Icon icon='check' />}
-        {state == CheckBoxState.Indeterminate && <Icon icon='remove' />}
+        {state == CheckboxState.Selected && <Icon icon='check' />}
+        {state == CheckboxState.Indeterminate && <Icon icon='remove' />}
       </div>
       <input
         type='checkbox'
         disabled={disabled}
-        checked={state == CheckBoxState.Checked}
+        checked={state != CheckboxState.Unselected}
         {...props}
       />
       <Ripple disabled={disabled} />

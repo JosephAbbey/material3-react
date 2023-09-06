@@ -1,8 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
-import { IconButton, IconButtonType } from './IconButton';
-import { Icon } from './Icon';
+import { IconButton, IconButtonType, Icon } from '..';
 import React from 'react';
 
 const meta = {

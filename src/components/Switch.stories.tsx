@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
-import { Switch } from './Switch';
+import { Switch, Icon } from '..';
 import React, { useState } from 'react';
-import { Icon } from './Icon';
 
 const meta = {
   title: 'Components/Switch',
@@ -22,9 +21,9 @@ const meta = {
       description:
         'Controls the enabled state of this icon button. When true, this component will not respond to user input, and it will appear visually disabled and disabled to accessibility services.',
     },
-    checked: {
+    selected: {
       control: 'boolean',
-      description: 'Controls the checked state of this button.',
+      description: 'Controls the Selected state of this button.',
     },
     style: {
       description: 'CSS styles to be applied to the HTMLButtonElement.',
@@ -39,53 +38,53 @@ type Story = StoryObj<typeof meta>;
 export const Standard: Story = {
   args: {
     disabled: false,
-    checked: false,
+    selected: false,
   },
 };
-export const Checked: Story = {
+export const Selected: Story = {
   args: {
     disabled: false,
-    checked: true,
+    selected: true,
   },
 };
 export const Disabled: Story = {
   args: {
     disabled: true,
-    checked: false,
+    selected: false,
   },
 };
-export const DisabledChecked: Story = {
+export const DisabledSelected: Story = {
   args: {
     disabled: true,
-    checked: true,
+    selected: true,
   },
 };
 export const Interactive: Story = {
   render: () => {
-    const [checked, setChecked] = useState(false);
+    const [selected, setSelected] = useState(false);
     return (
       <>
-        <Switch onClick={() => setChecked(!checked)} checked={checked} />
+        <Switch onClick={() => setSelected(!selected)} selected={selected} />
         <br />
         <Switch
-          onClick={() => setChecked(!checked)}
-          checked={checked}
-          checkedIcon={<Icon icon='surfing' />}
+          onClick={() => setSelected(!selected)}
+          selected={selected}
+          selectedIcon={<Icon icon='check' />}
         />
         <br />
         <Switch
-          onClick={() => setChecked(!checked)}
-          checked={checked}
-          checkedIcon={<Icon icon='surfing' />}
-          uncheckedIcon={<Icon icon='beach_access' />}
+          onClick={() => setSelected(!selected)}
+          selected={selected}
+          selectedIcon={<Icon icon='check' />}
+          unselectedIcon={<Icon icon='close' />}
         />
         <br />
         <Switch
           onClick={() => {}}
-          checked={checked}
+          selected={selected}
           disabled
-          checkedIcon={<Icon icon='surfing' />}
-          uncheckedIcon={<Icon icon='beach_access' />}
+          selectedIcon={<Icon icon='check' />}
+          unselectedIcon={<Icon icon='close' />}
         />
       </>
     );

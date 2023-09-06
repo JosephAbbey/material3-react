@@ -1,0 +1,15 @@
+.Color {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+
+  > div {
+    width: 1.5ex;
+    height: 1.5ex;
+    border-radius: 2px;
+  }
+
+  > .mono {
+    font-family: 'Robot Mono', monospace;
+  }
+}

@@ -1,0 +1,3 @@
+"Token","Element","Design attribute","Role","Value"
+"md.comp.divider.divider.thickness","1. Divider","Thickness","-","1dp"
+"md.comp.divider.divider.color",,"Color","Outline variant","md.sys.color.outline-variant"

@@ -1,10 +1,8 @@
-@import url(../tokens/components/ripple.css);
-
 .Ripple {
-  --ripple-hovered-color: var(--md-comp-ripple-hovered-color);
-  --ripple-hovered-opacity: var(--md-comp-ripple-hovered-opacity);
-  --ripple-pressed-color: var(--md-comp-ripple-pressed-color);
-  --ripple-pressed-opacity: var(--md-comp-ripple-pressed-opacity);
+  --ripple-hovered-color: var(--md-sys-color-on-surface);
+  --ripple-hovered-opacity: var(--md-sys-state-hover-state-layer-opacity);
+  --ripple-pressed-color: var(--md-sys-color-on-surface);
+  --ripple-pressed-opacity: var(--md-sys-state-pressed-state-layer-opacity);
 
   --ripple-diameter: ;
   --ripple-offset-left: ;
@@ -37,13 +35,8 @@
   position: absolute; /* The absolute position we mentioned earlier */
   border-radius: 50%;
   transform: scale(0);
-  animation: ripple var(--md-sys-motion-duration-900)
-    cubic-bezier(
-      var(--md-sys-motion-easing-standard-x0),
-      var(--md-sys-motion-easing-standard-y0),
-      var(--md-sys-motion-easing-standard-x1),
-      var(--md-sys-motion-easing-standard-y1)
-    );
+  animation: ripple var(--md-sys-motion-duration-extra-long3)
+    var(--md-sys-motion-easing-standard);
   background-color: color-mix(
     in srgb,
     var(--ripple-pressed-color) calc(var(--ripple-pressed-opacity) * 400%),

@@ -9,7 +9,7 @@ const preview: Preview = {
   decorators: [
     (Story) => (
       <MaterialTheme
-        // sourceColor={0x7f67be}
+        sourceColor={0x7f67be}
         style={{
           padding: '2rem',
           border:
@@ -21,6 +21,11 @@ const preview: Preview = {
     ),
   ],
   parameters: {
+    options: {
+      storySort: {
+        method: 'alphabetical',
+      },
+    },
     actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
       matchers: {

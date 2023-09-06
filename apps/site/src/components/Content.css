@@ -1,0 +1,11 @@
+.Content {
+  width: 100%;
+  max-width: 1200px;
+
+  > h2 {
+    font-size: 45px;
+    margin: 24px;
+    margin-top: 80px;
+    font-weight: 475;
+  }
+}

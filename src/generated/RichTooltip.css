@@ -1,0 +1,19 @@
+/* prettier-ignore */
+.RichTooltip, .RichTooltip * {
+  --rich-tooltip-container-color: var(--md-comp-rich-tooltip-container-color);
+  --rich-tooltip-container-elevation: var(--md-comp-rich-tooltip-container-elevation);
+  --rich-tooltip-container-shadow-color: var(--md-comp-rich-tooltip-container-shadow-color);
+  --rich-tooltip-container-shape: var(--md-comp-rich-tooltip-container-shape);
+  --rich-tooltip-subhead-font: var(--md-comp-rich-tooltip-subhead-font);
+  --rich-tooltip-subhead-line-height: var(--md-comp-rich-tooltip-subhead-line-height);
+  --rich-tooltip-subhead-size: var(--md-comp-rich-tooltip-subhead-size);
+  --rich-tooltip-subhead-weight: var(--md-comp-rich-tooltip-subhead-weight);
+  --rich-tooltip-subhead-tracking: var(--md-comp-rich-tooltip-subhead-tracking);
+  --rich-tooltip-subhead-color: var(--md-comp-rich-tooltip-subhead-color);
+  --rich-tooltip-supporting-text-font: var(--md-comp-rich-tooltip-supporting-text-font);
+  --rich-tooltip-supporting-text-line-height: var(--md-comp-rich-tooltip-supporting-text-line-height);
+  --rich-tooltip-supporting-text-size: var(--md-comp-rich-tooltip-supporting-text-size);
+  --rich-tooltip-supporting-text-weight: var(--md-comp-rich-tooltip-supporting-text-weight);
+  --rich-tooltip-supporting-text-tracking: var(--md-comp-rich-tooltip-supporting-text-tracking);
+  --rich-tooltip-supporting-text-color: var(--md-comp-rich-tooltip-supporting-text-color);
+}

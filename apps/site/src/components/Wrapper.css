@@ -1,0 +1,11 @@
+.Wrapper {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+
+  > .main {
+    margin: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

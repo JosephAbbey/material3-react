@@ -1,10 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { BADGE } from '@geometricpanda/storybook-addon-badges';
 
-import { BasicDialog } from './BasicDialog';
+import { BasicDialog, Icon, Button, ButtonType } from '..';
 import React, { useState } from 'react';
-import { Button, ButtonType } from './Button';
-import { Icon } from './Icon';
 
 const meta = {
   title: 'Components/BasicDialog',

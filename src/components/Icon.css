@@ -6,10 +6,12 @@
   -webkit-font-feature-settings: 'liga';
   -webkit-font-smoothing: antialiased;
 
+  --icon-color: inherit;
   --icon-size: 16px;
   --icon-fill: 0;
   --icon-grade: 0;
   --icon-optical-size: 48;
+  color: var(--icon-color);
   font-size: var(--icon-size);
   font-variation-settings: 'FILL' var(--icon-fill), 'GRAD' var(--icon-grade),
     'opsz' var(--icon-optical-size);

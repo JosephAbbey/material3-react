@@ -6,6 +6,7 @@ import React, {
   useRef,
 } from 'react';
 import './RichTooltipBox.css';
+import { cls } from '~/utils';
 
 export type RichTooltipBoxProps = PropsWithChildren<{
   title?: ReactNode;
@@ -49,12 +50,10 @@ export const RichTooltipBox = ({
   return (
     <div ref={ref} className='RichTooltipBox'>
       <div
-        className={`RichTooltip ${persistent ? 'persistent' : ''} ${
-          visible ? 'visible' : ''
-        }`}
+        className={cls`RichTooltip ${{ persistent, visible }}`}
         style={style}>
-        {title && <div className='RichTooltipTitle'>{title}</div>}
-        {content && <div className='RichTooltipContent'>{content}</div>}
+        {title && <div className='RichTooltipSubhead'>{title}</div>}
+        {content && <div className='RichTooltipSupportingText'>{content}</div>}
         {action && <div className='RichTooltipActions'>{action}</div>}
       </div>
       {children}

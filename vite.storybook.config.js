@@ -1,3 +1,12 @@
 import { defineConfig } from 'vite';
 
-export default defineConfig({});
+/* global process */
+
+export default defineConfig({
+  resolve: {
+    alias: [
+      { find: '@', replacement: process.cwd() + '/node_modules' },
+      { find: '~', replacement: process.cwd() + '/src' },
+    ],
+  },
+});
